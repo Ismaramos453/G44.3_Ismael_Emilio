@@ -1,0 +1,261 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	background: #a2f0c4; 
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+p {
+	margin: 0 0 1.5em 0;
+}
+
+.circulo{
+	display: flex;
+  	flex-direction:row;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* centra horizontalmente */
+  	align-items: center; /* centra verticalmente */
+}
+
+.circulo1{
+	border-radius: 100%;
+	background-color: rgb(0, 0, 0);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+  }
+
+
+.circulo2  {
+	border-radius: 100%;
+	background-color: rgb(0, 0, 0);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+  }
+  
+  .circulo3 {
+	border-radius: 100%;
+	background-color: rgb(0, 0, 0);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+  }
+  
+  .circulo4 {
+	border-radius: 100%;
+	background-color: rgb(0, 0, 0);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+  }
+  .circulo5 {
+	border-radius: 100%;
+	background-color: rgb(0, 0, 0);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+  }
+  .circulo6 {
+	border-radius: 100%;
+	background-color: rgb(0, 0, 0);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+  }
+
+  .circulo7 {
+	border-radius: 100%;
+	background-color: rgb(0, 0, 0);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+  }
+
+.cuadrados{
+	position: relative;
+	display: flex;
+  	flex-direction:row;
+	flex-wrap: wrap;
+	margin-bottom: 20rem;
+
+	
+}
+
+	.cuadrado1{
+		width: 20rem; 
+		height: 20rem; 
+		background: #000000;
+		transform: translate(10rem, 5rem);
+		
+	}
+	.cuadrado2{
+		width: 20rem; 
+		height: 20rem; 
+		background: #000000;
+		transform: translate(15rem, 5rem);
+	}
+	.cuadrado3{
+		width: 20rem; 
+		height: 20rem; 
+		background: #000000;
+		transform: translate(20rem, 5rem);
+
+	}
+	.cuadrado4{
+		width: 20rem; 
+		height: 20rem; 
+		background: #000000;
+		transform: translate(25rem, 5rem);
+	}
+
+.vehiculos{
+	position: relative;
+	display: flex;
+  	flex-direction:row;
+	flex-wrap: wrap;
+	margin-bottom: 20rem;
+	
+}
+
+	.Vehiculo1{
+		text-decoration:none;
+		font-weight:1rem;
+		font-size:1rem;
+		color:#ffffff;
+		padding-top:1rem;
+		padding-bottom:1rem;
+		padding-left:1rem;
+		padding-right:1rem;
+		background-color:#000000;
+		margin-bottom:4rem ; 
+		transform: translate(15rem, -10rem);
+
+	}
+
+	.Vehiculo2{
+		text-decoration:none;
+		font-weight:1rem;
+		font-size:1rem;
+		color:#ffffff;
+		padding-top:1rem;
+		padding-bottom:1rem;
+		padding-left:1rem;
+		padding-right:1rem;
+		background-color:#000000;
+		margin-bottom:4rem ; 
+		transform: translate(35rem, -10rem);
+
+	}
+
+	.Vehiculo3{
+		text-decoration:none;
+		font-weight:1rem;
+		font-size:1rem;
+		color:#ffffff;
+		padding-top:1rem;
+		padding-bottom:1rem;
+		padding-left:1rem;
+		padding-right:1rem;
+		background-color:#000000;
+		margin-bottom:4rem ; 
+		transform: translate(55rem, -10rem);
+	}
+
+
+	.Vehiculo4{
+		text-decoration:none;
+		font-weight:1rem;
+		font-size:1rem;
+		color:#ffffff;
+		padding-top:1rem;
+		padding-bottom:1rem;
+		padding-left:1rem;
+		padding-right:1rem;
+		margin-bottom:4rem ; 
+		background-color:#000000;
+		transform: translate(75rem, -10rem);
+	}
+
+
+
+#header {
+	background: #014807;
+	color: white;
+	height: 80px;
+}	
+#header a {
+		color: white;
+	}
+
+/*
+ * Logo
+ */
+#logo-header {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+	#logo-header:hover {
+		color: #0b76a6;
+	}
+	
+	.site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+	.site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: #999;
+	}
+	
+
+/*
+ * Navegación
+ */
+
+
+nav {
+	float: right;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	
+		nav ul li {
+			display: inline-block;
+			line-height: 80px;
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+			}
+
+#main-footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+}
+  

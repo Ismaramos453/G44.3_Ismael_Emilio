@@ -83,14 +83,20 @@ p {
 	margin-right: 2em;
   }
 
+  .circuloInicioSesion {
+
+	border-radius: 100%;
+	background-color: rgb(0, 0, 0);
+	height: 14em;
+	width: 14em;
+  }
+
 .cuadrados{
 	position: relative;
 	display: flex;
   	flex-direction:row;
 	flex-wrap: wrap;
-	margin-bottom: 20rem;
-
-	
+	margin-bottom: 20rem;	
 }
 
 	.cuadrado1{
@@ -258,4 +264,15 @@ nav {
 	padding: 20px;
 	margin-top: 40px;
 }
-  
+
+/*Cuadro de texto genérico*/
+
+.textInput {
+	border-radius: 5px;
+	background-color: #ffffff;
+	display: flex;
+	justify-content: center; 
+  	align-items: center; 
+	height: 20px;
+	width: auto;
+}

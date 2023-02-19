@@ -276,3 +276,13 @@ nav {
 	height: 20px;
 	width: auto;
 }
+
+.searchInput {
+	border-radius: 5px;
+	background-color: #ffffff;
+	display: flex;
+	justify-content: center; 
+  	align-items: center; 
+	height: 40px;
+	width: 60%;
+}

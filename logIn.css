@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	background: #a2f0c4; 
+	font-size: 1em;
+}
+
+.formulario {
+    width: 30rem;
+    height: 50rem;
+    border-radius: 10px;
+    margin: 10px;
+    background: rgb(209, 203, 203);
+}
+
+.formulario img {
+    width: 50%;
+    display: block;
+    margin: 20px;
+}
+
+.formulario input {
+    display: block;
+    height: 40px;
+    width: 75%;
+    padding-left: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+
+

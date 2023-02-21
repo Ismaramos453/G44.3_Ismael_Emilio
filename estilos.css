@@ -83,39 +83,46 @@ p {
 	margin-right: 2em;
   }
 
+  .circuloInicioSesion {
+
+	border-radius: 100%;
+	background-color: rgb(0, 0, 0);
+	height: 14em;
+	width: 14em;
+  }
+
 .cuadrados{
 	position: relative;
 	display: flex;
   	flex-direction:row;
 	flex-wrap: wrap;
-	margin-bottom: 20rem;
-
+	margin-bottom: 20rem;	
 	
 }
 
 	.cuadrado1{
-		width: 20rem; 
-		height: 20rem; 
+		width: 15rem; 
+		height: 15rem; 
 		background: #000000;
 		transform: translate(10rem, 5rem);
 		
 	}
 	.cuadrado2{
-		width: 20rem; 
-		height: 20rem; 
+		width: 15rem; 
+		height: 15rem; 
 		background: #000000;
 		transform: translate(15rem, 5rem);
 	}
 	.cuadrado3{
-		width: 20rem; 
-		height: 20rem; 
+		width: 15rem; 
+		height: 15rem; 
 		background: #000000;
 		transform: translate(20rem, 5rem);
 
 	}
 	.cuadrado4{
-		width: 20rem; 
-		height: 20rem; 
+		width: 15rem; 
+		height: 15rem; 
 		background: #000000;
 		transform: translate(25rem, 5rem);
 	}
@@ -125,7 +132,7 @@ p {
 	display: flex;
   	flex-direction:row;
 	flex-wrap: wrap;
-	margin-bottom: 20rem;
+
 	
 }
 
@@ -140,7 +147,11 @@ p {
 		padding-right:1rem;
 		background-color:#000000;
 		margin-bottom:4rem ; 
+		margin-right: 13rem;	
 		transform: translate(15rem, -10rem);
+		text-align:center;
+		
+		
 
 	}
 
@@ -155,7 +166,9 @@ p {
 		padding-right:1rem;
 		background-color:#000000;
 		margin-bottom:4rem ; 
-		transform: translate(35rem, -10rem);
+		margin-right: 15rem;	
+		transform: translate(15rem, -10rem);
+		text-align:center;
 
 	}
 
@@ -170,7 +183,9 @@ p {
 		padding-right:1rem;
 		background-color:#000000;
 		margin-bottom:4rem ; 
-		transform: translate(55rem, -10rem);
+		margin-right: 13rem;	
+		transform: translate(14rem, -10rem);
+
 	}
 
 
@@ -185,7 +200,8 @@ p {
 		padding-right:1rem;
 		margin-bottom:4rem ; 
 		background-color:#000000;
-		transform: translate(75rem, -10rem);
+		transform: translate(15rem, -10rem);
+
 	}
 
 
@@ -193,7 +209,7 @@ p {
 #header {
 	background: #014807;
 	color: white;
-	height: 80px;
+	height: 5rem;
 }	
 #header a {
 		color: white;
@@ -258,4 +274,57 @@ nav {
 	padding: 20px;
 	margin-top: 40px;
 }
+
+/*Cuadro de texto genérico*/
+
+.textInput {
+	border-radius: 5px;
+	background-color: #ffffff;
+	display: flex;
+	justify-content: center; 
+  	align-items: center; 
+	height: 20px;
+	width: auto;
+	
+}
+
+.searchInput {
+	border-radius: 5px;
+	background-color: #ffffff;
+	justify-content: center; 
+  	align-items: center; 
+	height: 40px;
+	width: 60%;
+	display: block;
+  	margin: auto;
+}
+
+.arrow {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+  }
   
+  .right {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+  }
+  
+  .up {
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+  }
+
+	
+   

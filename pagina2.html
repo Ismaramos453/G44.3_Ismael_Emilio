@@ -7,21 +7,34 @@
             <link rel="stylesheet" href="logIn.css">    
     </head>
    <body>
-<!-- / #logo-header -->
 
-    <article>
-        
+    <header id="header">
+		
+        <a id="logo-header" href="#">
+            <span class="site-name">PayToRent</span>
+            <span class="site-desc">Alquiler de vehiculos</span>
+        </a> 
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
         <div class="formulario">
+            <p class="text"> Iniciar Sesión </p>
             <img src="circulo_negro.png">
             <form class="login-form">
                 <p class="text"> Usuario: </p>
-                <p><input type="text"></p>  
+                <p><input type="name" class="formulario input"></p>  
                 <p class="text"> Contraseña: </p>
-                <p><input type="text"></p>  
+                <p><input type="password" class="formulario input"></p>  
+                <p><input type="submit" value="Iniciar Sesión" class="formulario button"></p>
             </form>
         </div>
-
-    </article> <!-- /article -->
 
    </body>
 

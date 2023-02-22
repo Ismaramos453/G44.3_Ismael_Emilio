@@ -1,42 +1,121 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
 	color: #666;
 	background: #a2f0c4; 
 	font-size: 1em;
+	line-height: 1.5em;
+}
+
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+p {
+	margin: 0 0 1.5em 0;
+}
+
+#header {
+	background: #014807;
+	color: white;
+	height: 80px;
+}	
+#header a {
+		color: white;
+	}
+
+/*
+ * Logo
+ */
+#logo-header {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+	#logo-header:hover {
+		color: #0b76a6;
+	}
+	
+	.site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+	.site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: #999;
+	}
+	
+nav {
+	float: right;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	
+		nav ul li {
+			display: inline-block;
+			line-height: 80px;
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+			}
+
+#main-footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
 }
 
 .formulario {
     width: 30rem;
     height: 50rem;
     border-radius: 10px;
-    margin: 10px;
+    margin: 0 auto;
+    font-family: Helvetica, Arial, sans-serif;
     background: rgb(209, 203, 203);
 }
 
 .formulario img {
     width: 50%;
     display: block;
-    margin: 20px;
+    margin: 0 auto;
 }
-
 .formulario input {
     display: block;
     height: 40px;
     width: 75%;
     padding-left: 10px;
-    color: white;
+    color: black;
     border-radius: 10px;
+    background-color: white;
 }
 
+.formulario text {
+    margin-left: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: solid;
+    color: white;
+}
 
-
+.formulario button {
+    color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+}

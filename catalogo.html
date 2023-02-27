@@ -6,19 +6,22 @@
         <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
         <link href="./css/diseñoCatalogo.css" rel="stylesheet" />
         <title>Document</title>
+        <script src = "jav1.js"></script>
     </head>
     <body>
         <header id="header">
 		
             <a id="logo-header" href="#">
                 <span class="site-name">PayToRent</span>
+                
             </a> <!-- / #logo-header -->
     
             <nav>
                 <ul>
-                    <li><a href="pagina2.html">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="#">Registrarse</a></li>
                     <li><a href="#">Contacto</a></li>
+                    
                 </ul>
             </nav><!-- / nav -->
     
@@ -29,23 +32,38 @@
 
 
         <div>
-            <p><input type="text" class="searchInput" title="Buscar" placeholder="Buscar..."></p>
+            <input class="busqueda" name="text" placeholder="Search..." type="search">
         </div>
         
         <div class="botones">
-            <button class="boton ">Filtros: </button>
-            <button class="boton ">Precio ↓</button>
-            <button class="boton ">Color ↓</button>
-            <button class="boton ">Plazas↓</button>
-            <button class="boton ">Ubicación ↓</button>
-          </div>
+            <button >Filtros: </button>
+            <div id="seleccionadorPrecio"></div>
+            <button onclick="abrirVentana()">Precio   ↓</button>
+            <div id="miVentanaEmergente" class="popup">
+            <div class="contenido">
+                <h2>Selecciona un precio</h2>
+                <p id="precioSeleccionado">500€</p>  
+                <p>Selecciona un precio:</p><input type="range" min="0" max="1000" step="1" value="500" id="rangoPrecio">
+                <button onclick="confirmarPrecio()">Confirmar</button>
+                <button onclick="cerrarVentana()">Cerrar</button>
+            
+            </div>
+            </div>
+            <button >Color      ↓</button>
+            <button >Plazas     ↓</button>
+            <button >Ubicación    ↓</button>
+        </div>
 
+          
 
+    <div class="contenido-pagina">
+    </div>
 
         <div class= "figuras">
             <div class="cuadrados">
-                <a class="cuadrado1" href="pagina2.html"></a>
-                <a class="cuadrado1" href="pagina2.html"></a>
+                <a class="cuadrado1" href="producto.html"></a>
+                <a class="cuadrado1" href="producto.html"></a>
+                <a class="cuadrado1" href="producto.html"></a>
     
             </div>
     
@@ -107,6 +125,36 @@
                     </span>
                 </a>
             </div>
+
+            <div class="rectangulo3">
+                <a class="rectangulo3_2" >
+                    <span class="calificacion">7.5
+                        <div class= "estrella">
+                            <form>
+                                <p class="clasificacion">
+                                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                  --><label for="radio1">★</label><!--
+                                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                  --><label for="radio2">★</label><!--
+                                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                  --><label for="radio3">★</label><!--
+                                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                  --><label for="radio4">★</label><!--
+                                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                  --><label for="radio5">★</label>
+                                </p>
+                              </form>
+                        </div>
+                    </span>
+                    <span class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id venenatis purus, tincidunt vulputate orci.
+                        Morbi feugiat erat sapien, vel iaculis diam faucibus ut. Quisque eu ante commodo, accumsan metus et, vulputate mi. Mauris in pellentesque sem. 
+                        Nunc ornare nibh et erat malesuada semper. Pellentesque accumsan lorem elit, a consequat quam dictum et. Ut sit amet nibh nibh. Integer semper 
+                        lacinia metus, a posuere arcu. Cras sed orci libero. 
+                    </span>
+                </a>
+            </div>
+
+            
         </div> 
 
 

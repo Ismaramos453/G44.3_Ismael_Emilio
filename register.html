@@ -1,40 +1,64 @@
-<!DOCTYPE = html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Inicio de Sesión</title>
-    
-            <link rel="stylesheet" href="./css/logIn.css">  
-            <link rel="stylesheet" href="./css/register.css">  
-            <link href="./css/estilos.css" rel="stylesheet" />
-            <link href="./css/diseño.css" rel="stylesheet" />
-            <link href="./css/figuras.css" rel="stylesheet" />
-            <link href="./css/texto.css" rel="stylesheet" />
-    </head>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./css/diseño.css" rel="stylesheet" />
+    <link href="./css/estilos.css" rel="stylesheet" />
+    <link href="./css/register.css" rel="stylesheet" />
+    <link href="./css/figuras.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header id="header">
+
+        <a id="logo-header" href="#">
+            <span class="site-name">PayToRent</span>
+            <span class="site-desc">Alquiler de vehiculos</span>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
 
     <body>
-        <header id="header">
-		
-            <a id="logo-header" href="#">
-                <span class="site-name">PayToRent</span>
-                <span class="site-desc">Alquiler de vehiculos</span>
-            </a> 
-    
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-    
-        </header>
-
         <div class="formularioHorizontal">
-            <p class="text"> Registrarse </p>
-            <form class="login-form">
- 
-            </form>
-        </div>
+            <h1> Registro </h1>
 
+            <div class="contenedorFormulariosHorizontal">
+
+                <div class="subFormulario">
+                    <p class="text">Correo Electrónico: </p>
+                    <input type="text" class="subFormulario input"></p>
+                    <p class="text">Contraseña: </p>
+                    <input type="text" class="subFormulario input"></p>
+                </div>
+
+                <div class="subFormulario">
+                    <p class="text">Nombre: </p>
+                    <input type="text" class="subFormulario input"></p>
+                    <p class="text">Apellido: </p>
+                    <input type="text" class="subFormulario input"></p>
+                    <p class="text">Nombre de usuario: </p>
+                    <input type="text" class="subFormulario input"></p>
+                </div>
+            </div>
+
+            <div class="contenedorFormulariosVertical">
+                <div class="subFormulario">
+                    <p class="text">Dirección: </p>
+                    <input type="text" class="subFormulario input"></p>
+                </div>
+            </div>
+
+            <div class="botones_contenedor">
+
+            </div>
+        </div>
     </body>
+
 </html>

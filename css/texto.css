@@ -2,7 +2,7 @@
     width: 113px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 16rem;
+    top: 14rem;
     left: 2.5rem;
     font-family: Helvetica, Arial, sans-serif;
     font-weight:100;
@@ -11,15 +11,15 @@
     text-align: left;
     flex-direction:row;
     display: flex;
-  
-
+    align-items: center;
   }
+
   .texto {
     width: 886px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 7rem;
     left: 2.5rem;
+    margin-top: 1rem;
     font-family: Helvetica, Arial, sans-serif;
     font-weight:100;
     font-size: 1rem;
@@ -31,7 +31,6 @@
 
   .estrella{
       display: flex;
-        align-items: center; /* para centrar verticalmente */
       margin-left: 2rem;
       font-size: 2rem;
   }
@@ -39,7 +38,6 @@
       width: 250px;
       margin: 0 auto;
       height: 50px;
-      
     }
     
     #form p {
@@ -54,9 +52,11 @@
     input[type="radio"] {
       display: none;
     }
-    
     label {
       color: grey;
-      
     }
+    
+
+
+
     

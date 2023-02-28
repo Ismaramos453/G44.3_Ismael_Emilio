@@ -1,7 +1,7 @@
 
 
   
-.figuras{
+.contenedorAnuncios{
 	position: relative;
 	display: flex;
   	flex-direction:row;
@@ -10,7 +10,7 @@
 }
 
   
-.cuadrados{
+.anuncios{
 	position: relative;
 	display: flex;
   	flex-direction:column;
@@ -18,7 +18,7 @@
  	margin-left: 1rem;
 }
 
-	.cuadrado1{
+	.fotoVehiculo{
 		width: 15rem; 
 		height: 15rem; 
 		background: #000000;
@@ -26,7 +26,7 @@
 	}
 
 
-.rectangulos{
+.contenedorInformacion{
   position: relative;
 	display: flex;
   	flex-direction:column;
@@ -34,7 +34,7 @@
  	 margin-left: 1rem;
 }
 
-  .rectangulo1{
+  .informacionAnuncio{
     position: relative;
     display: flex;
     flex-direction:column;
@@ -43,43 +43,17 @@
 
   
   }
-  .rectangulo1_2{
+  .informacion{
       width: 60rem; 
       height: 15rem; 
       background: #ffffff;
       margin-top: 5rem;
     }
 
-    .rectangulo2{
-      position: relative;
-      display: flex;
-      flex-direction:column;
-      flex-wrap: wrap;
-      margin-left: 10rem;
-    
-    }
-    .rectangulo2_2{
-      width: 60rem; 
-      height: 15rem; 
-      background: #ffffff;
-      margin-top: 5rem;
 
-    }
-	.rectangulo3{
-		position: relative;
-		display: flex;
-		flex-direction:column;
-		flex-wrap: wrap;
-		margin-left: 10rem;
-	  
-	  }
-	  .rectangulo3_2{
-		width: 60rem; 
-		height: 15rem; 
-		background: #ffffff;
-		margin-top: 5rem;
-  
-	  }
+
+
+
 
   
 	  

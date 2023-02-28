@@ -1,69 +1,70 @@
 
-.figurasProducto{
+.contenedorProducto{
 	position: relative;
 	display: flex;
-  	flex-direction:row;
-  	margin-left: 5rem;	
+  flex-direction:row;
+  margin-left: 5rem;	
+  margin-right: 8rem;	
 	right: 4rem;
+  max-width: 140rem;
 }
 
-.cuadradosProducto{
+.OpcionesProducto{
 	position: relative;
 	display: flex;
-  	flex-direction:column;
+  flex-direction:column;
 	flex-wrap: wrap;	
  	margin-left: 1rem;
 }
 
-	.cuadradoProducto1{
-		width: 25rem; 
-		height: 25rem; 
+	.FotoProducto{
+		width: 20rem; 
+		height: 20rem; 
 		background: #000000;
 		margin-top: 0rem;
 	}
 
-
-.rectangulosProducto{
-  position: relative;
-	display: flex;
-  	flex-direction:column;
-	flex-wrap: wrap;
- 	 margin-left: 1rem;
+ /* Rectangulo producto con la información*/
+ .rectangulosProducto{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    margin-left: 1rem;
 }
 
-  .rectanguloProducto1{
+  .contenedorInformacion{
     position: relative;
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
     margin-left: 5rem;
-
-  
   }
-  .rectanguloProducto1_2{
-      width: 60rem; 
-      height: 15rem; 
+
+
+  /*Descripcion del producto*/
+  .informacion{
+      width:auto; 
+      height: 25rem; 
       background: #ffffff;
-
+      
     }
-
-    .rectanguloProducto2{
+    .contenedorFotosProducto{
       position: relative;
       display: flex;
-      flex-direction:row;
       flex-wrap: wrap;
       margin-left: 5rem;
       margin-top: 3rem;
       background: #ffffff;
-      
+      justify-content: center;
+      max-width: 80rem;
     }
     .cuadradoProductos{
-      width: 15rem; 
-      height: 15rem; 
+      width: 20rem; 
+      height: 20rem; 
       background: #000000;
-      margin-top: 2rem;
-      margin-left: 3rem;
-      margin-bottom: 2rem;
+      margin:1rem;
+
     }
 
 
@@ -115,15 +116,16 @@
       font-size: 2rem;
       opacity: 1;
       text-align: left;
-	  flex-direction:row;
-	  display: flex;
-    left: 0;
+	    flex-direction:row;
+	    display: flex;
+      left: 0;
+      align-items: center;
 	
   
     
     }
 
-    .circulo10{
+    .chatUsuario{
       border-radius: 10%;
       background-color: rgb(255, 255, 255);
       height: 5em;
@@ -132,8 +134,9 @@
       background-size: cover;
       justify-content: center;
       position: relative;
+      
       }
-      .circulo10 img {
+      .chatUsuario img {
       display: block;
       margin-top: 15%;
       margin-left: 15%;
@@ -210,7 +213,7 @@
 	  line-height: 2rem;
     }
 
-
+    /*Boton de alquilar*/
     button {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 25px;
@@ -270,6 +273,8 @@
       transform: scale(0.97);
      }
      
+
+
 .rectangulosOpinion{
   position: relative;
 	display: flex;
@@ -321,15 +326,16 @@
       width: 113px;
       color: rgba(0,0,0,1);
       position: absolute;
-      top: 16rem;
+      top: 14rem;
       left: 2.5rem;
       font-family: Helvetica, Arial, sans-serif;
       font-weight:100;
       font-size: 2rem;
       opacity: 1;
       text-align: left;
-	  flex-direction:row;
-	  display: flex;
+	   flex-direction:row;
+	    display: flex;
+      align-items: center;
 	
 
     }
@@ -345,13 +351,14 @@
       opacity: 1;
       text-align: left;
       word-wrap:5rem;
-	  line-height: 2rem;
+	    line-height: 2rem;
     }
 
 	.estrellaOpinion{
-		display: flex;
+		  display: flex;
   		align-items: center; /* para centrar verticalmente */
-		margin-left: 2rem;
-		font-size: 2rem;
+		  margin-left: 2rem;
+		  font-size: 2rem;
 	}
     
+  

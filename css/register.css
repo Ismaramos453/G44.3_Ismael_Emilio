@@ -1,4 +1,3 @@
-
 .formularioHorizontal {
     width: 75rem;
     height: 45rem;
@@ -6,5 +5,75 @@
     margin: 0 auto;
     font-family: Helvetica, Arial, sans-serif;
     background: rgb(209, 203, 203);
+    display: block;
+    block-size: auto;
+}
+
+.contenedorFormulariosHorizontal {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    font-family: Helvetica, Arial, sans-serif;
     display: flex;
+    flex-flow: row wrap;
+    flex-grow: inherit;
+    margin: 0 auto;
+}
+.subFormulario {
+    background: transparent;
+    width: 30rem;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 2rem;
+    font-family: Helvetica, Arial, sans-serif;
+    display: block;
+    margin: 25px;
+}
+
+.subFormulario input {
+    display: block;
+    height: 40px;
+    width: 10rem;
+    padding-left: 10px;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.contenedorFormulariosVertical {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    font-family: Helvetica, Arial, sans-serif;
+    display: block;
+}
+
+.cuadroInputGrande {
+    display: block;
+    height: 40px;
+    width: 70%;
+    padding-left: 10px;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.entradaGenerica {
+    display: block;
+    height: 40px;
+    width: 10rem;
+    padding-left: 10px;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.botonCuadrado {
+
+    display: inline;
+    height: 40px;
+    width: 40px;
+    padding-left: 10px;
+    border-radius: 3px;
+    background-color: white;
 }

@@ -8,14 +8,15 @@
     font-weight:100;
     font-size: 2rem;
     opacity: 1;
-    text-align: left;
+    text-align: right;
     flex-direction:row;
     display: flex;
     align-items: center;
+    margin-right: 2rem;
   }
 
   .texto {
-    width: 886px;
+    width: 45rem;
     color: rgba(0,0,0,1);
     position: absolute;
     left: 2.5rem;
@@ -27,6 +28,7 @@
     text-align: left;
     word-wrap:5rem;
     line-height: 2rem;
+    
   }
 
   .estrella{

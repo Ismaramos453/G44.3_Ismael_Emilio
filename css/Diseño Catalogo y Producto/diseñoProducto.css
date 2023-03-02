@@ -1,4 +1,3 @@
-
 .contenedorProducto{
 	position: relative;
 	display: flex;
@@ -136,7 +135,7 @@
       background-color: rgb(255, 255, 255);
       height: 5em;
       width: 5em;
-      margin-right: 2em;
+    
       background-size: cover;
       justify-content: center;
       position: relative;
@@ -152,7 +151,7 @@
       background-size: cover;
       
       }
-      .circulo11{
+      .usuarioFoto{
         border-radius: 100%;
         background-color: rgb(255, 255, 255);
         height: 7em;
@@ -163,9 +162,9 @@
         display: flex;
   	    flex-direction:row;
         }
-        .circulo11 img {
+        .usuarioFoto img {
         display: block;
-        margin-top: 15%;
+        margin-top: 10%;
         margin-left: 15%;
         margin-right: 10%;
         max-width: 100%;
@@ -175,12 +174,11 @@
         }
 
         .usuario{
-          border-radius: 15%;
           background-color: rgb(255, 255, 255);
-          height: 7em;
-          width: 14em;
+          height: 4em;
+          width: 10em;
           margin-right: 2em;
-          margin-top: 8rem;
+          margin-top: 9rem;
           background-size: cover;
           display: flex;
           text-align: center;
@@ -278,6 +276,7 @@
      button:active {
       transform: scale(0.97);
      }
+
      
     
   

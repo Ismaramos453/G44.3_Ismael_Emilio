@@ -53,7 +53,8 @@
 }
 
 .imageSquare {
-
+    width: auto;
+    height: auto;
 }
 
 .chatGlobeLeft {

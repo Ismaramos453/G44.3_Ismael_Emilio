@@ -174,7 +174,7 @@
 .arrow {
 	cursor: pointer;
 	height: 60px;
-	right: 10%;
+	right: 5%;
 	position: absolute;
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
@@ -242,7 +242,7 @@
   .arrow2 {
 	cursor: pointer;
 	height: 60px;
-	left: 8%;
+	left: 5%;
 	position: absolute;
 	transform: translateX(-50%) translateY(-50%);
 	transition: transform 0.1s;

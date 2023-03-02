@@ -1,5 +1,4 @@
 
-
   
 .contenedorAnuncios{
 	position: relative;
@@ -31,7 +30,8 @@
 	display: flex;
   	flex-direction:column;
 	flex-wrap: wrap;
- 	 margin-left: 1rem;
+ 	margin-left: 1rem;
+	
 }
 
   .informacionAnuncio{
@@ -39,8 +39,7 @@
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
-    margin-left: 10rem;
-
+    margin-left: 5rem;
   
   }
   .informacion{
@@ -49,7 +48,6 @@
       background: #ffffff;
       margin-top: 5rem;
     }
-
 
 
 

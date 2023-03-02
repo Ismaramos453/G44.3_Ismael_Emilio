@@ -14,17 +14,13 @@
 
     <iframe class = "header1" src = "header.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
 
-        <div class="formulario">
-            <p class="text"> Iniciar Sesión </p>
-            <img src="circulo_negro.png">
-            <form class="login-form">
-                <p class="text"> Usuario: </p>
-                <p><input type="name" class="formulario input"></p>  
-                <p class="text"> Contraseña: </p>
-                <p><input type="password" class="formulario input"></p>  
-                <p><input type="submit" value="Iniciar Sesión" class="formulario button"></p>
-            </form>
-        </div>
+    <form class="form">
+        <input placeholder="Email address or phone number" class="input" type="text">
+        <input placeholder="Password" class="input" type="password" id="password"> 
+        <button id="loginBtn">Log in</button>
+        <a id="forgotPassword" href="#">Forgotten password?</a>
+        <button class="create" id="createAccountBtn">Create new account</button>
+    </form>
 
 
         <iframe class = "footer" src = "footer.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>

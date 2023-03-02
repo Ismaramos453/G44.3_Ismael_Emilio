@@ -1,7 +1,7 @@
 .formularioHorizontal {
     width: 75rem;
-    height: 45rem;
-    border-radius: 10px;
+    height: 200rem;
+    border-radius: 20px;
     margin: 0 auto;
     font-family: Helvetica, Arial, sans-serif;
     background: rgb(209, 203, 203);
@@ -18,6 +18,9 @@
     flex-flow: row wrap;
     flex-grow: inherit;
     margin: 0 auto;
+    position:relative;
+    text-align: left;
+    
 }
 
 .subFormulario {
@@ -29,6 +32,9 @@
     font-family: Helvetica, Arial, sans-serif;
     display: block;
     margin: 25px;
+    position:relative;
+    left:200px;
+    
 }
 
 .subFormulario input {
@@ -39,6 +45,10 @@
     color: black;
     border-radius: 10px;
     background-color: white;
+    position:relative;
+    right:200px;
+    bottom:230px;
+    text-align: left;
 }
 
 .cuadroInputGrande {
@@ -49,6 +59,9 @@
     color: black;
     border-radius: 10px;
     background-color: white;
+    right: 200px;
+    top: -5px;
+    
 }
 
 .entradaGenerica {
@@ -59,4 +72,6 @@
     color: black;
     border-radius: 10px;
     background-color: white;
+    position:relative;
+    left:100px;
 }

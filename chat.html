@@ -1,64 +1,38 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <title>chat</title>
+        <link href="./css/style.css" rel="stylesheet" />
+        <link href="./css/Diseño chat/chat.css" rel="stylesheet" />
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <title>chat</title>
-    <link href="./css/diseño.css" rel="stylesheet" />
-    <link href="./css/chat.css" rel="stylesheet" />
-    <link href="./css/register.css" rel="stylesheet" />
+    <body>
+        <iframe class = "header1" src = "header.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
 
-</head>
-
-<body>
-    <header id="header">
-
-        <a id="logo-header" href="#">
-            <span class="site-name">PayToRent</span>
-
-        </a>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Registrarse</a></li>
-                <li><a href="#">Contacto</a></li>
-
-            </ul>
-        </nav>
-    </header>
-
-    <div class="chatContainer">
-        <div class="chatList">
-            <header class="chatList header">
-                <input type="text" class="cuadroInputGrande" placeholder=" Buscar usuario..."></p>
-            </header>
-            
-            <div class="chatUserDisplay">
-                <p class="imageSquare"></p>
-                <p class="text"> USUARIO </p>
-            </div>
-        </div>
-        <div class="chatDisplay">
-            <header class="chatDisplay header">
-                <p class="imageSquare"></p>
-                <p class="text"> USUARIO </p>
-            </header>
-
-            <div class="chatDisplayContainer">
-                <p class="chatGlobeLeft"></p>
+        <div class="chat-container">
+            <div class="chat-header">
+              <img src="https://via.placeholder.com/50x50" alt="Profile Picture">
+              <h3>Nombre del contacto</h3>
             </div>
 
-            <footer class="chatDisplay footer">
-                <div class="contenedorFormulariosHorizontal">
-                    <input type="button" class="botonCuadrado"></p>
-                    <input type="button" class="botonCuadrado"></p>
-                    <input type="text" class="cuadroInputGrande"></p>
-                    <input type="button" class="botonCuadrado"></p>
+            <div class="chat-body">
+                <div class="message sent">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed ut perspiciatis unde omnis iste natus.</p>
+                    <span class="metadata">10:02 AM</span>
                 </div>
-            </footer>
-        </div>
-    </div>
-</body>
+                <div class="message received">
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                  <span class="metadata">10:00 AM</span>
+                </div>
+            </div>
 
+            <div class="chat-footer">
+              <input type="text" placeholder="Escribe tu mensaje aquí">
+              <button>Enviar</button>
+            </div>
+        </div>
+
+        <iframe class = "footer" src = "footer.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </body>
 </html>

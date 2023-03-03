@@ -4,7 +4,7 @@
     padding: 20px;
     background-color: #f2f2f2;
     border-radius: 10px;
-    margin-bottom: 8rem;
+    margin-bottom: 3.40rem;
 
   }
   
@@ -22,7 +22,7 @@
   .form-group1 {
     margin-bottom: 10px;
     float: right;
-    margin-top: -13rem;
+    margin-top: -9rem;
     margin-right: 6rem;
     
   }
@@ -65,10 +65,10 @@
   button[type="submit"] {
     display: block;
     width: 20rem;
-    margin-left: 35%;
+    margin-left: 40%;
     margin-top: 2rem;
     padding: 10px;
-    background-color: #071e54;
+    background-color: #075e54;
     color: #fff;
     border: none;
     border-radius: 5px;

@@ -1,43 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <link href="./css/diseño.css" rel="stylesheet" />
-    <link href="./css/pagina1.css" rel="stylesheet" />
-    <link href="./css/pago.css" rel="stylesheet" />
-    <link href="./css/figuras.css" rel="stylesheet" />
-    <meta charset="UTF-8">
-    <title>Método de Pago</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Pago</title>
-</head>
-
-
-<body>
-    <iframe class = "header1" src = "header.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+<html>
+    <head>
+        <link href="./css/style.css" rel="stylesheet" />
+        <link href="./css/Diseño Inicio/Inicio.css" rel="stylesheet" />
+        <link href="./css/Inicio Sesion y Registro/register.css" rel="stylesheet" />
+        <link href="./css/Edición Texto y Figuras/figuras.css" rel="stylesheet" />
+        <title>Registro</title>
+    </head>
 
     <body>
-        <div class="formularioHorizontal">
-            <h1> Pago </h1>
-
-            <div class="contenedorFormulariosHorizontal">
-                
-                <div class="subFormulario">
-                    <p class="text">Titular de la tarjeta: </p>
-                    <input type="text" class="cuadroInputGrande"></p>
-                    <p class="text">Numero de la tarjeta: </p>
-                    <input type="text" class="cuadroInputGrande"></p>
-
-                <div class="subFormulario input">
-                    <p class="text">Fecha de Nacimiento: </p>
-                    <input type="date" class="subFormulario input"></p>
-                    <p class="text">CVC: </p>
-                    <input type="text" class="subFormulario input"></p>
+        <iframe class = "header1" src = "header.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+            <form class="registration-form">
+                <h2>Pago</h2>
+                <div class="form-group">
+                    <label for="text">Titular de la tarjeta</label>
+                    <input type="text" id="text" name="text" required>
                 </div>
-            </div>
-        </body>
 
-        <iframe class = "footer" src = "footer.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+                <div class="form-group">
+                    <label for="text">Contraseña:</label>
+                    <input type="text" id="text" name="text" required>
 
+                </div>
+
+                <div class="form-group1">
+                    <label for="date">Fecha de nacimiento:</label>
+                    <input type="date" id="date" name="date" required>
+                    
+                    <label for="text">CVC:</label>
+                    <input type="text" id="text" name="text" required>
+                
+                </div>
+                
+                <button type="submit">Confirmar</button>
+            </form>
+            <iframe class = "footer" src = "footer.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </body>
 </html>

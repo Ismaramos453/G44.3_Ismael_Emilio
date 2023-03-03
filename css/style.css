@@ -17,8 +17,8 @@ body {
 }
 .footer{
 	width: 100% !important;
-	height: 200px !important;
-	bottom: 0;
+	height: auto!important;
+	position: absolute;
 }
 .producto{
 	width: 100% !important;
@@ -28,6 +28,11 @@ body {
 .busqueda{
 	width: 50% !important;
 	height: auto !important;
+}
+
+.perfil{
+	width: 100% !important;
+	height: 85rem;
 }
 
 

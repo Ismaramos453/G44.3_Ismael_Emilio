@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link href="./css/diseño.css" rel="stylesheet" />
-    <link href="./css/pagina1.css" rel="stylesheet" />
-    <link href="./css/register.css" rel="stylesheet" />
-    <link href="./css/figuras.css" rel="stylesheet" />
-    <title>Registro</title>
-</head>
-
-<body>
-    <iframe class = "header1" src = "header.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    <head>
+        <link href="./css/style.css" rel="stylesheet" />
+        <link href="./css/Diseño Inicio/Inicio.css" rel="stylesheet" />
+        <link href="./css/Inicio Sesion y Registro/register.css" rel="stylesheet" />
+        <link href="./css/Edición Texto y Figuras/figuras.css" rel="stylesheet" />
+        <title>Registro</title>
+    </head>
 
     <body>
-        <div class="formularioHorizontal">
-            <h1> Registro </h1>
-
-            <div class="contenedorFormulariosHorizontal">
-
-                <div class="subFormulario">
-                    <p class="text">Correo Electrónico: </p>
-                    <input type="text" class="cuadroInputGrande"></p>
-                    <p class="text">Contraseña: </p>
-                    <input type="text" class="cuadroInputGrande"></p>
+        <iframe class = "header1" src = "header.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+            <form class="registration-form">
+                <h2>Registro</h2>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
 
-                <div class="subFormulario">
-                    <p class="text">Nombre: </p>
-                    <input type="text" class="subFormulario input"></p>
-                    <p class="text">Apellido: </p>
-                    <input type="text" class="subFormulario input"></p>
-                    <p class="text">Nombre de usuario: </p>
-                    <input type="text" class="subFormulario input"></p>
-                </div>
-            </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
 
-            <div class="contenedorFormulariosVertical">
-                <div class="subFormulario">
-                    <p class="text">Dirección: </p>
-                    <input type="text" class="cuadroInputGrande"></p>
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" name="address" required>
                 </div>
-            </div>
 
-            <div class="contenedorFormulariosHorizontal">
-                <p class="text">Teléfono: </p>
-                <input type="text" class="entradaGenerica"></p>
-                <p class="text">Fecha de Nacimiento: </p>
-                <input type="date" class="entradaGenerica"></p>
-            </div>
-            
-            <div class="contenedorFormulariosHorizontal">
-                <input type="button" class="botonCuadrado"></p>
-                <input type="button" class="botonCuadrado"></p>
-            </div>
-        </div>
+                <div class="form-group1">
+                    <label for="first-name">Nombre:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    
+                    <label for="last-name">Apellido:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group2">
+                    <label for="phone">Número de teléfono:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group3">
+                    <label for="birthdate"> Fecha de Nacimiento:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                
+                <button type="submit">Registrarse</button>
+            </form>
+            <iframe class = "footer" src = "footer.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </body>
-
-
-    <iframe class = "footer" src = "footer.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-
 </html>

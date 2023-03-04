@@ -5,7 +5,8 @@
     background-color: #f2f2f2;
     border-radius: 10px;
     margin-bottom: 8rem;
-
+    display: flex;
+    flex-wrap: wrap;
   }
   
   .registration-form h2 {

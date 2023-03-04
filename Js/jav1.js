@@ -13,6 +13,7 @@ function abrirVentana() {
     rangoPrecio.addEventListener("input", function() {
     precioSeleccionado.innerHTML = rangoPrecio.value + "€";
 
+
   });
   }
   function cerrarVentana() {

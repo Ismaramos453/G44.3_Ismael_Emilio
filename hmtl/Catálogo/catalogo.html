@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Jockey+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        <link href="../../css/Diseño Catalogo y Producto/diseñoCatalogo.css" rel="stylesheet" />
+        <link href="../../css/style.css" rel="stylesheet" />
+        <link href="../../css/Edición Texto y Figuras/figuras.css" rel="stylesheet" />
+        <link href="../../css/Edición Texto y Figuras/texto.css" rel="stylesheet" />
+        <title>Catalogo</title>
+        <script src = "../../Js/jav1.js"></script>
+    </head>
+    <body>
+        
+
+
+       <iframe class = "header1" src = "../Header y Footer/header.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+       <div class = "items"> 
+            <a class="usuarioFoto" href="../perfil/editarPerfil.html"> 
+                <img class = "imagen" src="../../images/usuario1.png">
+            </a>
+            <a class = "usuario" >Mi perfil
+            </a>
+        </div>
+
+       <div class="barrabusqueda">
+            <input class="busqueda" name="text" placeholder="Search..." type="search">
+        </div>
+
+
+        
+        <div class="botones_contendor">
+            <button >Filtros: </button>
+            <div id="seleccionadorPrecio"></div>
+            <button onclick="abrirVentana()" >Precio   ↓</button>
+            <div id="miVentanaEmergente" class="ventana">
+                <div class="contenido">
+                    <h2>Selecciona un precio</h2>
+                    <p id="precioSeleccionado">500€</p>  
+                    <p>Selecciona un precio:</p><input type="range" min="0" max="1000" step="1" value="500" id="rangoPrecio">
+                    <button onclick="confirmarPrecio()">Confirmar</button>
+                    <button onclick="cerrarVentana()">Cerrar</button>
+            
+                </div>
+            </div>
+            <button >Color      ↓</button>
+            <button >Plazas     ↓</button>
+            <button >Ubicación    ↓</button>
+        </div>
+
+
+        <div class= "contenedorAnuncios">
+            <div class="anuncios">
+                <a class="fotoVehiculo" href="../Producto/producto.html"></a>
+            </div>
+        <iframe class = "producto" src = "../Producto/descripcionProducto.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+        </div>
+        
+
+        <div class= "contenedorAnuncios">
+            <div class="anuncios">
+                <a class="fotoVehiculo" href="../Producto/producto.html"></a>
+            </div>
+        <iframe class = "producto" src = "../Producto/descripcionProducto.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+        </div>
+
+
+        <div class= "contenedorAnuncios">
+            <div class="anuncios">
+                <a class="fotoVehiculo" href="../Producto/producto.html"></a>
+            </div>
+        <iframe class = "producto" src = "../Producto/descripcionProducto.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+        </div>
+
+
+    <iframe class = "footer" src = "../Header y Footer/footer.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+    </body>
+</html>

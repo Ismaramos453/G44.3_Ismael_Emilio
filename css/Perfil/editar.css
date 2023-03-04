@@ -64,28 +64,36 @@
         
         }
 
+.items2{
+     height: auto;
+    flex-direction:row;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: end; /* centra horizontalmente */
+    margin-top: -8rem;
+}
 
+.editarFoto{
 
-        .editarFoto{
-
-            height: 4em;
-            width: 4em;
-            margin-left: 42.5em;
-            margin-top: -4rem;
-            background-size: cover;
-            display: flex;
-              flex-direction:row;
-            }
-            .editarFoto img {
-            display: block;
-            margin-top: 10%;
-            margin-left: 15%;
-            margin-right: 10%;
-            max-width: 100%;
-            height: 70%;
-            background-size: cover;
+        height: 4em;
+        width: 4em;
+        margin-left: 42.5em;
+        margin-top: -4rem;
+        background-size: cover;
+        display: flex;
+        flex-direction:row;
+}
+.editarFoto img {
+    display: block;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 10%;
+    max-width: 100%;
+    height: 70%;
+    background-size: cover;
             
-            }
+}
 
         .items{
             display: flex;

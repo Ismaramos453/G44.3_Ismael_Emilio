@@ -232,7 +232,6 @@
       margin-top: 2rem;
       display: flex;
       justify-content: center; /* centra horizontalmente */
-
       margin-right: 4rem;
       position: relative;
       overflow: hidden;
@@ -276,10 +275,7 @@
      button:active {
       transform: scale(0.97);
      }
-<<<<<<< HEAD
 
      
-=======
->>>>>>> Ismael
     
   

@@ -4,7 +4,7 @@
     padding: 20px;
     background-color: #f2f2f2;
     border-radius: 10px;
-    margin-bottom: 8rem;
+    margin-bottom: 3.40rem;
 
   }
   
@@ -22,8 +22,9 @@
   .form-group1 {
     margin-bottom: 10px;
     float: right;
-    margin-top: -13rem;
+    margin-top: -9rem;
     margin-right: 6rem;
+    
   }
 
   .form-group2 {
@@ -33,6 +34,7 @@
     flex-direction:row;
   }
   
+
   .form-group3 {
     margin-bottom: 10px;
     margin-left: 50rem;
@@ -63,7 +65,7 @@
   button[type="submit"] {
     display: block;
     width: 20rem;
-    margin-left: 35%;
+    margin-left: 40%;
     margin-top: 2rem;
     padding: 10px;
     background-color: #075e54;
@@ -73,3 +75,4 @@
     font-size: 16px;
     cursor: pointer;
   }
+  /*#075e54*/

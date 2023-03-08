@@ -160,13 +160,14 @@
 	justify-content: center; /* centra horizontalmente */
   	align-items: center; /* centra verticalmente */
 	margin-bottom:4rem;	
+
 }
 	.VehiculoDestacado{
 		width: 14rem; 
 		height: 14rem; 
 		background: #000000;
 		margin-right: 3rem;
-		margin-bottom: 3rem;
+		margin-bottom: 1.75rem;
 	}
 	
   /*Flechas*/

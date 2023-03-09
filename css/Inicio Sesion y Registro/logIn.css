@@ -9,7 +9,7 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, .2);
   border-radius: 5px;
   font-family: inherit;
-  margin-bottom: 16rem;
+  margin-bottom: 17rem;
 }
 
 .input {
@@ -86,4 +86,39 @@
 
 #createAccountBtn:hover {
   background: #34a61d;
+}
+/* Estilos para pantallas de 768px o menos (tablets en orientación vertical y móviles) */
+@media screen and (max-width: 768px) {
+  .form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8rem;
+  }
+  #createAccountBtn {
+    font-size: 0.8rem;
+    padding: 10px 15px;
+  }
+}
+
+/* Estilos para pantallas de 480px o menos (móviles en orientación vertical) */
+@media screen and (max-width: 480px) {
+  .form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+  }
+  .input {
+    font-size: 12px;
+    padding: 10px;
+  }
+  #loginBtn {
+    width: 100%;
+    padding: 10px;
+  }
+  #createAccountBtn {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
 }

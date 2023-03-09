@@ -25,5 +25,4 @@ function abrirVentana() {
     alert("El precio seleccionado es: " + rangoPrecio);
     cerrarVentana();
   }
-
   

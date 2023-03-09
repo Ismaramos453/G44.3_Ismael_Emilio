@@ -7,7 +7,7 @@
   font-family: Helvetica, Arial, sans-serif;
   font-weight:100;
   font-size: 2rem;
-  opacity: 1;
+
   text-align: right;
   flex-direction:row;
   display: flex;
@@ -29,14 +29,14 @@
   
 }
 .texto {
-  width: 45rem;
+  width: 35rem;
   color: rgba(0,0,0,1);
   position: absolute;
   left: 2.5rem;
   margin-top: 1rem;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:100;
-  font-size: 1rem;
+  font-size: 0.75rem;
   opacity: 1;
   text-align: left;
   word-wrap:5rem;
@@ -70,7 +70,238 @@
   label {
     color: grey;
   }
+  /*  
+  @media screen and (max-width: 900px) {
+    .calificacion {
+      width: 113px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 16rem;
+      left: 2.5rem;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight:100;
+      font-size: 1rem;
+
+      text-align: right;
+      flex-direction:row;
+      display: flex;
+      align-items: center;
+      margin-right: 2rem;
+    }
+
+    .opiniones{
+      width: 45rem;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      left: 6rem;
+      margin-top: 1rem;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      text-align: left;
+      
+    }
+
+    .texto {
+      width: 45rem;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      left: 2.5rem;
+      margin-top: 1rem;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight:100;
+      font-size: 0.75rem;
+      opacity: 1;
+      text-align: left;
+      word-wrap:5rem;
+      line-height: 1.25rem;
+      max-width: 20rem;
+
+    }
+
+    .estrella{
+      display: flex;
+      margin-left: 2rem;
+      font-size: 1rem;
+  }
+  #form {
+      width: 250px;
+      margin: 0 auto;
+      height: 50px;
+    }
     
+    #form p {
+      text-align: center;
+  
+    }
+    
+    #form label {
+      font-size: 20px;
+    }
+    
+    input[type="radio"] {
+      display: none;
+    }
+    label {
+      color: grey;
+    }
+
+  }
+
+  */
+
+  @media screen and (max-width: 768px)  {
+    .calificacion {
+      width: 200px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 15rem;
+      left: 2.5rem;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight:100;
+      font-size: 1rem;
+    
+      text-align: right;
+      flex-direction:row;
+      display: flex;
+      align-items: center;
+      margin-right: 2rem;
+    }
+    .opiniones{
+      width: 45rem;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      left: 6rem;
+      margin-top: 1rem;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 2rem;
+      text-align: left;
+    
+    }
+    .texto {
+      width: 45rem;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      left: 2.5rem;
+      margin-top: 1rem;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight:100;
+      font-size: 0.75rem;
+      opacity: 1;
+      text-align: left;
+      word-wrap:5rem;
+      line-height: 1.5rem;
+      max-width: 25rem;
+    }
+    
+    .estrella{
+        display: flex;
+        margin-left: 2rem;
+        font-size: 1.5rem;
+    }
+    #form {
+        width: 250px;
+        margin: 0 auto;
+        height: 50px;
+      }
+      
+      #form p {
+        text-align: center;
+    
+      }
+      
+      #form label {
+        font-size: 20px;
+      }
+      
+      input[type="radio"] {
+        display: none;
+      }
+      label {
+        color: grey;
+      }
+
+
+  }
+
+  @media screen and (max-width: 440px) {
+    .calificacion {
+      width: 113px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 19.5rem;
+      left: 3.5rem;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight:100;
+      font-size: 0.5rem;
+    
+      text-align: right;
+      flex-direction:row;
+      display: flex;
+      align-items: center;
+      margin-right: 2rem;
+    }
+    .opiniones{
+      width: 45rem;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      left: 6rem;
+      margin-top: 1rem;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 2rem;
+      text-align: left;
+    
+    }
+    .texto {
+      width: 15rem;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      left: 3.5rem;
+      margin-top: 1rem;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight:100;
+      font-size: 0.5rem;
+      opacity: 1;
+      text-align: left;
+      word-wrap:5rem;
+      line-height: 1rem;
+      max-width: 10.5rem;
+    }
+    
+    .estrella{
+        display: flex;
+        margin-left: 2rem;
+        font-size: 0.5rem;
+    }
+    #form {
+        width: 250px;
+        margin: 0 auto;
+        height: 50px;
+      }
+      
+      #form p {
+        text-align: center;
+    
+      }
+      
+      #form label {
+        font-size: 20px;
+      }
+      
+      input[type="radio"] {
+        display: none;
+      }
+      label {
+        color: grey;
+      }
+
+
+
+
+  }
+
+
+
+
 
 
 

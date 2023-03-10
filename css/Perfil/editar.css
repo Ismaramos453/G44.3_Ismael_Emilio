@@ -1,11 +1,10 @@
-
 .edicionUsuario{
 
     background-color: rgb(255, 255, 255);
     height: 4em;
     width: 4em;
     margin-top: -15rem;
-    margin-left: 11rem;
+    margin-left: 0;
     background-size: cover;
     justify-content: center;
     position: relative;
@@ -27,7 +26,7 @@
     height: 4em;
     width: 4em;
     margin-top: 7rem;
-    margin-left: 11rem;
+    margin-left: 0;
     background-size: cover;
     justify-content: center;
     position: relative;
@@ -37,32 +36,12 @@
     display: block;
     margin-top: 15%;
     margin-left: 15%;
-    margin-right: 10%;
+    margin-right: 20%;
     max-width: 100%;
     height: 70%;
     background-size: cover;
     }
-    .usuarioFotoEdicion{
-        border-radius: 100%;
-        background-color: rgb(255, 255, 255);
-        height: 12em;
-        width: 12em;
-        margin-left: 34em;
-        margin-top: 4rem;
-        background-size: cover;
-        display: flex;
-  	    flex-direction:row;
-        }
-        .usuarioFotoEdicion img {
-        display: block;
-        margin-top: 10%;
-        margin-left: 15%;
-        margin-right: 10%;
-        max-width: 100%;
-        height: 70%;
-        background-size: cover;
-        
-        }
+
 
 .items2{
      height: auto;
@@ -95,7 +74,60 @@
             
 }
 
-        .items{
-            display: flex;
-            flex-direction:row;
-          }
+.items{
+    display: flex;
+    flex-direction:row;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .edicionUsuario{
+
+        background-color: rgb(255, 255, 255);
+        height: 4em;
+        width: 4em;
+        margin-top: -15rem;
+        margin-left: -3rem;
+        background-size: cover;
+        justify-content: center;
+        position: relative;
+        
+        }
+        .edicionUsuario img {
+        display: block;
+        margin-top: 15%;
+        margin-left: 15%;
+        margin-right: 10%;
+        max-width: 100%;
+        height: 70%;
+        background-size: cover;
+        }
+        
+    .edicionUsuarioEliminar{
+    
+        background-color: rgb(255, 255, 255);
+        height: 4em;
+        width: 4em;
+        margin-top: 7rem;
+        margin-left: -3rem;
+        background-size: cover;
+        justify-content: center;
+        position: relative;
+        
+        }
+        .edicionUsuarioEliminar img {
+        display: block;
+        margin-top: 15%;
+        margin-left: 15%;
+        margin-right: 20%;
+        max-width: 100%;
+        height: 70%;
+        background-size: cover;
+        }
+
+
+
+          
+}

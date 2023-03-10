@@ -7,8 +7,8 @@ Header
 	height: 5rem;
 }	
 #header a {
-		color: white;
-	}
+	color: white;
+}
 
 /*
  * Logo
@@ -18,54 +18,134 @@ Header
 	padding: 15px 0 0 20px;
 	text-decoration: none;
 }
-	#logo-header:hover {
-		color: #0b76a6;
-	}
-	
-	.site-name {
-		display: block;
-		font-weight: 700;
-		font-size: 2rem;
-		margin-top: 0.5rem;
-	}
+#logo-header:hover {
+	color: #0b76a6;
+}
+.site-name {
+	display: block;
+	font-weight: 700;
+	font-size: 2rem;
+	margin-top: 0.5rem;
+}
 
 /*Nav de header*/
 nav {
 	float: right;
 }
-	nav ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		padding-right: 20px;
-		display: flex;
-		text-align: center;
-		align-items: center;
-		justify-content: center; /* centra horizontalmente */
-		flex-direction:row;
-		position: relative;
-	}
-	
-		nav ul li {
-			display: inline-block;
-			line-height: 80px;
-		}
-			
-			nav ul li a {
-				display: block;
-				padding: 0 10px;
-				text-decoration: none;
-			}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-right: 20px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center; /* centra horizontalmente */
+	flex-direction:row;
+	position: relative;
+}
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+}
+nav ul li a {
+	display: block;
+	padding: 0 10px;
+	text-decoration: none;
+}
   
-  input:focus {
+input:focus {
 	border-bottom: 2px solid #5b5fc7;
 	border-radius: 4px 4px 2px 2px;
-  }
-  input:hover {
+}
+  
+input:hover {
 	outline: 1px solid lightgrey;
-  }
+}
 
+/* Media queries */
+/*
+@media (max-width: 768px) {
+	#logo-header {
+		padding: 15px 0 0 10px;
+	}
+	.site-name {
+		font-size: 1.5rem;
+	}
+	nav {
+		float: right;
+	}
+	nav ul {
+		position: absolute;
+		top: 5rem;
+		left: 0;
+		background: #014807;
+		width: 100%;
+		flex-direction: column;
+		display: none;
+	}
+	nav ul li {
+		display: block;
+		margin-bottom: 10px;
+		line-height: 50px;
+	}
+	nav ul li a {
+		padding: 0;
+	}
+	#menu-toggle {
+		float: right;
+		display: block;
+		margin-top: 15px;
+		margin-right: 20px;
+	}
+	#menu-toggle i {
+		color: white;
+		font-size: 2rem;
+	}
+	#menu-toggle.active + nav ul {
+		display: flex;
+	}
+}
 
-  
-  
-  
+@media (max-width: 480px) {
+	#logo-header {
+		padding: 15px 0 0 10px;
+	}
+	.site-name {
+		font-size: 1.5rem;
+	}
+	nav {
+		float: right;
+	}
+	nav ul {
+		position: absolute;
+		top: 5rem;
+		left: 0;
+		background: #014807;
+		width: 100%;
+		flex-direction: column;
+		display: none;
+	}
+	nav ul li {
+		display: block;
+		margin-bottom: 10px;
+		line-height: 50px;
+	}
+	nav ul li a {
+		padding: 0;
+	}
+	#menu-toggle {
+		float: right;
+		display: block;
+		margin-top: 15px;
+		margin-right: 20px;
+	}
+	#menu-toggle i {
+		color: white;
+		font-size: 2rem;
+	}
+	#menu-toggle.active + nav ul {
+		display: flex;
+	}
+}
+*/

@@ -19,10 +19,10 @@ function abrirVentana() {
   function cerrarVentana() {
     document.getElementById("miVentanaEmergente").style.display = "none";
   }
+  
   function confirmarPrecio() {
     var rangoPrecio = document.getElementById("rangoPrecio").value;
     alert("El precio seleccionado es: " + rangoPrecio);
     cerrarVentana();
   }
-
   

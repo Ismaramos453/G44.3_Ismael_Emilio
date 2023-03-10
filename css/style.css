@@ -9,21 +9,28 @@ body {
 	background-size: cover;
 	font-size: 1em;
 	line-height: 1.5em;
+	overflow-x: hidden;
 }
 
 .header1{
 	width: 100% !important;
-	height: 200px !important;
+	height: auto!important;
 }
 .footer{
 	width: 100% !important;
 	height: auto!important;
+	margin-top: 1.90rem;
 	position: absolute;
+
+	
 }
+
+
 .producto{
 	width: 100% !important;
 	height: 20rem;
 }
+
 .busqueda{
 	width: 50% !important;
 	height: auto !important;

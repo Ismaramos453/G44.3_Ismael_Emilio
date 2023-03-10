@@ -25,7 +25,7 @@
 .form-group {
   margin-bottom: 10px;
   margin-top: 2rem;
-  margin-left: 3rem;
+  margin-left: 8rem;
   flex-direction:row;
   padding-right: 2rem;
 }
@@ -42,7 +42,7 @@ input[type="tel"],
 input[type="text"],
 input[type="date"] {
   display: block;
-  width: 20rem;
+  width: 15rem;
   height: 1rem;
   padding: 10px;
   border: none;
@@ -79,7 +79,7 @@ button[type="submit"] {
 .form-group {
   margin-bottom: 10px;
   margin-top: 2rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   flex-direction:row;
   padding-right: 1rem;
 }

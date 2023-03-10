@@ -42,9 +42,11 @@
 	position: relative;
 	display: flex;
   	flex-direction:row;
-  	margin-left: 1rem;	
+  	margin-left: 0rem;	
 	right: 1rem;
 }
+
+
 
   
 .anuncios{
@@ -60,7 +62,7 @@
 	height: 15rem; 
 	background: #000000;
 	margin-top: 5rem;
-	margin-left: 2rem;
+	margin-right: 2rem;
 }
 
 

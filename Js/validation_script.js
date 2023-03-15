@@ -1,9 +1,8 @@
 
 function checkRegister(event) {
-
-  //Variables que evitarán el submit si hay errores
-  var checked = false;
-  var passed = 0;
+  if (!(checkMail()&&checkPassword()&&checkUserName()&&checkFirstName()&&checkLastName()&&checkAddress()&&checkPhone()&&checkBirthDate())){
+    event.preventDefault();
+  }
 }
 
 function checkMail(){
@@ -27,6 +26,7 @@ function checkPassword(){
   var pass2 = document.getElementById("password2");
   var passwordError1 = document.querySelector("#password1 + .error-message");
   var passwordError2 = document.querySelector("#password2 + .error-message");
+  var ok = false;
 
   if (pass1.value === '') {
     passwordError1.textContent = "Por favor, ingresa una contraseña";
@@ -44,14 +44,16 @@ function checkPassword(){
     } else {
       passwordError1.textContent = "";
       passwordError2.textContent = "";
+      ok = true;
     }
   }
-
+  return ok;
 }
 
 function checkUserName(){
   var userName = document.getElementById("username");
   var userError = document.querySelector("#username + .error-message");
+  var ok = false;
 
   if (userName.value === ''){
     userError.textContent = "Por favor, ingresa un nombre de usuario";
@@ -61,7 +63,9 @@ function checkUserName(){
     userError.style.color = "red";
   } else {
     userError.textContent = "";
+    ok = true;
   }
+  return ok;
 }
 
 function checkFirstName(){
@@ -71,8 +75,10 @@ function checkFirstName(){
   if (firstName.value === ''){
     nameError.textContent = "Por favor, ingresa tu nombre";
     nameError.style.color = "red";
+    return false;
   } else {
     nameError.textContent = "";
+    return true;
   }
 }
 
@@ -84,8 +90,10 @@ function checkLastName(){
   if (lastName.value === ''){
     surnameError.textContent = "Por favor, ingresa tu(s) apellido(s)";
     surnameError.style.color = "red";
+    return false;
   } else {
     surnameError.textContent = "";
+    return true;
   }
 }
 
@@ -97,13 +105,25 @@ function checkPhone(){
   if (!telephoneRegex.test(phoneInput.value) || phoneInput.value === '') {
     phoneError.textContent = "Por favor, ingresa un número de teléfono válido.";
     phoneError.style.color = "red";
+    return false;
   } else {
     phoneError.textContent = "";
+    return true;
   }
 }
 
 function checkAddress() {
+  var addrInput = document.getElementById("address");
+  var addrError = document.querySelector("#address + .error-message");
 
+  if(addrInput.value === ''){
+    addrError.textContent = "Por favor, incluye una dirección";
+    addrError.style.color = "red";
+    return false;
+  } else {
+    addrError.textContent = "";
+    return true;
+  }
 }
 
 function checkBirthDate () {
@@ -113,6 +133,7 @@ function checkBirthDate () {
   if(dateInput.value === ''){
     dateError.textContent = "Por favor,escriba una fecha";
     dateError.style.color = "red";
+    return false;
   } else {
     edadMS = Date.parse(Date()) - Date.parse(dateInput.value);
     edads = new Date();
@@ -123,8 +144,10 @@ function checkBirthDate () {
     if (res < 18){
       dateError.textContent = "Debe ser mayor de edad para registrarse";
       dateError.style.color = "red";
+      return false;
     } else {
       dateError.textContent = "";
+      return true;
     }
   }
 }

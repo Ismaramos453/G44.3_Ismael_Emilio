@@ -39,8 +39,8 @@ function checkExpDate(){
   var expInput = document.getElementById("expiration-date");
   var expError = document.querySelector("#expiration-date + .error-message");
 
-  const expRegex = /[0-1][0-9]{1}\/[0-9]{2}/;
-  if (!expRegex.test(cardInput.value) || expInput.value === '') {
+  const expRegex = /[0-1][0-9]\/[0-9]{2}/;
+  if (!expRegex.test(expInput.value) || expInput.value === '') {
     expError.textContent = "Por favor, ingrese una fecha correcta";
     expError.style.color = "red";
     return false;

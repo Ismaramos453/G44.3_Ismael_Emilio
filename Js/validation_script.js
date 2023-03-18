@@ -4,6 +4,10 @@ function checkPayment(event){
   }
 }
 
+function checkReservation(event){
+  
+}
+
 function checkName(){
   var holderName = document.getElementById("card-holder");
   var holderError = document.querySelector("#card-holder + .error-message");

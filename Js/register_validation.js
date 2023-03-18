@@ -5,6 +5,11 @@ function checkRegister(event) {
     }
   }
   
+function checkProfile(event){
+  if (!(checkMail()&&checkPassword()&&checkUserName()&&checkFirstName()&&checkLastName()&&checkAddress()&&checkBirthDate())){
+    event.preventDefault();
+  }
+}
   function checkMail(){
     var emailInput = document.getElementById("email");
     var emailError = document.querySelector("#email + .error-message");

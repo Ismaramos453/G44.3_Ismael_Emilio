@@ -1,153 +1,51 @@
-
-function checkRegister(event) {
-  if (!(checkMail()&&checkPassword()&&checkUserName()&&checkFirstName()&&checkLastName()&&checkAddress()&&checkPhone()&&checkBirthDate())){
+function checkPayment(event){
+  if(!(checkName()&&checkCardData('card-number')&&checkCardData('cvc')&&checkExpDate())){
     event.preventDefault();
   }
 }
 
-function checkMail(){
-  var emailInput = document.getElementById("email");
-  var emailError = document.querySelector("#email + .error-message");
+function checkName(){
+  var holderName = document.getElementById("card-holder");
+  var holderError = document.querySelector("#card-holder + .error-message");
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(emailInput.value) || emailInput.value === '') {
-    emailError.textContent = "Por favor, ingresa una dirección de correo electrónico válida.";
-    emailError.style.color = "red";
+  if (holderName.value === ''){
+    holderError.textContent = "Por favor, ingrese su nombre";
+    holderError.style.color = "red";
     return false;
   } else {
-    emailError.textContent = "";
+    holderError.textContent = "";
     return true;
   }
 }
 
-function checkPassword(){
+function checkCardData(text){
 
-  var pass1 = document.getElementById("password1");
-  var pass2 = document.getElementById("password2");
-  var passwordError1 = document.querySelector("#password1 + .error-message");
-  var passwordError2 = document.querySelector("#password2 + .error-message");
-  var ok = false;
+  var cardInput = document.getElementById(text);
+  var cardError = document.querySelector("#"+text+" + .error-message");
 
-  if (pass1.value === '') {
-    passwordError1.textContent = "Por favor, ingresa una contraseña";
-    passwordError1.style.color = "red";
-  } else {
-    if (pass1.value.length < 8) {
-      passwordError1.textContent = "La contraseña debe tener al menos 8 caracteres";
-      passwordError1.style.color = "red";
-    } else if (pass2.value === '') {
-      passwordError2.textContent = "Debe introducir la contraseña dos veces"
-      passwordError2.style.color = "red";
-    } else if (pass1.value != pass2.value) {
-      passwordError2.textContent = "Las contraseñas no coinciden";
-      passwordError2.style.color = "red";
-    } else {
-      passwordError1.textContent = "";
-      passwordError2.textContent = "";
-      ok = true;
-    }
-  }
-  return ok;
-}
-
-function checkUserName(){
-  var userName = document.getElementById("username");
-  var userError = document.querySelector("#username + .error-message");
-  var ok = false;
-
-  if (userName.value === ''){
-    userError.textContent = "Por favor, ingresa un nombre de usuario";
-    userError.style.color = "red";
-  } else if (userName.value.length < 8) {
-    userError.textContent = "El nombre de usuario debe tener al menos 8 caracteres";
-    userError.style.color = "red";
-  } else {
-    userError.textContent = "";
-    ok = true;
-  }
-  return ok;
-}
-
-function checkFirstName(){
-  var firstName = document.getElementById("first-name");
-  var nameError = document.querySelector("#first-name + .error-message");
-
-  if (firstName.value === ''){
-    nameError.textContent = "Por favor, ingresa tu nombre";
-    nameError.style.color = "red";
+  const cardRegex = /[0-9]{15,16}|(([0-9]{4}\s){3}[0-9]{3,4})|[0-9]{3}/;
+  if (!cardRegex.test(cardInput.value) || cardInput.value === '') {
+    cardError.textContent = "Por favor, ingrese el dato indicado";
+    cardError.style.color = "red";
     return false;
   } else {
-    nameError.textContent = "";
+    cardError.textContent = "";
     return true;
   }
+
 }
 
-function checkLastName(){
-  
-  var lastName = document.getElementById("last-name");
-  var surnameError = document.querySelector("#last-name + .error-message");
+function checkExpDate(){
+  var expInput = document.getElementById("expiration-date");
+  var expError = document.querySelector("#expiration-date + .error-message");
 
-  if (lastName.value === ''){
-    surnameError.textContent = "Por favor, ingresa tu(s) apellido(s)";
-    surnameError.style.color = "red";
+  const expRegex = /[0-1][0-9]{1}\/[0-9]{2}/;
+  if (!expRegex.test(cardInput.value) || expInput.value === '') {
+    expError.textContent = "Por favor, ingrese una fecha correcta";
+    expError.style.color = "red";
     return false;
   } else {
-    surnameError.textContent = "";
+    expError.textContent = "";
     return true;
-  }
-}
-
-function checkPhone(){
-  var phoneInput = document.getElementById("phone");
-  var phoneError = document.querySelector("#phone + .error-message");
-
-  const telephoneRegex = /[0-9]{9}/;
-  if (!telephoneRegex.test(phoneInput.value) || phoneInput.value === '') {
-    phoneError.textContent = "Por favor, ingresa un número de teléfono válido.";
-    phoneError.style.color = "red";
-    return false;
-  } else {
-    phoneError.textContent = "";
-    return true;
-  }
-}
-
-function checkAddress() {
-  var addrInput = document.getElementById("address");
-  var addrError = document.querySelector("#address + .error-message");
-
-  if(addrInput.value === ''){
-    addrError.textContent = "Por favor, incluye una dirección";
-    addrError.style.color = "red";
-    return false;
-  } else {
-    addrError.textContent = "";
-    return true;
-  }
-}
-
-function checkBirthDate () {
-  var dateInput = document.getElementById("birthdate");
-  var dateError = document.querySelector("#birthdate + .error-message");
-
-  if(dateInput.value === ''){
-    dateError.textContent = "Por favor,escriba una fecha";
-    dateError.style.color = "red";
-    return false;
-  } else {
-    edadMS = Date.parse(Date()) - Date.parse(dateInput.value);
-    edads = new Date();
-    edads.setTime(edadMS);
-    resultado = edads.getFullYear() - 1970;
-    res = (resultado <= 0) ? 0 : resultado; 
-
-    if (res < 18){
-      dateError.textContent = "Debe ser mayor de edad para registrarse";
-      dateError.style.color = "red";
-      return false;
-    } else {
-      dateError.textContent = "";
-      return true;
-    }
   }
 }

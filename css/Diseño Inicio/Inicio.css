@@ -10,6 +10,21 @@
 	margin-bottom: 5rem;
 }
 
+.fila {
+    display: flex;
+    justify-content: center;
+}
+
+.cuadradoNegro {
+    width: 15rem;
+    height: 200px;
+    background-color: black;
+    margin: 0 1rem 2rem 1rem;
+}
+
+
+
+
 .circuloVehiculo1{
 	border-radius: 100%;
 	background-color: rgb(255, 255, 255);
@@ -172,134 +187,7 @@
 	}
 	
   /*Flechas*/
-.arrow {
-	cursor: pointer;
-	height: 60px;
-	right: 5%;
-	position: absolute;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	transition: transform 0.1s;
-	width: 50px;
-	
-  }
-   
-  .arrow-top, .arrow-bottom {
-	background-color: #666;
-	height: 4px;
-	left: -5px;
-	position: absolute;
-	top: 50%;
-	width: 100%;
-  }
-  
-  .arrow-top:after, .arrow-bottom:after {
-	background-color: #fff;
-	content: "";
-	height: 100%;
-	position: absolute;
-	top: 0;
-	transition: all 0.15s;
-  }
-  
-  .arrow-top {
-	transform: rotate(45deg);
-	transform-origin: bottom right;
-  }
-  
-  .arrow-top:after {
-	left: 100%;
-	right: 0;
-	transition-delay: 0s;
-  }
-  
-  .arrow-bottom {
-	transform: rotate(-45deg);
-	transform-origin: top right;
-  }
-  
-  .arrow-bottom:after {
-	left: 0;
-	right: 100%;
-	transition-delay: 0.15s;
-  }
-  
-  .arrow:hover .arrow-top:after {
-	left: 0;
-	transition-delay: 0.15s;
-  }
-  
-  .arrow:hover .arrow-bottom:after {
-	right: 0;
-	transition-delay: 0s;
-  }
-  
-  .arrow:active {
-	transform: translateX(-50%) translateY(-50%) scale(0.9);
-  }
-  
 
-
-  .arrow2 {
-	cursor: pointer;
-	height: 60px;
-	left: 5%;
-	position: absolute;
-	transform: translateX(-50%) translateY(-50%);
-	transition: transform 0.1s;
-	width: 50px;
-	transform: rotate(180deg);
-	
-  }
-  .arrow-top2, .arrow-bottom2 {
-	background-color: #666;
-	height: 4px;
-	left: -5px;
-	position: absolute;
-	top: 50%;
-	width: 100%;
-  }
-  
-  .arrow-top2:after, .arrow-bottom2:after {
-	background-color: #fff;
-	content: "";
-	height: 100%;
-	position: absolute;
-	top: 0;
-	transition: all 0.15s;
-  }
-  
-  .arrow-top2 {
-	transform: rotate(45deg);
-	transform-origin: bottom right;
-  }
-  
-  .arrow-top2:after {
-	left: 100%;
-	right: 0;
-	transition-delay: 0s;
-  }
-  
-  .arrow-bottom2 {
-	transform: rotate(-45deg);
-	transform-origin: top right;
-  }
-  
-  .arrow-bottom2:after {
-	left: 0;
-	right: 100%;
-	transition-delay: 0.15s;
-  }
-  
-  .arrow2:hover .arrow-top2:after {
-	left: 0;
-	transition-delay: 0.15s;
-  }
-  
-  .arrow2:hover .arrow-bottom2:after {
-	right: 0;
-	transition-delay: 0s;
-  }
 
 /* For tablets */
 @media screen and (max-width: 768px) {
@@ -325,18 +213,10 @@
 	  margin-left: 4rem;
 	}
 	
-	.arrow {
-	  height: 40px;
-	  right: 2%;
-	  width: 30px;
-	}
-
-	.arrow2 {
-		height: 40px;
-		right: 2%;
-		width: 30px;
-	  }
   }
+
+ 
+
   
   /* For mobiles */
   @media screen and (max-width: 480px) {
@@ -370,17 +250,7 @@
 	  margin-left: 2rem;
 	}
 	
-	.arrow {
-		height: 40px;
-		right: 2%;
-		width: 30px;
-	  }
 
-	.arrow2 {
-		height: 40px;
-		right: 2%;
-		width: 30px;
-	  }
 
   }
 

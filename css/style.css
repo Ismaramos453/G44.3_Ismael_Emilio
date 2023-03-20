@@ -1,6 +1,8 @@
 body {
 	margin: 0;
 	padding: 0;
+	height: auto;
+	width: auto;
 	font-family: Helvetica, Arial, sans-serif;
 	color: #666;
 	background-color: #77aa77;
@@ -10,6 +12,7 @@ body {
 	font-size: 1em;
 	line-height: 1.5em;
 	overflow-x: hidden;
+	
 }
 
 .header1{
@@ -19,7 +22,7 @@ body {
 .footer{
 	width: 100% !important;
 	height: auto!important;
-	margin-top: 1.90rem;
+	margin-top: 9rem;
 	position: absolute;
 
 	

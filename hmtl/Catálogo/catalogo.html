@@ -6,6 +6,11 @@
         <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
         <link href="../../css/Diseño Catalogo y Producto/diseñoCatalogo.css" rel="stylesheet" />
         <link href="../../css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe_COXzF1Cc7Nah991z7Vc3xafyq9nRcg"></script>
+
+
         <link href="../../css/Edición Texto y Figuras/figuras.css" rel="stylesheet" />
         <link href="../../css/Edición Texto y Figuras/texto.css" rel="stylesheet" />
         <title>Catalogo</title>
@@ -44,10 +49,42 @@
             
                 </div>
             </div>
-            <button >Color</button>
-            <button >Plazas</button>
-            <button >Ubicación</button>
+            <button onclick="abrirVentanaColor()">Color</button>
+                <div id="miVentanaEmergenteColor" class="ventana">
+                    <div class="contenido">
+                        <h2>Selecciona un color</h2>
+                        <select id="seleccionadorColor">
+                            <option value="rojo">Rojo</option>
+                            <option value="azul">Azul</option>
+                            <option value="verde">Verde</option>
+                            <option value="amarillo">Amarillo</option>
+                        </select>
+                        <button onclick="seleccionarColor()">Seleccionar</button>
+                        <button onclick="cerrarVentanaColor()">Cerrar</button>
+                    </div>
+                </div>
+
+
+            <button onclick="abrirVentanaPlazas()">Plazas</button>
+            <div id="miVentanaEmergentePlazas" class="ventana">
+                <div class="contenido">
+                    <h2>Selecciona el número de plazas</h2>
+                    <select id="seleccionadorPlazas">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <button onclick="seleccionarPlazas()">Seleccionar</button>
+                    <button onclick="cerrarVentanaPlazas()">Cerrar</button>
+                </div>
+            </div>
+
+            <button onclick="mostrarMapa()">Ubicación</button>
+            
         </div>
+
+        
 
 
         <div class= "contenedorAnuncios">

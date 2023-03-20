@@ -281,60 +281,6 @@
 	  width: 30px;
 	}
 
-<<<<<<< HEAD
-=======
-	.arrow2 {
-		height: 40px;
-		right: 2%;
-		width: 30px;
-	  }
-  }
-  
-  /* For mobiles */
-  @media screen and (max-width: 480px) {
-	.circuloVehiculo {
-	  flex-direction: column;
-	  margin-bottom: 3rem;
-	}
-	
-	.circuloVehiculo1, .circuloVehiculo2, .circuloVehiculo3,
-	.circuloVehiculo4, .circuloVehiculo5, .circuloVehiculo6,
-	.circuloVehiculo7 {
-	  height: 4em;
-	  width: 4em;
-	  margin-right: 1em;
-	}
-	
-	.circuloVehiculo1 img, .circuloVehiculo2 img, .circuloVehiculo3 img,
-	.circuloVehiculo4 img, .circuloVehiculo5 img, .circuloVehiculo6 img,
-	.circuloVehiculo7 img {
-	  margin-top: 5%;
-	  margin-left: 5%;
-	  margin-right: 5%;
-	  height: 70%;
-	}
-	
-	.VehiculoDestacado {
-	  width: 10rem;
-	  height: 10rem;
-	  margin-right: 1.5rem;
-	  margin-bottom: 1.5rem;
-	  margin-left: 2rem;
-	}
-	
-	.arrow {
-		height: 40px;
-		right: 2%;
-		width: 30px;
-	  }
-
-	.arrow2 {
-		height: 40px;
-		right: 2%;
-		width: 30px;
-	  }
-
->>>>>>> Ismael
   }
 
 

@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "userName": "Paco38",
+            "email": "paco38@gmail.com",
+            "firstName": "Paco",
+            "lastName": "Suárez Rodríguez",
+            "address": "C Laquesea nº 10, Las Palmas de Gran Canaria",
+            "passwd": "micontraseña",
+            "birthDate": "28/10/2001",
+            "profilePicture": "",
+            "vehicles" : {"123": "Opel Corsa"}
+
+        },
+
+        {
+            "userName": "Agustín51",
+            "email": "agustin@gmail.com",
+            "firstName": "Agustín",
+            "lastName": "González Domínguez",
+            "address": "C Leche Condensada nº 15, Las Palmas de Gran Canaria",
+            "passwd": "micontraseña",
+            "birthDate": "10/08/1999",
+            "profilePicture": "",
+            "vehicles" : {"1": "Toyota Corola", "2": "Citroen c4 Cactus"}
+        }
+    ]
+}

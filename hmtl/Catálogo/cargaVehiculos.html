@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vehículos</title>
+	<link href="../../car.css" rel="stylesheet" />
+</head>
+<body>
+	<h1>Vehículos</h1>
+	<div id="vehiculos"></div>
+
+
+	<div class="contenedorImagen">
+		<img class="fotoVehiculo" src="" alt="">
+	  </div>
+	  
+	  <script>
+	  fetch('../../vehiculos.json')
+		.then(response => response.json())
+		.then(data => {
+		  // Busca el primer vehículo en el array
+		  const vehiculo = data.vehiculos.find(v => v.nombre === 'Chevrolet Camaro');
+	  
+		  // Establece la fuente de la imagen y el texto alternativo
+		  document.querySelector('.fotoVehiculo').src = vehiculo.foto;
+		  document.querySelector('.fotoVehiculo').alt = vehiculo.nombre;
+		})
+		.catch(error => console.error(error));
+	  </script>
+	  
+	  
+
+
+
+
+	<script>
+		fetch('../../vehiculos.json')
+			.then(response => response.json())
+			.then(data => {
+				// Obtiene la sección de vehículos
+				const vehiculos = data.vehiculos;
+
+				// Crea un elemento HTML para cada vehículo
+				vehiculos.forEach(vehiculo => {
+					const div = document.createElement('div');
+					div.innerHTML = `
+
+            <img class="fotoVehiculo" src="${vehiculo.foto}" alt="${vehiculo.nombre}">
+
+            
+					`;
+					// Agrega el elemento al DOM
+					document.getElementById('vehiculos').appendChild(div);
+				});
+			})
+			.catch(error => console.error(error));
+	</script>
+
+
+
+
+
+  
+  
+</body>
+</html>

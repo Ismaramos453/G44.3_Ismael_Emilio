@@ -49,6 +49,26 @@
 
 				</div>
 
+				<script>
+					// Cargar el archivo JSON
+					fetch('vehiculos.json')
+					  .then(response => response.json())
+					  .then(data => {
+						// Iterar sobre el array de vehículos
+						data.vehiculos.forEach((vehiculo, index) => {
+						  // Obtener el contenedor HTML correspondiente
+						  const contenedor = document.querySelectorAll('.cuadradoNegro')[index];
+				
+						  // Crear la imagen y establecer la fuente desde el archivo JSON
+						  const imagen = new Image();
+						  imagen.src = vehiculo.foto;
+				
+						  // Agregar la imagen al contenedor
+						  contenedor.appendChild(imagen);
+						});
+					  });
+				  </script>
+
 
 				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-inner">
@@ -68,14 +88,7 @@
 						  <a href="./hmtl/Producto/producto.html" class="cuadradoNegro"></a>
 						</div>
 					  </div>
-					  <div class="carousel-item">
-						<div class="fila">
-						  <a href="./hmtl/Producto/producto.html" class="cuadradoNegro"></a>
-						  <a href="./hmtl/Producto/producto.html" class="cuadradoNegro"></a>
-						  <a href="./hmtl/Producto/producto.html" class="cuadradoNegro"></a>
-						  <a href="./hmtl/Producto/producto.html" class="cuadradoNegro"></a>
-						</div>
-					  </div>
+					 
 					</div>
 				  </div>
 				  

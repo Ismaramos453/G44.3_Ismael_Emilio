@@ -29,7 +29,7 @@ input[type="text"] {
 
 button[type="submit"] {
   display: block;
-  width: 20rem;
+  width: 15rem;
   margin-top: 20px;
   padding: 10px;
   background-color: #075e54;
@@ -38,12 +38,26 @@ button[type="submit"] {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  margin-left: 5rem;
+  margin-left: 9rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .payment-form {
     max-width: 90%;
     margin-bottom: 30px;
+  }
+
+  button[type="submit"] {
+    display: block;
+    width: 5rem;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #075e54;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 7rem;
   }
 }

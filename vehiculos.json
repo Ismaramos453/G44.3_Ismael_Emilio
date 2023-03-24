@@ -1,0 +1,75 @@
+{
+    "vehiculos": [
+      {
+        "id":"vehiculo-1",
+        "nombre": "Jeep",
+        "foto": "https://images.pexels.com/photos/2882234/pexels-photo-2882234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "descripcion": "¡Alquilo mi Jeep Wrangler, el todoterreno más divertido y emocionante que hayas conducido nunca! Este vehículo es la elección perfecta para los amantes de la aventura, gracias a su capacidad para recorrer cualquier tipo de terreno. Este Wrangler cuenta con un motor potente y confiable, con tracción en las cuatro ruedas que lo convierte en el compañero ideal para cualquier viaje de off-road. Además, su diseño icónico y robusto lo hace lucir increíble en la ciudad.",
+        "color": "Blanco",
+        "vista": [
+          {
+            "foto": "https://images.pexels.com/photos/2959523/pexels-photo-2959523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          },
+          {
+            "foto": "https://images.pexels.com/photos/2959523/pexels-photo-2959523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          },
+          {
+            "foto": "https://images.pexels.com/photos/2959523/pexels-photo-2959523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          },
+          {
+            "foto": "https://images.pexels.com/photos/2959523/pexels-photo-2959523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          },
+          {
+            "foto": "https://images.pexels.com/photos/2959523/pexels-photo-2959523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          },
+          {
+            "foto": "https://images.pexels.com/photos/2959523/pexels-photo-2959523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          }
+        ]
+      } ,
+      {
+        "id":"vehiculo-2",
+        "nombre": "Ford Mustang",
+        "foto": "https://images.pexels.com/photos/10905500/pexels-photo-10905500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "descripcion": "Si estás buscando un automóvil que combine un estilo icónico, un rendimiento emocionante y un manejo impresionante, no busques más allá del Mustang.Con su poderoso motor V8 de 5.0 litros y su elegante diseño deportivo, este auto es una verdadera obra maestra de la ingeniería automotriz. Su interior cómodo y espacioso, equipado con tecnología avanzada, lo convierte en el vehículo ideal para cualquier conductor que busque una experiencia emocionante.",
+        "color": "Azul"
+      },
+      {
+        "id":"vehiculo-3",
+        "nombre": "Bmw",
+        "foto": "https://images.pexels.com/photos/3166786/pexels-photo-3166786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "descripcion": "Se alquila bmw m4. Es un automóvil que combina un diseño atractivo, un rendimiento excepcional y una experiencia de conducción única, no busques más allá del M4. Tiene un motor TwinPower Turbo de 3.0 litros y 6 cilindros, el M4 ofrece una potencia impresionante y un rendimiento deportivo en todo momento. Su diseño elegante y aerodinámico, con una carrocería de fibra de carbono, ofrece una experiencia de conducción incomparable y una presencia imponente en la carretera.",
+        "color": "Rojo"
+      },
+      {
+        "id":"vehiculo-4",
+        "nombre": "Nissan GTR Nismo",
+        "foto": "https://images.pexels.com/photos/3593922/pexels-photo-3593922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "descripcion": "¡Anunciamos la llegada del poderoso Nissan Nismo GT-R! Si estás buscando un automóvil que combine un diseño icónico, un rendimiento de carreras y una tecnología de vanguardia, no busques más allá del GT-R Nismo.Con su motor V6 biturbo de 3.8 litros que produce una potencia de hasta 600 caballos de fuerza, el GT-R Nismo es un verdadero monstruo en la carretera. Su diseño aerodinámico y elegante está inspirado en la tecnología de carreras, lo que permite al GT-R Nismo alcanzar velocidades impresionantes y una respuesta inmediata en cualquier situación.",
+        "color": "Rojo"
+      },
+      {
+
+        "id":"vehiculo-5",
+        "nombre": "Jeep",
+        "foto": "https://images.pexels.com/photos/2882234/pexels-photo-2882234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  
+      } ,
+      {
+        "id":"vehiculo-6",
+        "nombre": "Ford Mustang",
+        "foto": "https://images.pexels.com/photos/10905500/pexels-photo-10905500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        "id":"vehiculo-7",
+        "nombre": "Bmw",
+        "foto": "https://images.pexels.com/photos/3166786/pexels-photo-3166786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        "id":"vehiculo-4",
+        "nombre": "Nissan GTR Nismo",
+        "foto": "https://images.pexels.com/photos/3593922/pexels-photo-3593922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      }
+      
+    ]
+  }

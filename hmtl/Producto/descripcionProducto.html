@@ -33,13 +33,30 @@
                         
                     </span>
                     
-                    <span class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id venenatis purus, tincidunt vulputate orci.
-                        Morbi feugiat erat sapien, vel iaculis diam faucibus ut. Quisque eu ante commodo, accumsan metus et, vulputate mi. Mauris in pellentesque sem. 
-                        Nunc ornare nibh et erat malesuada semper. Pellentesque accumsan lorem elit, a consequat quam dictum et. Ut sit amet nibh nibh. Integer semper 
-                        lacinia metus, a posuere arcu. Cras sed orci libero. 
-                    </span>
+                    <p class="texto"> </p>
                 </a>
             </div>
         </div> 
     </body>
+
+
+    <script>
+        // Cargar el archivo JSON
+        fetch('../../vehiculos.json')
+          .then(response => response.json())
+          .then(data => {
+            // Iterar sobre el array de vehículos
+            data.vehiculos.forEach((vehiculo, index) => {
+              // Obtener el contenedor HTML correspondiente
+              const descripcion = document.querySelectorAll('.texto')[index];
+              
+              // Crear el elemento HTML para la descripción y establecer su texto
+              const descripcionHtml = document.createElement('p');
+              descripcionHtml.innerText = vehiculo.descripcion;
+              // Agregar la imagen y la descripción al contenedor
+              descripcion.appendChild(descripcionHtml);
+            });
+          });
+      </script>
+      
 </html>

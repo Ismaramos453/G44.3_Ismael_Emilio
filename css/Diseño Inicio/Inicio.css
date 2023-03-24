@@ -18,8 +18,15 @@
 .cuadradoNegro {
     width: 15rem;
     height: 200px;
-    background-color: black;
+    background-color: transparent;
     margin: 0 1rem 2rem 1rem;
+}
+.cuadradoNegro img{
+    width: 100%;
+	height: auto;
+	max-width: 15rem;
+	max-height: 15rem;
+	margin-top: 1.20rem;
 }
 
 
@@ -207,11 +214,8 @@
 	  height: 80%;
 	}
 	
-	.VehiculoDestacado {
-	  width: 8rem;
-	  height: 8rem;
-	  margin-left: 4rem;
-	}
+
+	
 	
   }
 
@@ -221,7 +225,7 @@
   /* For mobiles */
   @media screen and (max-width: 480px) {
 	.circuloVehiculo {
-	  flex-direction: column;
+	 
 	  margin-bottom: 3rem;
 	}
 	
@@ -236,10 +240,10 @@
 	.circuloVehiculo1 img, .circuloVehiculo2 img, .circuloVehiculo3 img,
 	.circuloVehiculo4 img, .circuloVehiculo5 img, .circuloVehiculo6 img,
 	.circuloVehiculo7 img {
-	  margin-top: 5%;
-	  margin-left: 5%;
-	  margin-right: 5%;
-	  height: 70%;
+		margin-top: 10%;
+		margin-left: 10%;
+		margin-right: 10%;
+		height: 70%;
 	}
 	
 	.VehiculoDestacado {
@@ -251,40 +255,4 @@
 	}
 	
 
-/* For tablets */
-@media screen and (max-width: 768px) {
-	.circuloVehiculo1, .circuloVehiculo2, .circuloVehiculo3,
-	.circuloVehiculo4, .circuloVehiculo5, .circuloVehiculo6,
-	.circuloVehiculo7 {
-	  height: 5em;
-	  width: 5em;
-	}
-	
-	.circuloVehiculo1 img, .circuloVehiculo2 img, .circuloVehiculo3 img,
-	.circuloVehiculo4 img, .circuloVehiculo5 img, .circuloVehiculo6 img,
-	.circuloVehiculo7 img {
-	  margin-top: 10%;
-	  margin-left: 10%;
-	  margin-right: 10%;
-	  height: 80%;
-	}
-	
-	.VehiculoDestacado {
-	  width: 8rem;
-	  height: 8rem;
-	  margin-left: 4rem;
-	}
-	
-	.arrow {
-	  height: 40px;
-	  right: 2%;
-	  width: 30px;
-	}
-
   }
-
-
-
-
-
- 

@@ -104,3 +104,24 @@
   font-size: 14px; /* Cambiado */
 }
 }
+@media only screen and (max-width: 480px){
+
+  .chat-footer input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+  .chat-footer button {
+    padding: 10px 20px;
+    background-color: #075e54;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+
+}

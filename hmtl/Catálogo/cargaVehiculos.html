@@ -9,51 +9,43 @@
 	<div id="vehiculos"></div>
 
 
-	<div class="contenedorImagen">
-		<img class="fotoVehiculo" src="" alt="">
+	<div>
+		<img src="../../images/barras.png" alt="Imagen 1" id="imagen1">
+		<img src="imagen2.jpg" alt="Imagen 2" id="imagen2">
+		<img src="imagen3.jpg" alt="Imagen 3" id="imagen3">
 	  </div>
 	  
+	  <div id="contenido"></div>
+
+	  
 	  <script>
-	  fetch('../../vehiculos.json')
-		.then(response => response.json())
-		.then(data => {
-		  // Busca el primer vehículo en el array
-		  const vehiculo = data.vehiculos.find(v => v.nombre === 'Chevrolet Camaro');
-	  
-		  // Establece la fuente de la imagen y el texto alternativo
-		  document.querySelector('.fotoVehiculo').src = vehiculo.foto;
-		  document.querySelector('.fotoVehiculo').alt = vehiculo.nombre;
-		})
-		.catch(error => console.error(error));
-	  </script>
-	  
-	  
-
-
-
-
-	<script>
+		// Definimos la función que se ejecutará cuando se haga click en una imagen
+		function cargarContenido(id) {
 		fetch('../../vehiculos.json')
 			.then(response => response.json())
 			.then(data => {
-				// Obtiene la sección de vehículos
-				const vehiculos = data.vehiculos;
+			// Buscamos el vehículo con el ID correspondiente
+			const vehiculo = data.vehiculos.find(v => v.id === id);
 
-				// Crea un elemento HTML para cada vehículo
-				vehiculos.forEach(vehiculo => {
-					const div = document.createElement('div');
-					div.innerHTML = `
+			// Si encontramos el vehículo, mostramos su información
+			if (vehiculo) {
+				const contenidoElement = document.getElementById('contenido');
+				contenidoElement.innerHTML = `
+				<h2>${vehiculo.marca} ${vehiculo.modelo}</h2>
+				<p>Precio: ${vehiculo.precio}</p>
+				<p>Año: ${vehiculo.anio}</p>
+				<p>Descripción: ${vehiculo.descripcion}</p>
+				`;
+			}
+			});
+		}
 
-            <img class="fotoVehiculo" src="${vehiculo.foto}" alt="${vehiculo.nombre}">
+		// Asignamos el evento click a cada imagen para cargar su contenido
+		document.getElementById('imagen1').addEventListener('click', () => cargarContenido('1'));
+		document.getElementById('imagen2').addEventListener('click', () => cargarContenido('2'));
+		document.getElementById('imagen3').addEventListener('click', () => cargarContenido('3'));
 
-            
-					`;
-					// Agrega el elemento al DOM
-					document.getElementById('vehiculos').appendChild(div);
-				});
-			})
-			.catch(error => console.error(error));
-	</script>
+	  </script>
 
 
 

@@ -25,8 +25,21 @@
           {
             "foto": "https://images.pexels.com/photos/2959523/pexels-photo-2959523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           }
-        ]
-      } ,
+        ],
+      "opinion":[
+        {
+          "opinion1":"Es uno de los pocos vehículos que pueden competir en el terreno áspero y exigente fuera de la carretera con facilidad. Además, tiene una gran cantidad de opciones de personalización y una gran comunidad de propietarios y entusiastas.Sin embargo, el Jeep Wrangler no es el vehículo más cómodo o práctico para su uso diario. Su suspensión robusta y su diseño enfocado en la aventura pueden hacer que el paseo sea un poco más áspero y ruidoso en comparación con otros vehículos de carretera. Además, su eficiencia de combustible es relativamente baja en comparación con otros vehículos de su clase."
+        },
+        {
+          "opinion2":"En términos de desempeño todoterreno, el Wrangler es excepcional. Su tracción en las cuatro ruedas y su capacidad para conducir en terrenos rocosos, senderos embarrados y subidas empinadas lo hacen ideal para aquellos que buscan aventuras fuera de la carretera. También es uno de los pocos vehículos que aún ofrece una opción de caja de transferencia de dos velocidades, lo que le da al conductor un mayor control sobre la tracción en diferentes condiciones."
+
+        }
+
+
+      ]
+      
+      
+        } ,
       {
         "id":"vehiculo-2",
         "nombre": "Ford Mustang",

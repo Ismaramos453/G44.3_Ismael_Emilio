@@ -27,7 +27,12 @@ body {
 
 	
 }
-
+.opinion{
+	width: 100% !important;
+	height: 20rem;
+	margin-left: 1rem;
+	
+}
 
 .producto{
 	width: 100% !important;

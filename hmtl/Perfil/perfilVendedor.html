@@ -11,13 +11,13 @@
         <link href="../../css/Perfil/perfil.css" rel="stylesheet" />
         <link href="../../css/Perfil/editar.css" rel="stylesheet" />
         <link href="../../css/Diseño Catalogo y Producto/diseñoCatalogo.css" rel="stylesheet" />
-        <title>Perfil</title>
+        <title>Vendedor</title>
     </head>
     <body>
         <iframe class = "header1" src = "../Header y Footer/header.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
         
         <form class="registration-form">
-            <h2>Perfil</h2>
+            <h2>Vendedor</h2>
 
 
             <div class = "contenedorFotoUsuario">
@@ -78,45 +78,9 @@
               </script>
            
     
+           <p class="texto-bonito"> <a href="verAnuncio.html">Ver anuncios</a></p>
     
-           
-        
-    
-    
-            <div class="contenedorAnuncios">
-                <div class="anuncios">
-                    <a id="vehiculo-1" class="fotoVehiculo" href="../Producto/producto.html ">
-                    </a>
-                </div>
-                <div class= "contenedorInformacion">
-                    <div class="informacionAnuncio">
-                        <a class="informacion" >
-                            
-                            <p class="texto"> </p>
-                        </a>
-                    </div>
-                </div> 
-            </div>
-    
-            <script>
-                // Cargar el archivo JSON
-                fetch('../../vehiculos.json')
-                  .then(response => response.json())
-                  .then(data => {
-                    // Iterar sobre el array de vehículos
-                    data.vehiculos.forEach((vehiculo, index) => {
-                      // Obtener el contenedor HTML correspondiente
-                      const contenedorTexto = document.querySelectorAll('.texto')[index];
-                      // Crear la descripción del vehículo y establecer el texto desde el archivo JSON
-                      const descripcion = document.createElement('p');
-                      descripcion.textContent = vehiculo.descripcion;
             
-                      // Agregar la imagen y la descripción al contenedor correspondiente
-                      
-                      contenedorTexto.appendChild(descripcion);
-                    });
-                  });
-            </script>
     
     </body>
 </html>

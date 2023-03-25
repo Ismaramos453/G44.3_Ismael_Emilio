@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="../../css/Diseño Catalogo y Producto/diseñoCatalogo.css" rel="stylesheet" />
+        <link href="../../css/Edición Texto y Figuras/texto.css" rel="stylesheet" />
+        
+    </head>
+    <body>
+        <div class= "contenedorInformacion">
+            <div class="informacionAnuncio">
+                <a class="informacion" >
+                    <span class="calificacion">7.5
+                        <div class= "estrella">
+                            <form>
+                                <p class="clasificacion">
+                                <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                --><label for="radio1">★</label><!--
+                                --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                --><label for="radio2">★</label><!--
+                                --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                --><label for="radio3">★</label><!--
+                                --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                --><label for="radio4">★</label><!--
+                                --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                --><label for="radio5">★</label>
+                                </p>
+                            </form>
+                        </div>
+                        
+                    </span>
+                    
+                    <p class="opinion"> </p>
+                </a>
+            </div>
+        </div> 
+    </body>
+
+
+    <script>
+    fetch('../../vehiculos.json')
+  .then(response => response.json())
+  .then(data => {
+    // Iterar sobre el array de vehículos
+    data.vehiculos.forEach((vehiculo, index) => {
+      // Obtener el contenedor de opiniones correspondiente
+      const contenedorOpinion = document.querySelectorAll('.opinion')[index];
+      
+      // Iterar sobre el arreglo de opiniones del vehículo
+      vehiculo.opinion.forEach((opinion, i) => {
+        // Crear un elemento HTML para mostrar la opinión
+        const opinionElement = document.createElement('p');
+        opinionElement.textContent = opinion.opinion1;
+        
+        // Agregar la opinión al contenedor correspondiente
+        const opinionContainer = document.createElement('div');
+        opinionContainer.classList.add('opinion');
+        opinionContainer.appendChild(opinionElement);
+        contenedorOpinion.appendChild(opinionContainer);
+      });
+    });
+  });
+      </script>
+
+
+      
+</html>

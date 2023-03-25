@@ -90,10 +90,11 @@
 /* Estilos para pantallas de 768px o menos (tablets en orientación vertical y móviles) */
 @media screen and (max-width: 768px) {
   .form {
-    width: 90%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 8rem;
+    margin-top: 9rem;
   }
   #createAccountBtn {
     font-size: 0.8rem;
@@ -104,10 +105,11 @@
 /* Estilos para pantallas de 480px o menos (móviles en orientación vertical) */
 @media screen and (max-width: 480px) {
   .form {
-    width: 90%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 4rem;
+    margin-top: 2rem;
   }
   .input {
     font-size: 12px;

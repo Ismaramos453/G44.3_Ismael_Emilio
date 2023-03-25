@@ -75,11 +75,7 @@
 					
 						<div class="contenedorInformacion">
 							<a class="informacion" >
-								<span class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id venenatis purus, tincidunt vulputate orci.
-									Morbi feugiat erat sapien, vel iaculis diam faucibus ut. Quisque eu ante commodo, accumsan metus et, vulputate mi. Mauris in pellentesque sem. 
-									Nunc ornare nibh et erat malesuada semper. Pellentesque accumsan lorem elit, a consequat quam dictum et. Ut sit amet nibh nibh. Integer semper 
-									lacinia metus, a posuere arcu. Cras sed orci libero. 
-								</span>
+								<span class="texto">
 							</a>
 						</div>
 
@@ -109,10 +105,34 @@
 					</div>
 				</div>
 				<a class = "opiniones" >Opiniones:</a>
-				<iframe class = "producto" src = "./descripcionProducto.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
-				<iframe class = "producto" src = "./descripcionProducto.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+				<iframe class = "opinion" src = "./opinion.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+				<iframe class = "opinion" src = "./opinion.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
 			</article>
 		</section>
+
+		<script>
+            // Cargar el archivo JSON
+            fetch('../../vehiculos.json')
+              .then(response => response.json())
+              .then(data => {
+                // Iterar sobre el array de vehículos
+                data.vehiculos.forEach((vehiculo, index) => {
+                  // Obtener el contenedor HTML correspondiente
+                  const contenedorTexto = document.querySelectorAll('.texto')[index];
+                  // Crear la descripción del vehículo y establecer el texto desde el archivo JSON
+                  const descripcion = document.createElement('p');
+                  descripcion.textContent = vehiculo.descripcion;
+        
+                  // Agregar la imagen y la descripción al contenedor correspondiente
+                  
+                  contenedorTexto.appendChild(descripcion);
+                });
+              });
+        </script>
+
+		
+
+
 		<iframe class = "footer" src = "../Header y Footer/footer.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
 
 		<script src = "../../Js/dynamicLoad.js"></script>

@@ -410,6 +410,7 @@ button:active {
     margin-top: 2rem;
   }
 
+
   .contenedorInformacion {
     position: relative;
     display: flex;
@@ -418,6 +419,7 @@ button:active {
     margin-left: -1rem;
     overflow:hidden;
   }
+
 
   .contenedorProducto {
     position: relative;
@@ -429,6 +431,7 @@ button:active {
     right: 4rem;
     max-width: 20rem;
   }
+  
 
   .contenedorFotosProducto {
     position: relative;

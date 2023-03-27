@@ -9,30 +9,28 @@
             <link href="../..css/Diseño Inicio/Inicio.css" rel="stylesheet" />
             <link href="../../css/Edición Texto y Figuras/figuras.css" rel="stylesheet" />
             <link href="../..css/Edición Texto y Figuras/texto.css" rel="stylesheet" />
+            <link href="../../css/Inicio Sesion y Registro/errors.css" rel="stylesheet" />
+            <script src="../../Js/login_functions.js"></script>
             <meta name="viewport" content="width=device-width">
     </head>
     <body>
 
         <iframe class = "header1" src = "../Header y Footer/header.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
 
-        <form class="form">
-            <input placeholder="Correo electrónico" class="input" type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-            <input placeholder="Contraseña" class="input" type="password" id="password" required> 
-            <button id="loginBtn">Inicio Sesión</button>
+        <form class="form" novalidate>
+            <input placeholder="Correo electrónico" id="email" class="input" type="email" onchange="checkMail()" required>
+            <p class="error-message"></p>
+            <input placeholder="Contraseña" class="input" id="loginpass" type="password" onchange="checkPassword()" id="password" required> 
+            <p class="error-message"></p>
+            <button id="loginBtn" onclick="checkLogin(event)">Inicio Sesión</button>
+
             <a id="forgotPassword" href="#">Contraseña olvidada</a>
             <button class="create" id="createAccountBtn" formnovalidate>
                 <a href="./register.html" style="color: inherit; text-decoration: none;">
                     Crea una cuenta
                 </a>
             </button>
-            
-        </form>
-
-        
+        </form>   
     </body>
-
-    
-
-
 </html>
 

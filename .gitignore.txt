@@ -1,0 +1,2 @@
+./PayToRent/node-modules
+./PayToRent/.angular

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./text-label.component.css']
 })
 export class TextLabelComponent {
-
+  value!:string;
 }

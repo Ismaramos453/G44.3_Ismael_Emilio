@@ -10,11 +10,11 @@
        <app-header></app-header>
 
         <form class="form" novalidate>
-            <app-text-label placeholder="Correo electrónico" id="email" class="input" type="email" required></app-text-label>
+            <app-text-label [(ngModel)]="email" (ngModelChange)="checkMail()" placeholder="Correo electrónico" class="input" type="email" required></app-text-label>
             <app-error-message></app-error-message>
-            <app-text-label placeholder="Contraseña" class="input" id="loginpass" type="password" id="password" required></app-text-label>
+            <app-text-label [(ngModel)]="passwd" (ngModelChange)="checkPass()" placeholder="Contraseña" class="input"  type="password" required></app-text-label>
             <app-error-message></app-error-message>
-            <app-submit-button class="loginBtn">Iniciar Sesión</app-submit-button>
+            <app-submit-button class="loginBtn" (click)="validateLogIn()">Iniciar Sesión</app-submit-button>
 
             <a id="forgotPassword" href="#">Contraseña olvidada</a>
             <button class="create" id="createAccountBtn" formnovalidate>

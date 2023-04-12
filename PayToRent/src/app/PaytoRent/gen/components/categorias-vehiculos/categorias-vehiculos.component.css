@@ -1,0 +1,198 @@
+/*Circulos de selección de vehiculos*/
+
+.circuloVehiculo1{
+	border-radius: 100%;
+	background-color: rgb(255, 255, 255);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+	background-size: cover;
+	
+  }
+  .circuloVehiculo1 img {
+	display: block;
+	margin-top: 15%;
+	margin-left: 15%;
+	margin-right: 10%;
+	max-width: 100%;
+	height: 70%;
+	background-size: cover;
+	
+  }
+
+  .circuloVehiculo2{
+	border-radius: 100%;
+	background-color: rgb(255, 255, 255);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+	background-size: cover;
+	
+  }
+  .circuloVehiculo2 img {
+	display: block;
+	margin-top: 20%;
+	margin-left: 15%;
+	margin-right: 10%;
+	max-width: 100%;
+	height: 70%;
+	background-size: cover;
+	
+  }
+
+  .circuloVehiculo3{
+	border-radius: 100%;
+	background-color: rgb(255, 255, 255);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+	background-size: cover;
+	
+  }
+  .circuloVehiculo3 img {
+	display: block;
+	margin-top: 15%;
+	margin-left: 15%;
+	margin-right: 10%;
+	max-width: 100%;
+	height: 70%;
+	background-size: cover;
+	
+  }
+
+
+  .circuloVehiculo4{
+	border-radius: 100%;
+	background-color: rgb(255, 255, 255);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+	background-size: cover;
+	
+  }
+  .circuloVehiculo4 img {
+	display: block;
+	margin-top: 20%;
+	margin-left: 15%;
+	margin-right: 15%;
+	max-width: 100%;
+	height: 70%;
+	background-size: cover;
+	
+  }
+
+  .circuloVehiculo5{
+	border-radius: 100%;
+	background-color: rgb(255, 255, 255);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+	background-size: cover;
+	
+  }
+  .circuloVehiculo5 img {
+	display: block;
+	margin-top: 15%;
+	margin-left: 15%;
+	margin-right: 15%;
+	max-width: 100%;
+	height: 70%;
+	background-size: cover;
+	
+  }
+
+
+  .circuloVehiculo6{
+	border-radius: 100%;
+	background-color: rgb(255, 255, 255);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+	background-size: cover;
+	
+  }
+  .circuloVehiculo6 img {
+	display: block;
+	margin-top: 20%;
+	margin-left: 15%;
+	margin-right: 10%;
+	max-width: 100%;
+	height: 70%;
+	background-size: cover;
+	
+  }
+  .circuloVehiculo7{
+	border-radius: 100%;
+	background-color: rgb(255, 255, 255);
+	height: 7em;
+	width: 7em;
+	margin-right: 2em;
+	background-size: cover;
+	
+  }
+  .circuloVehiculo7 img {
+	display: block;
+	margin-top: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+	max-width: 100%;
+	height: 70%;
+	background-size: cover;
+	
+  }
+
+	
+
+
+/* For tablets */
+@media screen and (max-width: 768px) {
+	.circuloVehiculo1, .circuloVehiculo2, .circuloVehiculo3,
+	.circuloVehiculo4, .circuloVehiculo5, .circuloVehiculo6,
+	.circuloVehiculo7 {
+	  height: 5em;
+	  width: 5em;
+	}
+	
+	.circuloVehiculo1 img, .circuloVehiculo2 img, .circuloVehiculo3 img,
+	.circuloVehiculo4 img, .circuloVehiculo5 img, .circuloVehiculo6 img,
+	.circuloVehiculo7 img {
+	  margin-top: 10%;
+	  margin-left: 10%;
+	  margin-right: 10%;
+	  height: 80%;
+	}
+	
+
+	
+	
+  }
+
+ 
+
+  
+  /* For mobiles */
+  @media screen and (max-width: 480px) {
+	.circuloVehiculo {
+	 
+	  margin-bottom: 3rem;
+	}
+	
+	.circuloVehiculo1, .circuloVehiculo2, .circuloVehiculo3,
+	.circuloVehiculo4, .circuloVehiculo5, .circuloVehiculo6,
+	.circuloVehiculo7 {
+	  height: 4em;
+	  width: 4em;
+	  margin-right: 1em;
+	}
+	
+	.circuloVehiculo1 img, .circuloVehiculo2 img, .circuloVehiculo3 img,
+	.circuloVehiculo4 img, .circuloVehiculo5 img, .circuloVehiculo6 img,
+	.circuloVehiculo7 img {
+		margin-top: 10%;
+		margin-left: 10%;
+		margin-right: 10%;
+		height: 70%;
+	}
+	
+
+  }

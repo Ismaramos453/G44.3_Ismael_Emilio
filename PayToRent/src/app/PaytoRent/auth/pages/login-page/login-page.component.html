@@ -1,1 +1,27 @@
-<p>login-page works!</p>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Inicio de Sesión</title>
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+
+       <app-header></app-header>
+
+        <form class="form" novalidate>
+            <app-text-label placeholder="Correo electrónico" id="email" class="input" type="email" required></app-text-label>
+            <app-error-message></app-error-message>
+            <app-text-label placeholder="Contraseña" class="input" id="loginpass" type="password" id="password" required></app-text-label>
+            <app-error-message></app-error-message>
+            <app-submit-button class="loginBtn">Iniciar Sesión</app-submit-button>
+
+            <a id="forgotPassword" href="#">Contraseña olvidada</a>
+            <button class="create" id="createAccountBtn" formnovalidate>
+                <a href="" style="color: inherit; text-decoration: none;">
+                    Crea una cuenta
+                </a>
+            </button>
+        </form>   
+    </body>
+</html>

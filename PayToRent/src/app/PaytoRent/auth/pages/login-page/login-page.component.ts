@@ -6,20 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-page.component.css'],
 })
 export class LoginPageComponent {
-  email!: string;
-  passwd!: string;
+  email!: string
+  passwd!: string
   
   constructor(){
-    this.email = '';
-    this.passwd = '';
+    this.email = ''
+    this.passwd = ''
   }
 
-  checkPass() {
-    
+  checkPass():boolean {
+    return true;
   }
 
-  checkMail() {
-
+  checkMail():boolean {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return regex.test(this.email)||this.email != ''
   }
 
   validateLogIn(){

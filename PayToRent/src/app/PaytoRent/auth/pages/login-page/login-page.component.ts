@@ -13,17 +13,13 @@ export class LoginPageComponent {
     this.email = ''
     this.passwd = ''
   }
+  
+  validateLogIn(loginForm: any): void {
+    if (loginForm.valid) {
+      
+    } else {
 
-  checkPass():boolean {
-    return true;
-  }
-
-  checkMail():boolean {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return regex.test(this.email)||this.email != ''
-  }
-
-  validateLogIn(){
-
+      loginForm.submitted = true;
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-submit-button',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class SubmitButtonComponent {
 
+  private _disabled = false
+
+  @Input()
+  set disabled (value:boolean){
+    this._disabled = value
+  }
+
+  get disabled () {
+    return this._disabled
+  }
 }

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./vehiculos-destacados.component.css']
 })
 export class VehiculosDestacadosComponent {
+  public numFilas = [1, 2]; // Cambiar por el número de filas que deseas mostrar
+  public numCuadradosPorFila = 4;
+
 
 }

@@ -12,15 +12,15 @@
     <app-header></app-header>
 
     <form class="form" #loginForm="ngForm" (ngSubmit)="validateLogIn(loginForm)" novalidate>
-        <app-text-label [(ngModel)]="email" name="email" placeholder="Correo electrónico" type="email"
-            required></app-text-label>
+        <input [(ngModel)]="email" name="email" placeholder="Correo electrónico" class="input" type="email"
+            required>
         <app-error-message *ngIf="loginForm.submitted && loginForm.controls['email'].invalid">Por favor, introduce una
             dirección de correo electrónico válida.</app-error-message>
-        <app-text-label [(ngModel)]="passwd" name="passwd" placeholder="Contraseña" class="input" type="password"
-            required></app-text-label>
+        <input [(ngModel)]="passwd" name="passwd" placeholder="Contraseña" class="input" type="password"
+            required><input>
         <app-error-message *ngIf="loginForm.submitted && loginForm.controls['passwd'].invalid">Por favor, introduce una
             contraseña válida.</app-error-message>
-        <app-submit-button class="loginBtn" [disabled]="loginForm.invalid ?? false">Iniciar Sesión</app-submit-button>
+        <button type="submit" class="loginBtn" [disabled]="loginForm.invalid ?? false">Iniciar Sesión</button>
         <a id="forgotPassword" href="#">Contraseña olvidada</a>
         <button class="create" id="createAccountBtn" formnovalidate>
             <a href="" style="color: inherit; text-decoration: none;">

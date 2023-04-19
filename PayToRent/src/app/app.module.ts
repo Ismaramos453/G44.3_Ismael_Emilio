@@ -8,13 +8,13 @@ import { RegisterPageComponent } from './PaytoRent/auth/pages/register-page/regi
 import { CategoriasVehiculosComponent } from './PaytoRent/gen/components/categorias-vehiculos/categorias-vehiculos.component';
 import { VehiculosDestacadosComponent } from './PaytoRent/gen/components/vehiculos-destacados/vehiculos-destacados.component';
 import { PrincipalComponent } from './PaytoRent/gen/pages/principal/principal.component';
+import { CatalogoComponent } from './PaytoRent/gen/pages/catalogo/catalogo.component';
 
 import { TextLabelComponent } from './PaytoRent/auth/components/text-label/text-label.component';
 import { SubmitButtonComponent } from './PaytoRent/auth/components/submit-button/submit-button.component';
 import { HeaderComponent } from './PaytoRent/gen/pages/header/header.component';
 import { FooterComponent } from './PaytoRent/gen/pages/footer/footer.component';
 import { ErrorMessageComponent } from './PaytoRent/auth/components/error-message/error-message.component';
-import { CatalogoComponent } from './PaytoRent/gen/pages/catalogo/catalogo.component';
 
 
 @NgModule({

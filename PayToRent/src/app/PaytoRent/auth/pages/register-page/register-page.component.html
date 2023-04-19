@@ -13,18 +13,18 @@
         <div class="form-container">
             <div class="form-group">
                 <label for="email">Correo electrónico:</label>
-                <app-text-label [(ngModel)]="email" type="email" name="email" required></app-text-label>
+                <input [(ngModel)]="email" type="email" name="email" class="input" required>
                 <app-error-message *ngIf="registerForm.submitted && registerForm.controls[email].invalid">Por favor,
                     introduce una
                     dirección de correo electrónico válida.</app-error-message>
 
                 <label for="password">Contraseña:</label>
-                <app-text-label [(ngModel)]="passwd1" type="password" name="password" required></app-text-label>
+                <input [(ngModel)]="passwd1" type="password" name="password" required>
                 <app-error-message *ngIf="registerForm.submitted && registerForm.controls[passwd1].invalid">Introduzca
                     una contraseña válida.</app-error-message>
 
                 <label for="confirm-password">Confirmar contraseña:</label>
-                <app-text-label [(ngModel)]="passwd2" type="password" name="confirm-password" required></app-text-label>
+                <input [(ngModel)]="passwd2" type="password" name="confirm-password" required>
                 <app-error-message *ngIf="registerForm.submitted && registerForm.controls['confirm-password'].invalid">
                     Por favor, confirme su contraseña.
                 </app-error-message>
@@ -34,12 +34,12 @@
                 </app-error-message>
 
                 <label for="address">Dirección:</label>
-                <app-text-label [(ngModel)]="address" type="text" name="address" required></app-text-label>
+                <input [(ngModel)]="address" type="text" name="address" required>
                 <app-error-message *ngIf="registerForm.submitted && registerForm.controls[address].invalid">Introduzca
                     una dirección válida</app-error-message>
 
                 <label for="phone">Número de teléfono:</label>
-                <app-text-label [(ngModel)]="phone" type="tel" name="phone" required></app-text-label>
+                <input [(ngModel)]="phone" type="tel" name="phone" required>
                 <app-error-message *ngIf="registerForm.submitted && registerForm.controls[phone].invalid">Introduzca un
                     número de teléfono válido</app-error-message>
             </div>
@@ -51,12 +51,12 @@
                     su nombre</app-error-message>
 
                 <label for="last-name">Apellido:</label>
-                <app-text-label [(ngModel)]="lastName" type="text" name="last-name" required></app-text-label>
+                <input [(ngModel)]="lastName" type="text" name="last-name" required>
                 <app-error-message *ngIf="registerForm.submitted && registerForm.controls[lastName].invalid">Introduzca
                     su apellido</app-error-message>
 
                 <label for="username">Nombre de usuario:</label>
-                <app-text-label [(ngModel)]="username" type="text" name="username" required></app-text-label>
+                <input [(ngModel)]="username" type="text" name="username" required>
                 <app-error-message *ngIf="registerForm.submitted && registerForm.controls[firstName].invalid">Introduzca
                     su nombre de usuario</app-error-message>
 
@@ -67,7 +67,7 @@
 
             </div>
 
-            <app-submit-button>Registrarse</app-submit-button>
+            <button type="submit">Registrarse</button>
         </div>
     </form>
     <app-footer></app-footer>

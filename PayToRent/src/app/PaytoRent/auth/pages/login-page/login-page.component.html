@@ -1,1 +1,34 @@
-<p>login-page works!</p>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Inicio de Sesión</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+
+    <app-header></app-header>
+
+    <form class="form" #loginForm="ngForm" (ngSubmit)="validateLogIn(loginForm)" novalidate>
+        <app-text-label [(ngModel)]="email" name="email" placeholder="Correo electrónico" type="email"
+            required></app-text-label>
+        <app-error-message *ngIf="loginForm.submitted && loginForm.controls['email'].invalid">Por favor, introduce una
+            dirección de correo electrónico válida.</app-error-message>
+        <app-text-label [(ngModel)]="passwd" name="passwd" placeholder="Contraseña" class="input" type="password"
+            required></app-text-label>
+        <app-error-message *ngIf="loginForm.submitted && loginForm.controls['passwd'].invalid">Por favor, introduce una
+            contraseña válida.</app-error-message>
+        <app-submit-button class="loginBtn" [disabled]="loginForm.invalid ?? false">Iniciar Sesión</app-submit-button>
+        <a id="forgotPassword" href="#">Contraseña olvidada</a>
+        <button class="create" id="createAccountBtn" formnovalidate>
+            <a href="" style="color: inherit; text-decoration: none;">
+                Crea una cuenta
+            </a>
+        </button>
+    </form>
+
+</body>
+
+</html>

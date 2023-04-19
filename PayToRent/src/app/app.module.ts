@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './PaytoRent/auth/pages/login-page/login-page.component';
@@ -8,6 +9,12 @@ import { CategoriasVehiculosComponent } from './PaytoRent/gen/components/categor
 import { VehiculosDestacadosComponent } from './PaytoRent/gen/components/vehiculos-destacados/vehiculos-destacados.component';
 import { PrincipalComponent } from './PaytoRent/gen/pages/principal/principal.component';
 
+import { TextLabelComponent } from './PaytoRent/auth/components/text-label/text-label.component';
+import { SubmitButtonComponent } from './PaytoRent/auth/components/submit-button/submit-button.component';
+import { HeaderComponent } from './PaytoRent/gen/pages/header/header.component';
+import { FooterComponent } from './PaytoRent/gen/pages/footer/footer.component';
+import { ErrorMessageComponent } from './PaytoRent/auth/components/error-message/error-message.component';
+import { CatalogoComponent } from './PaytoRent/gen/pages/catalogo/catalogo.component';
 
 
 @NgModule({
@@ -18,9 +25,16 @@ import { PrincipalComponent } from './PaytoRent/gen/pages/principal/principal.co
     CategoriasVehiculosComponent,
     VehiculosDestacadosComponent,
     PrincipalComponent,
+    TextLabelComponent,
+    SubmitButtonComponent,
+    HeaderComponent,
+    FooterComponent,
+    ErrorMessageComponent,
+    CatalogoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

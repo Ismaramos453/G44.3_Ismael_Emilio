@@ -1,0 +1,780 @@
+
+/*Barra de búsqueda*/
+.barrabusqueda{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  
+  .busqueda {
+      background-color: #f5f5f5;
+      color: #242424;
+      padding: .15rem .5rem;
+      min-height: 40px;
+      border-radius: 4px;
+      outline: none;
+      border: none;
+      width: 60rem;
+      line-height: 2;
+      box-shadow: 0px 10px 20px -18px;
+      top:4rem;
+      margin-top: 1rem;
+    margin-bottom: 3rem;
+      text-decoration: none;
+  
+      
+    }
+  
+    /* Boton de filtro*/
+    
+    .botones_contendor{
+      margin-top: 2rem;
+      display: flex;
+    align-items: center;
+    justify-content: center; 
+    }
+    
+    button {
+      background-color: #107700;
+      width:8rem;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+      margin-left: 4rem;
+      cursor: pointer;
+    }
+  
+    /* Ventana de Filtro*/
+    .ventana {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      z-index: 1;
+    }
+    
+    .contenido {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      width: 80%;
+      max-width: 600px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+    }
+    
+    .contenido h2 {
+      margin-top: 0;
+    }
+    
+    .contenido button {
+      margin-top: 20px;
+    }
+    
+    .barra-precio {
+      position: relative;
+      height: 50px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .barra-precio input {
+      width: 80%;
+      margin: 0 10px;
+    }
+    
+    .barra-precio button {
+      position: absolute;
+      right: 0;
+    }
+    
+    .contenido-pagina {
+      position: relative;
+      z-index: 0;
+    }
+    
+  
+    /*Contenedores del catálogo*/
+    
+    .catalogo{
+        position: relative;
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        margin-left: 1rem;
+    }
+    
+      .producto{
+        position: relative;
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        margin-left: 0rem;
+      
+      }
+  
+      
+      /*
+      
+      .productoTexto{
+          width: 60rem; 
+          height: 15rem; 
+          background: #ffffff;
+          margin-top: 5rem;
+        }
+  
+        .producto1{
+          position: relative;
+          display: flex;
+          flex-direction:column;
+          flex-wrap: wrap;
+          margin-left: 10rem;
+        
+        }
+        .productoTexto1{
+            width: 60rem; 
+            height: 15rem; 
+            background: #ffffff;
+            margin-top: 5rem;
+          }
+  
+      */
+
+
+
+
+
+.usuarioFoto{
+	background-color: rgb(140, 138, 138);
+	height: 5em;
+	width: 5em;
+	background-size: cover;
+	display: flex;
+	flex-direction:row;
+}
+
+.usuarioFoto img {
+	display: block;
+	margin-top: 10%;
+	margin-left: 15%;
+	margin-right: 10%;
+	max-width: 100%;
+	height: 70%;
+	background-size: cover;
+
+}
+.usuario{
+	background-color: rgb(255, 255, 255);
+	height: 5em;
+	width: 10em;
+	background-size: cover;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center; /* centra horizontalmente */
+}
+
+.items{
+	height: auto;
+	flex-direction:row;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: end; /* centra horizontalmente */
+	margin-top: 0rem;
+
+  }
+.contenedorAnuncios{
+	position: relative;
+	display: flex;
+  	flex-direction:row;
+  	margin-left: 0rem;	
+	right: 1rem;
+
+}
+
+
+
+  
+.anuncios{
+	position: relative;
+	display: flex;
+  	flex-direction:column;
+	flex-wrap: wrap;	
+ 	margin-left: 4rem;
+	
+}
+
+.fotoVehiculo{
+	width: 15rem; 
+	height: 15rem; 
+	background:#242424;
+	margin-top: 4rem;
+	margin-right: 2rem;
+}
+
+.fotoVehiculo img {
+
+	width: 100%;
+	height: auto;
+	max-width: 15rem;
+	max-height: 15rem;
+	margin-top: 1.20rem;
+
+}
+
+.contenedorInformacion{
+  position: relative;
+	display: flex;
+  	flex-direction:column;
+	flex-wrap: wrap;
+ 	margin-left: 5rem;
+	
+}
+
+.informacionAnuncio{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    margin-left: -5rem;
+  
+}
+
+.informacion{
+    width: 50rem; 
+    height: 15rem; 
+    background: #ffffff;
+    margin-top: 4rem;
+
+    }
+
+
+
+    .calificacion {
+        width: 113px;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        top: 14rem;
+        left: 2.5rem;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight:100;
+        font-size: 2rem;
+      
+        text-align: right;
+        flex-direction:row;
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+      }
+      .opiniones{
+        width: 45rem;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        left: 6rem;
+        margin-top: 1rem;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 2rem;
+        text-align: left;
+      
+      
+      
+        
+      }
+      .texto {
+        width: 35rem;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        left: 2.5rem;
+        margin-top: 1rem;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight:100;
+        font-size: 0.75rem;
+        opacity: 1;
+        text-align: left;
+        word-wrap:5rem;
+        line-height: 1.75rem;
+        
+      }
+      
+      
+      .estrella{
+          display: flex;
+          margin-left: 2rem;
+          font-size: 2rem;
+      }
+      #form {
+          width: 250px;
+          margin: 0 auto;
+          height: 50px;
+        }
+        
+        #form p {
+          text-align: center;
+      
+        }
+        
+        #form label {
+          font-size: 20px;
+        }
+        
+        input[type="radio"] {
+          display: none;
+        }
+        label {
+          color: grey;
+        }
+        /*  
+        @media screen and (max-width: 900px) {
+          .calificacion {
+            width: 113px;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            top: 16rem;
+            left: 2.5rem;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight:100;
+            font-size: 1rem;
+      
+            text-align: right;
+            flex-direction:row;
+            display: flex;
+            align-items: center;
+            margin-right: 2rem;
+          }
+      
+          .opiniones{
+            width: 45rem;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            left: 6rem;
+            margin-top: 1rem;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            text-align: left;
+            
+          }
+      
+          .texto {
+            width: 45rem;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            left: 2.5rem;
+            margin-top: 1rem;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight:100;
+            font-size: 0.75rem;
+            opacity: 1;
+            text-align: left;
+            word-wrap:5rem;
+            line-height: 1.25rem;
+            max-width: 20rem;
+      
+          }
+      
+          .estrella{
+            display: flex;
+            margin-left: 2rem;
+            font-size: 1rem;
+        }
+        #form {
+            width: 250px;
+            margin: 0 auto;
+            height: 50px;
+          }
+          
+          #form p {
+            text-align: center;
+        
+          }
+          
+          #form label {
+            font-size: 20px;
+          }
+          
+          input[type="radio"] {
+            display: none;
+          }
+          label {
+            color: grey;
+          }
+      
+        }
+      
+        */
+
+
+
+	@media screen and (max-width: 768px) {
+        .calificacion {
+            width: 200px;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            top: 16rem;
+            left: 2.5rem;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight:100;
+            font-size: 1.5rem;
+          
+            text-align: right;
+            flex-direction:row;
+            display: flex;
+            align-items: center;
+            margin-right: 2rem;
+          }
+          .opiniones{
+            width: 45rem;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            left: 6rem;
+            margin-top: 1rem;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 2rem;
+            text-align: left;
+          
+          }
+          .texto {
+            width: 45rem;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            left: 2.5rem;
+            margin-top: 1rem;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight:100;
+            font-size: 0.75rem;
+            opacity: 1;
+            text-align: left;
+            word-wrap:5rem;
+            line-height: 1rem;
+            max-width: 20rem;
+          }
+      
+      
+      
+          
+          .estrella{
+              display: flex;
+              margin-left: 2rem;
+              font-size: 1.5rem;
+          }
+          #form {
+              width: 250px;
+              margin: 0 auto;
+              height: 50px;
+            }
+            
+            #form p {
+              text-align: center;
+          
+            }
+            
+            #form label {
+              font-size: 20px;
+            }
+            
+            input[type="radio"] {
+              display: none;
+            }
+            label {
+              color: grey;
+            }
+
+        button {
+            background-color: #107700;
+            width:5.5rem;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+            margin-left: 0.25rem;
+            
+          }
+
+	.contenedorAnuncios{
+		position: relative;
+		display: flex;
+		flex-direction:row;
+		margin-left: 2rem;
+
+	}
+	.anuncios{
+		position: relative;
+		display: flex;
+		  flex-direction:column;
+		flex-wrap: wrap;	
+		 margin-left: 1.5rem;
+	}
+
+	.fotoVehiculo{
+		width: 10rem; 
+		height: 10rem; 
+		background:transparent;
+		margin-top: 4rem;
+		margin-right: 0rem;
+	}
+	
+	.fotoVehiculo img {
+	
+		width: 100%;
+		height: auto;
+		max-width: 15rem;
+		max-height: 15rem;
+		margin-top: 1.20rem;
+	
+	}
+	
+	
+	.contenedorInformacion{
+	  position: relative;
+		display: flex;
+		flex-direction:column;
+		flex-wrap: wrap;
+		 margin-left: -2rem;
+		
+	}
+	
+	.informacionAnuncio{
+		position: relative;
+		display: flex;
+		flex-direction:column;
+		flex-wrap: wrap;
+		margin-left: 3.5rem;
+	  
+	}
+	
+	.informacion{
+		width: 30rem; 
+		height: 15rem; 
+		background: #ffffff;
+		margin-top: 5rem;
+	
+		}
+
+		.usuarioFoto{
+			background-color: rgb(140, 138, 138);
+			height: 2.5em;
+			width: 2.5em;
+			background-size: cover;
+			display: flex;
+			flex-direction:row;
+		}
+		
+		.usuarioFoto img {
+			display: block;
+			margin-top: 10%;
+			margin-left: 15%;
+			margin-right: 10%;
+			max-width: 100%;
+			height: 70%;
+			background-size: cover;
+		
+		}
+		.usuario{
+			background-color: rgb(255, 255, 255);
+			height: 2.5em;
+			width: 5em;
+			background-size: cover;
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: center; /* centra horizontalmente */
+
+		}
+		
+	
+}
+
+
+  @media screen and (max-width: 480px) {
+
+    .calificacion {
+        width: 113px;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        top: 17.5rem;
+        left: 3.5rem;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight:100;
+        font-size: 0.25rem;
+      
+        text-align: right;
+        flex-direction:row;
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+      }
+      .opiniones{
+        width: 45rem;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        left: 3rem;
+        margin-top: 1rem;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+        text-align: left;
+      
+      }
+      .texto {
+        width: 15rem;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        left: 1.5rem;
+        margin-top: 1rem;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight:100;
+        font-size: 0.5rem;
+        opacity: 1;
+        text-align: left;
+        word-wrap:5rem;
+        line-height: 1rem;
+        max-width: 10.5rem;
+      }
+      
+      
+      .estrella{
+          display: flex;
+          margin-left: 2rem;
+          font-size: 0.5rem;
+      }
+      #form {
+          width: 250px;
+          margin: 0 auto;
+          height: 50px;
+        }
+        
+        #form p {
+          text-align: center;
+      
+        }
+        
+        #form label {
+          font-size: 20px;
+        }
+        
+        input[type="radio"] {
+          display: none;
+        }
+        label {
+          color: grey;
+        }
+
+	
+	  
+	.contenedorAnuncios{
+		position: relative;
+		display: flex;
+		flex-direction:row;
+		margin-left: 5rem;
+
+	}
+	.anuncios{
+		position: relative;
+		display: flex;
+		  flex-direction:column;
+		flex-wrap: wrap;	
+		 margin-left: 4.5rem;
+	}
+
+	.fotoVehiculo{
+		width: 6rem; 
+		height: 10rem; 
+		background:transparent;
+		margin-top: 4rem;
+		margin-right: 0rem;
+	}
+	
+	.fotoVehiculo img {
+	
+		width: 100%;
+		height: auto;
+		max-width: 15rem;
+		max-height: 15rem;
+		margin-top: 1.20rem;
+	
+	}
+	
+	
+	.contenedorInformacion{
+	  position: relative;
+		display: flex;
+		flex-direction:column;
+		flex-wrap: wrap;
+		 margin-left: -12rem;
+		 margin-top: 10rem;
+		
+	}
+	
+	.informacionAnuncio{
+		position: relative;
+		display: flex;
+		flex-direction:column;
+		flex-wrap: wrap;
+		margin-left: 3.5rem;
+	  
+	}
+	
+	.informacion{
+		width: 12rem; 
+		height: 15rem; 
+		background: #ffffff;
+		margin-top: 5rem;
+	
+		}
+
+		.usuarioFoto{
+			background-color: rgb(140, 138, 138);
+			height: 2.5em;
+			width: 2.5em;
+			background-size: cover;
+			display: flex;
+			flex-direction:row;
+		}
+		
+		.usuarioFoto img {
+			display: block;
+			margin-top: 10%;
+			margin-left: 15%;
+			margin-right: 10%;
+			max-width: 100%;
+			height: 70%;
+			background-size: cover;
+		
+		}
+		.usuario{
+			background-color: rgb(255, 255, 255);
+			height: 2.5em;
+			width: 5em;
+			background-size: cover;
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: center; /* centra horizontalmente */
+
+		}
+
+
+}
+
+
+

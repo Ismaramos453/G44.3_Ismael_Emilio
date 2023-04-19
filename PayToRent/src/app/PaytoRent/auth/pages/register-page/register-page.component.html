@@ -28,35 +28,42 @@
                 <app-error-message *ngIf="registerForm.submitted && registerForm.controls['confirm-password'].invalid">
                     Por favor, confirme su contraseña.
                 </app-error-message>
-                <app-error-message *ngIf="!validatePasswordsMatch() && registerForm.controls['confirm-password'].touched">
+                <app-error-message
+                    *ngIf="!validatePasswordsMatch() && registerForm.controls['confirm-password'].touched">
                     Las contraseñas no coinciden.
                 </app-error-message>
 
                 <label for="address">Dirección:</label>
                 <app-text-label [(ngModel)]="address" type="text" name="address" required></app-text-label>
-                <app-error-message></app-error-message>
+                <app-error-message *ngIf="registerForm.submitted && registerForm.controls[address].invalid">Introduzca
+                    una dirección válida</app-error-message>
 
                 <label for="phone">Número de teléfono:</label>
                 <app-text-label [(ngModel)]="phone" type="tel" name="phone" required></app-text-label>
-                <app-error-message></app-error-message>
+                <app-error-message *ngIf="registerForm.submitted && registerForm.controls[phone].invalid">Introduzca un
+                    número de teléfono válido</app-error-message>
             </div>
 
             <div class="form-group">
                 <label for="first-name">Nombre:</label>
                 <app-text-label [(ngModel)]="firstName" type="text" name="first-name" required></app-text-label>
-                <app-error-message></app-error-message>
+                <app-error-message *ngIf="registerForm.submitted && registerForm.controls[firstName].invalid">Introduzca
+                    su nombre</app-error-message>
 
                 <label for="last-name">Apellido:</label>
                 <app-text-label [(ngModel)]="lastName" type="text" name="last-name" required></app-text-label>
-                <app-error-message></app-error-message>
+                <app-error-message *ngIf="registerForm.submitted && registerForm.controls[lastName].invalid">Introduzca
+                    su apellido</app-error-message>
 
                 <label for="username">Nombre de usuario:</label>
                 <app-text-label [(ngModel)]="username" type="text" name="username" required></app-text-label>
-                <app-error-message></app-error-message>
+                <app-error-message *ngIf="registerForm.submitted && registerForm.controls[firstName].invalid">Introduzca
+                    su nombre de usuario</app-error-message>
 
                 <label for="birthdate"> Fecha de Nacimiento:</label>
                 <app-text-label [(ngModel)]="birthDate" type="date" name="birthdate" required></app-text-label>
-                <app-error-message></app-error-message>
+                <app-error-message *ngIf="registerForm.submitted && !validateBirthDate()">Debe ser mayor de edad para
+                    registrarse</app-error-message>
 
             </div>
 

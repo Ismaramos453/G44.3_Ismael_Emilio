@@ -26,7 +26,6 @@ export class RegisterPageComponent {
     this.lastName = ''
     this.phone = ''
     this.email = ''
-    this.birthDate = new Date()
   }
 
   validatePasswordsMatch() {
@@ -35,6 +34,16 @@ export class RegisterPageComponent {
     } else {
       return true
     }
+  }
+
+  validateBirthDate() {
+    const today = new Date();
+    var age = today.getFullYear() - this.birthDate.getFullYear();
+    const month = today.getMonth() - this.birthDate.getMonth();
+    if (month < 0 || (month === 0 && today.getDate() < this.birthDate.getDate())) {
+      age--;
+    }
+    return age >= 18;
   }
   
 }

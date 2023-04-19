@@ -5,10 +5,9 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './PaytoRent/auth/pages/login-page/login-page.component';
 import { RegisterPageComponent } from './PaytoRent/auth/pages/register-page/register-page.component';
 import { CategoriasVehiculosComponent } from './PaytoRent/gen/components/categorias-vehiculos/categorias-vehiculos.component';
-
-
-import { DescripcionProductoComponent } from './PaytoRent/gen/components/descripcion-producto/descripcion-producto.component';
 import { VehiculosDestacadosComponent } from './PaytoRent/gen/components/vehiculos-destacados/vehiculos-destacados.component';
+import { PrincipalComponent } from './PaytoRent/gen/pages/principal/principal.component';
+
 
 
 @NgModule({
@@ -17,8 +16,8 @@ import { VehiculosDestacadosComponent } from './PaytoRent/gen/components/vehicul
     LoginPageComponent,
     RegisterPageComponent,
     CategoriasVehiculosComponent,
-    DescripcionProductoComponent,
     VehiculosDestacadosComponent,
+    PrincipalComponent,
   ],
   imports: [
     BrowserModule

@@ -25,12 +25,14 @@ import { EditarPerfilComponent } from './PaytoRent/gen/pages/editar-perfil/edita
 import { VerAnuncioComponent } from './PaytoRent/gen/pages/ver-anuncio/ver-anuncio.component';
 import { PerfilVendedorComponent } from './PaytoRent/gen/pages/perfil-vendedor/perfil-vendedor.component';
 import {RouterModule, Routes} from "@angular/router";
+import { RegisterComponent } from './PaytoRent/auth/pages/register/register.component';
+
 
 const appRoute: Routes = [
   {path: '', redirectTo:'Home', pathMatch:'full'},
   {path: 'Home', component:PrincipalComponent},
   {path: 'login', component: LoginPageComponent},
-  {path: 'register', component: RegisterPageComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'catalogo', component: CatalogoComponent},
   {path: 'producto', component: ProductoComponent},
   {path: 'perfil', component: PerfilComponent},
@@ -68,6 +70,8 @@ const appRoute: Routes = [
     EditarPerfilComponent,
     VerAnuncioComponent,
     PerfilVendedorComponent,
+    RegisterComponent
+
 
   ],
   imports: [

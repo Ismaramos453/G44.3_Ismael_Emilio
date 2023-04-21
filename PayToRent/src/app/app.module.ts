@@ -24,7 +24,28 @@ import { EditarVehiculoComponent } from './PaytoRent/gen/pages/editar-vehiculo/e
 import { EditarPerfilComponent } from './PaytoRent/gen/pages/editar-perfil/editar-perfil.component';
 import { VerAnuncioComponent } from './PaytoRent/gen/pages/ver-anuncio/ver-anuncio.component';
 import { PerfilVendedorComponent } from './PaytoRent/gen/pages/perfil-vendedor/perfil-vendedor.component';
+import {RouterModule, Routes} from "@angular/router";
 
+const appRoute: Routes = [
+  {path: '', redirectTo:'Home', pathMatch:'full'},
+  {path: 'Home', component:PrincipalComponent},
+  {path: 'login', component: LoginPageComponent},
+  {path: 'register', component: RegisterPageComponent},
+  {path: 'catalogo', component: CatalogoComponent},
+  {path: 'producto', component: ProductoComponent},
+  {path: 'perfil', component: PerfilComponent},
+  {path: 'chat', component: ChatComponent},
+  {path: 'propietario', component: PerfilVendedorComponent},
+  {path: 'alquilar', component: ReservaComponent},
+  {path: 'pagar', component: PagoComponent},
+  {path: 'verAnuncio', component: VerAnuncioComponent},
+  {path: 'editar', component: EditarPerfilComponent},
+  {path: 'editarVehiculo', component: EditarVehiculoComponent}
+
+  
+  
+
+];
 
 @NgModule({
   declarations: [
@@ -51,10 +72,13 @@ import { PerfilVendedorComponent } from './PaytoRent/gen/pages/perfil-vendedor/p
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoute),
     FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
 

@@ -4,6 +4,7 @@
     padding: 20px;
     background-color: #f2f2f2;
     border-radius: 10px;
+    margin-bottom: 6rem;
   }
   .error-message {
     display: block;

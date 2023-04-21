@@ -9,7 +9,6 @@
 
 <body>
 
-    <app-header></app-header>
 
     <form class="form" #loginForm="ngForm" (ngSubmit)="validateLogIn(loginForm)" novalidate>
         <input [(ngModel)]="email" name="email" placeholder="Correo electrónico" class="input" type="email"

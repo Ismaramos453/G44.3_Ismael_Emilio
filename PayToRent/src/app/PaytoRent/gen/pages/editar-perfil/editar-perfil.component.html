@@ -9,14 +9,14 @@
    
 
 </head>
-<app-header></app-header>
+
 <body>
     
     <form class="registration-form">
         <h2>Editar Perfil</h2>
 
         <div class="contenedorFotoUsuario">
-            <a class="usuarioFotoEdicion" href="../Catálogo/catalogo.html">
+            <a class="usuarioFotoEdicion" [routerLink]="['/editarPerfil']">
                 <img class="imagen" src="../../../../../assets/img/foto.png">
             </a>
         </div>
@@ -59,19 +59,19 @@
 
             </div>
 
-            <button type="submit" onclick="checkRegister(event)">Guardar cambios</button>
+            <button [routerLink]="['/perfil']"  type="submit" onclick="checkRegister(event)">Guardar cambios</button>
         </div>
 
 
         <div class="contenedorAnuncios">
             <div class="anuncios">
-                <a id="vehiculo-1" class="fotoVehiculo" href="../editar/editVehicle.html">
-                    <a class="edicionUsuario" href="#">
+                <a id="vehiculo-1" class="fotoVehiculo" [routerLink]="['/editarVehiculo']">
+                    <a class="edicionUsuario" [routerLink]="['/editarVehiculo']">
                         <img class="imagen" src="../../images/edicion.png">
 
                     </a>
 
-                    <a class="edicionUsuarioEliminar" href="#">
+                    <a class="edicionUsuarioEliminar" [routerLink]="['/editarVehiculo']">
                         <img class="imagen" src="../../images/cancelar.png">
                     </a>
                 </a>
@@ -79,7 +79,7 @@
 
             <div class="contenedorAnuncios">
                 <div class="anuncios">
-                    <a id="vehiculo-1" class="fotoVehiculo" href="../editar/editVehicle.html">
+                    <a id="vehiculo-1" class="fotoVehiculo" [routerLink]="['/editarVehiculo']">
                         <a class="edicionUsuario" href="#">
                             <img class="imagen" src="../../images/edicion.png">
     
@@ -98,5 +98,5 @@
     </form>
 
 </body>
-<app-footer></app-footer>
+
 </html>

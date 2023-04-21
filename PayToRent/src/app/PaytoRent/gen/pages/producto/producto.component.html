@@ -1,16 +1,16 @@
-<app-header></app-header>
+
 <div class= "contenedorProducto">
 	<div class="OpcionesProducto">
-		<a class="FotoProducto" href="./producto.html"></a>
+		<a class="FotoProducto" [routerLink]="['/producto']"></a>
 		<div class ="chat">
-			<a class="reserva" href="../Reserva/reserva.html">
+			<a class="reserva" [routerLink]="['/alquilar']">
 				<button>
 					<span class="transition"></span>
 					<span class="gradient"></span>
 					<span class="label">Alquilar</span>
 				</button>
 			</a>
-			<a class="chatUsuario" href="../Chat/chat.html">
+			<a class="chatUsuario" [routerLink]="['/chat']">
 				<img class = "imagen" src="../../../../../assets/img/chat1.png" >
 			</a>
 
@@ -37,7 +37,7 @@
 		</div>
 						
 		<div class = "items">
-			<a class="usuarioFoto" href="../Perfil/perfilVendedor.html">
+			<a class="usuarioFoto" [routerLink]="['/propietario']">
 				<img class = "imagen" src="../../../../../assets/img/usuario1.png">
 			</a>			
 				<a class = "usuario" >Nombre Usuario</a>
@@ -49,24 +49,24 @@
 	    <div class="contenedorInformacion">
 			<a class="informacion" ></a>
             <div class="contenedorFotosProducto">
-                <a href="./producto.html">
+                <a [routerLink]="['/producto']">
                   <div class="cuadradoProductos"></div>
                 </a>
-                <a href="./producto.html">
+                <a [routerLink]="['/producto']">
                   <div class="cuadradoProductos"></div>
                 </a>
-                <a href="./producto.html">
+                <a [routerLink]="['/producto']">
                   <div class="cuadradoProductos"></div>
                 </a>
-                <a href="./producto.html">
+                <a [routerLink]="['/producto']">
                     <div class="cuadradoProductos"></div>
                   </a>
 
-                  <a href="./producto.html">
+                  <a [routerLink]="['/producto']">
                     <div class="cuadradoProductos"></div>
                   </a>
 
-                  <a href="./producto.html">
+                  <a [routerLink]="['/producto']">
                   <div class="cuadradoProductos"></div>
                 </a>
               </div>
@@ -79,6 +79,6 @@
 
 		
 		
-<app-footer></app-footer>
+
 
 

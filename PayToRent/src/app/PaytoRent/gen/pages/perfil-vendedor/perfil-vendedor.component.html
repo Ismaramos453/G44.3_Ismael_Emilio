@@ -8,14 +8,14 @@
         <title>Perfil Vendedor</title>
     </head>
 
-    <app-header></app-header>
+
     <body>
         <form class="registration-form">
             <h2>Perfil Vendedor</h2>
 
 
             <div class = "contenedorFotoUsuario">
-                <a class="usuarioFotoEdicion" href="#">
+                <a class="usuarioFotoEdicion" [routerLink]="['/propietario']">
                     <img class = "imagen" src="../../../../../assets/img/usuario1.png">
                 </a>
 
@@ -23,13 +23,7 @@
             </div>
 
 
-            <div class = "items2"> 
-                <a class="usuarioFoto" href="../perfil/editarPerfil.html"> 
-                    <img class = "imagen" src="../../../../../assets/img/usuario1.png">
-                </a>
-                <a class = "usuario" >Editar Perfil
-                </a>
-            </div>
+
 
             <div class="form-container">
                 <div class="form-group">
@@ -61,7 +55,7 @@
   
             </div>
             
-            <p class="texto-bonito"> <a href="verAnuncio.html">Ver anuncios</a></p>
+            <p class="texto-bonito"> <a [routerLink]="['/verAnuncio']">Ver anuncios</a></p>
         </form>
     </body>
 </html>

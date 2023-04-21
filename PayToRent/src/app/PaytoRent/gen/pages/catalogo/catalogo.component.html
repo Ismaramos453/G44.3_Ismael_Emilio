@@ -12,10 +12,9 @@
 
         <!--<link href="../../car.css" rel="stylesheet" />-->
 
-        <app-header></app-header>
 
        <div class = "items"> 
-            <a class="usuarioFoto" href="../perfil/Perfil.html"> 
+            <a class="usuarioFoto" [routerLink]="['/perfil']"> 
                 <img class = "imagen" src="../../../../../assets/img/usuario1.png">
             </a>
             <a class = "usuario" >Mi perfil
@@ -37,7 +36,7 @@
 
         <div class="contenedorAnuncios">
             <div class="anuncios">
-                <a id="vehiculo-1" class="fotoVehiculo" href="../Producto/producto.html ">
+                <a id="vehiculo-1" class="fotoVehiculo" [routerLink]="['/producto']">
                 </a>
             </div>
             <div class= "contenedorInformacion">
@@ -71,7 +70,7 @@
 
             <div class="contenedorAnuncios">
             <div class="anuncios">
-                <a id="vehiculo-2" class="fotoVehiculo" href="../Producto/producto.html">
+                <a id="vehiculo-2" class="fotoVehiculo" [routerLink]="['/producto']">
                 </a>
             </div>
             <div class= "contenedorInformacion">
@@ -138,6 +137,6 @@
         </div>
 
 
-    <app-footer></app-footer>
+
     
     

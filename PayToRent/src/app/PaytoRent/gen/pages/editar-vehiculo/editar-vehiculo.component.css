@@ -1,0 +1,744 @@
+.calificacion {
+    width: 113px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 14rem;
+    left: 2.5rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:100;
+    font-size: 2rem;
+  
+    text-align: right;
+    flex-direction:row;
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+  .opiniones{
+    width: 45rem;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    left: 6rem;
+    margin-top: 1rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    text-align: left;
+  
+  
+  
+    
+  }
+  .texto {
+    width: 35rem;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    left: 2.5rem;
+    margin-top: 1rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:100;
+    font-size: 0.75rem;
+    opacity: 1;
+    text-align: left;
+    word-wrap:5rem;
+    line-height: 1.75rem;
+    
+  }
+  
+  
+  .estrella{
+      display: flex;
+      margin-left: 2rem;
+      font-size: 2rem;
+  }
+  #form {
+      width: 250px;
+      margin: 0 auto;
+      height: 50px;
+    }
+    
+    #form p {
+      text-align: center;
+  
+    }
+    
+    #form label {
+      font-size: 20px;
+    }
+    
+    input[type="radio"] {
+      display: none;
+    }
+    label {
+      color: grey;
+    }
+    /*  
+    @media screen and (max-width: 900px) {
+      .calificacion {
+        width: 113px;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        top: 16rem;
+        left: 2.5rem;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight:100;
+        font-size: 1rem;
+  
+        text-align: right;
+        flex-direction:row;
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+      }
+  
+      .opiniones{
+        width: 45rem;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        left: 6rem;
+        margin-top: 1rem;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+        text-align: left;
+        
+      }
+  
+      .texto {
+        width: 45rem;
+        color: rgba(0,0,0,1);
+        position: absolute;
+        left: 2.5rem;
+        margin-top: 1rem;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight:100;
+        font-size: 0.75rem;
+        opacity: 1;
+        text-align: left;
+        word-wrap:5rem;
+        line-height: 1.25rem;
+        max-width: 20rem;
+  
+      }
+  
+      .estrella{
+        display: flex;
+        margin-left: 2rem;
+        font-size: 1rem;
+    }
+    #form {
+        width: 250px;
+        margin: 0 auto;
+        height: 50px;
+      }
+      
+      #form p {
+        text-align: center;
+    
+      }
+      
+      #form label {
+        font-size: 20px;
+      }
+      
+      input[type="radio"] {
+        display: none;
+      }
+      label {
+        color: grey;
+      }
+  
+    }
+  
+    */
+
+
+.contenedorProducto{
+    position: relative;
+    display: flex;
+    flex-direction:row;
+    margin-left: 5rem;	
+    margin-right: 8rem;	
+    right: 4rem;
+    max-width: 140rem;
+    }
+
+.OpcionesProducto{
+	position: relative;
+	display: flex;
+  flex-direction:column;
+	flex-wrap: wrap;	
+ 	margin-left: 1rem;
+}
+
+	.FotoProducto{
+		width: 25rem; 
+		height: 25rem; 
+		background: #000000;
+		margin-top: 0rem;
+	}
+
+  .FotoProducto img{
+		width: 100%;
+    height: auto;
+    max-width: 25rem;
+    max-height: 25rem;
+	}
+
+ /* Rectangulo producto con la información*/
+ .rectangulosProducto{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    
+}
+
+  .contenedorInformacion{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    margin-left: 5rem;
+    overflow: hidden;
+    
+  }
+
+
+  /*Descripcion del producto*/
+  .informacion{
+      width:auto; 
+      height: 15rem; 
+      background: #ffffff;
+    }
+
+    
+    .contenedorFotosProducto{
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -26rem;
+      margin-top: 14rem;
+      width: 90rem; 
+      height: 50rem; 
+      background: #ffffff;
+
+
+    }
+    .cuadradoProductos{
+      width: 17rem; 
+      height: 17rem; 
+      background: #000000;
+      margin:1.75rem;
+
+    }
+
+    .cuadradoProductos img{
+      width: 100%;
+      height: auto;
+      max-width: 17rem;
+      max-height: 17rem;
+
+    }
+
+
+    #form {
+      width: 250px;
+      margin: 0 auto;
+      height: 50px;
+    }
+    
+    #form p {
+      text-align: center;
+    }
+    
+    #form label {
+      font-size: 20px;
+    }
+    
+    input[type="radio"] {
+      display: none;
+    }
+    
+    label {
+      color: grey;
+    }
+    /*
+    .clasificacion {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+    }
+    
+    label:hover,
+    label:hover ~ label {
+      color: orange;
+    }
+    
+    input[type="radio"]:checked ~ label {
+      color: orange;
+    }
+    */
+    .edicionUsuarioEliminar{
+
+        background-color: rgb(255, 255, 255);
+        height: 4em;
+        width: 4em;
+        margin-top: 2rem;
+        margin-left: -7rem;
+        margin-right: 2rem;
+        background-size: cover;
+        justify-content: center;
+        position: relative;
+        
+        }
+        .edicionUsuarioEliminar img {
+        display: block;
+        margin-top: 15%;
+        margin-left: 15%;
+        margin-right: 10%;
+        max-width: 100%;
+        height: 70%;
+        background-size: cover;
+        }
+
+        
+        @media screen and (max-width: 768px){
+            .calificacion {
+                width: 200px;
+                color: rgba(0,0,0,1);
+                position: absolute;
+                top: 16rem;
+                left: 2.5rem;
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight:100;
+                font-size: 1.5rem;
+              
+                text-align: right;
+                flex-direction:row;
+                display: flex;
+                align-items: center;
+                margin-right: 2rem;
+              }
+              .opiniones{
+                width: 45rem;
+                color: rgba(0,0,0,1);
+                position: absolute;
+                left: 6rem;
+                margin-top: 1rem;
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 2rem;
+                text-align: left;
+              
+              }
+              .texto {
+                width: 45rem;
+                color: rgba(0,0,0,1);
+                position: absolute;
+                left: 2.5rem;
+                margin-top: 1rem;
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight:100;
+                font-size: 0.75rem;
+                opacity: 1;
+                text-align: left;
+                word-wrap:5rem;
+                line-height: 1rem;
+                max-width: 20rem;
+              }
+          
+          
+          
+              
+              .estrella{
+                  display: flex;
+                  margin-left: 2rem;
+                  font-size: 1.5rem;
+              }
+              #form {
+                  width: 250px;
+                  margin: 0 auto;
+                  height: 50px;
+                }
+                
+                #form p {
+                  text-align: center;
+              
+                }
+                
+                #form label {
+                  font-size: 20px;
+                }
+                
+                input[type="radio"] {
+                  display: none;
+                }
+                label {
+                  color: grey;
+                }
+
+          .contenedorProducto{
+            position: relative;
+            display: flex;
+            flex-direction:row;
+            margin-left: 5rem;	
+            margin-right: 8rem;	
+            right: 4rem;
+            max-width: 70rem;
+            }
+        
+        .OpcionesProducto{
+          position: relative;
+          display: flex;
+          flex-direction:column;
+          flex-wrap: wrap;	
+           margin-left: 1rem;
+        }
+        
+          .FotoProducto{
+            width: 20rem; 
+            height: 20rem; 
+            background: #000000;
+            margin-top: 0rem;
+          }
+        
+         /* Rectangulo producto con la información*/
+
+          /* Rectangulo producto con la información*/
+        .rectangulosProducto{
+          position: relative;
+          display: flex;
+          flex-direction:column;
+          flex-wrap: wrap;
+          margin-left: 1rem;
+          
+        }
+
+
+          .contenedorInformacion{
+            position: relative;
+            display: flex;
+            flex-direction:column;
+            flex-wrap: wrap;
+            margin-left: -21rem;
+            margin-top: 25rem;
+            overflow: hidden;
+            
+          }
+        
+        
+          /*Descripcion del producto*/
+          .informacion{
+              width:30; 
+              height: 15rem; 
+              background: #ffffff;
+              
+              
+            
+            }
+            
+            .contenedorFotosProducto{
+              position: relative;
+              display: flex;
+              flex-wrap: wrap;
+              margin-left: -21rem;
+              margin-top: 5rem;
+              width: 25rem; 
+              height: 20rem; 
+              background: #ffffff;
+        
+        
+            }
+            .cuadradoProductos{
+              width: 5rem; 
+              height: 5rem; 
+              background: #000000;
+              margin:1rem;
+        
+            }
+        
+        
+            #form {
+              width: 250px;
+              margin: 0 auto;
+              height: 50px;
+            }
+            
+            #form p {
+              text-align: center;
+            }
+            
+            #form label {
+              font-size: 20px;
+            }
+            
+            input[type="radio"] {
+              display: none;
+            }
+            
+            label {
+              color: grey;
+            }
+            /*
+            .clasificacion {
+              direction: rtl;
+              unicode-bidi: bidi-override;
+            }
+            
+            label:hover,
+            label:hover ~ label {
+              color: orange;
+            }
+            
+            input[type="radio"]:checked ~ label {
+              color: orange;
+            }
+            */
+            .edicionUsuarioEliminar{
+        
+                background-color: rgb(255, 255, 255);
+                height: 1em;
+                width: 1em;
+                margin-top: 2rem;
+                margin-left: -6rem;
+                margin-right: 5rem;
+                background-size: cover;
+                justify-content: center;
+                position: relative;
+                
+                }
+                .edicionUsuarioEliminar img {
+                display: block;
+                margin-top: 15%;
+                margin-left: 15%;
+                margin-right: 10%;
+                max-width: 100%;
+                height: 70%;
+                background-size: cover;
+                }
+
+
+
+
+
+
+          
+        }
+        
+        
+
+
+        @media screen and (max-width: 480px) {
+
+
+            .calificacion {
+                width: 113px;
+                color: rgba(0,0,0,1);
+                position: absolute;
+                top: 17.5rem;
+                left: 3.5rem;
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight:100;
+                font-size: 0.25rem;
+              
+                text-align: right;
+                flex-direction:row;
+                display: flex;
+                align-items: center;
+                margin-right: 2rem;
+              }
+              .opiniones{
+                width: 45rem;
+                color: rgba(0,0,0,1);
+                position: absolute;
+                left: 3rem;
+                margin-top: 1rem;
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 1rem;
+                text-align: left;
+              
+              }
+              .texto {
+                width: 15rem;
+                color: rgba(0,0,0,1);
+                position: absolute;
+                left: 1.5rem;
+                margin-top: 1rem;
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight:100;
+                font-size: 0.5rem;
+                opacity: 1;
+                text-align: left;
+                word-wrap:5rem;
+                line-height: 1rem;
+                max-width: 10.5rem;
+              }
+              
+              
+              .estrella{
+                  display: flex;
+                  margin-left: 2rem;
+                  font-size: 0.5rem;
+              }
+              #form {
+                  width: 250px;
+                  margin: 0 auto;
+                  height: 50px;
+                }
+                
+                #form p {
+                  text-align: center;
+              
+                }
+                
+                #form label {
+                  font-size: 20px;
+                }
+                
+                input[type="radio"] {
+                  display: none;
+                }
+                label {
+                  color: grey;
+                }
+
+          .contenedorProducto{
+            position: relative;
+            display: flex;
+            flex-direction:row;
+            margin-left: 5rem;	
+            margin-right: 8rem;	
+            right: 4rem;
+            max-width: 70rem;
+            }
+        
+        .OpcionesProducto{
+          position: relative;
+          display: flex;
+          flex-direction:column;
+          flex-wrap: wrap;	
+           margin-left: 1rem;
+        }
+        
+          .FotoProducto{
+            width: 10rem; 
+            height: 10rem; 
+            background: #000000;
+            margin-top: 0rem;
+          }
+        
+         /* Rectangulo producto con la información*/
+
+          /* Rectangulo producto con la información*/
+        .rectangulosProducto{
+          position: relative;
+          display: flex;
+          flex-direction:column;
+          flex-wrap: wrap;
+          margin-left: 1rem;
+          
+        }
+
+
+          .contenedorInformacion{
+            position: relative;
+            display: flex;
+            flex-direction:column;
+            flex-wrap: wrap;
+            margin-left: -12rem;
+            margin-top: 18rem;
+            overflow: hidden;
+            
+          }
+        
+        
+          /*Descripcion del producto*/
+          .informacion{
+              width:10; 
+              height: 15rem; 
+              background: #ffffff;
+              
+            
+            }
+            
+            .contenedorFotosProducto{
+              position: relative;
+              display: flex;
+              flex-wrap: wrap;
+              margin-left: -12rem;
+              margin-top: 5rem;
+              width: 15rem; 
+              height: 30rem; 
+              background: #ffffff;
+        
+        
+            }
+            .cuadradoProductos{
+              width: 5rem; 
+              height: 5rem; 
+              background: #000000;
+              margin:1rem;
+        
+            }
+        
+        
+            #form {
+              width: 250px;
+              margin: 0 auto;
+              height: 50px;
+            }
+            
+            #form p {
+              text-align: center;
+            }
+            
+            #form label {
+              font-size: 20px;
+            }
+            
+            input[type="radio"] {
+              display: none;
+            }
+            
+            label {
+              color: grey;
+            }
+            /*
+            .clasificacion {
+              direction: rtl;
+              unicode-bidi: bidi-override;
+            }
+            
+            label:hover,
+            label:hover ~ label {
+              color: orange;
+            }
+            
+            input[type="radio"]:checked ~ label {
+              color: orange;
+            }
+            */
+            .edicionUsuarioEliminar{
+        
+                background-color: rgb(255, 255, 255);
+                height: 1em;
+                width: 1em;
+                margin-top: 2rem;
+                margin-left: -6rem;
+                margin-right: 5rem;
+                background-size: cover;
+                justify-content: center;
+                position: relative;
+                
+                }
+                .edicionUsuarioEliminar img {
+                display: block;
+                margin-top: 15%;
+                margin-left: 15%;
+                margin-right: 10%;
+                max-width: 100%;
+                height: 70%;
+                background-size: cover;
+                }
+
+
+
+        }

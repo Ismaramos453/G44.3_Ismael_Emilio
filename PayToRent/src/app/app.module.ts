@@ -5,16 +5,26 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './PaytoRent/auth/pages/login-page/login-page.component';
 import { RegisterPageComponent } from './PaytoRent/auth/pages/register-page/register-page.component';
-import { CategoriasVehiculosComponent } from './PaytoRent/gen/components/categorias-vehiculos/categorias-vehiculos.component';
-import { VehiculosDestacadosComponent } from './PaytoRent/gen/components/vehiculos-destacados/vehiculos-destacados.component';
+
+
 import { PrincipalComponent } from './PaytoRent/gen/pages/principal/principal.component';
 import { CatalogoComponent } from './PaytoRent/gen/pages/catalogo/catalogo.component';
 
 import { TextLabelComponent } from './PaytoRent/auth/components/text-label/text-label.component';
 import { SubmitButtonComponent } from './PaytoRent/auth/components/submit-button/submit-button.component';
-import { HeaderComponent } from './PaytoRent/gen/pages/header/header.component';
-import { FooterComponent } from './PaytoRent/gen/pages/footer/footer.component';
+import { HeaderComponent } from './PaytoRent/gen/components/header/header.component';
+import { FooterComponent } from './PaytoRent/gen/components/footer/footer.component';
 import { ErrorMessageComponent } from './PaytoRent/auth/components/error-message/error-message.component';
+import { ChatComponent } from './PaytoRent/gen/pages/chat/chat.component';
+import { ProductoComponent } from './PaytoRent/gen/pages/producto/producto.component';
+import { ReservaComponent } from './PaytoRent/gen/pages/reserva/reserva.component';
+import { PagoComponent } from './PaytoRent/gen/pages/pago/pago.component';
+import { PerfilComponent } from './PaytoRent/gen/pages/perfil/perfil.component';
+import { EditarVehiculoComponent } from './PaytoRent/gen/pages/editar-vehiculo/editar-vehiculo.component';
+import { EditarPerfilComponent } from './PaytoRent/gen/pages/editar-perfil/editar-perfil.component';
+import { VerAnuncioComponent } from './PaytoRent/gen/pages/ver-anuncio/ver-anuncio.component';
+import { PerfilVendedorComponent } from './PaytoRent/gen/pages/perfil-vendedor/perfil-vendedor.component';
+
 
 
 @NgModule({
@@ -22,15 +32,23 @@ import { ErrorMessageComponent } from './PaytoRent/auth/components/error-message
     AppComponent,
     LoginPageComponent,
     RegisterPageComponent,
-    CategoriasVehiculosComponent,
-    VehiculosDestacadosComponent,
     PrincipalComponent,
     TextLabelComponent,
     SubmitButtonComponent,
     HeaderComponent,
     FooterComponent,
     ErrorMessageComponent,
-    CatalogoComponent
+    CatalogoComponent,
+    ChatComponent,
+    ProductoComponent,
+    ReservaComponent,
+    PagoComponent,
+    PerfilComponent,
+    EditarVehiculoComponent,
+    EditarPerfilComponent,
+    VerAnuncioComponent,
+    PerfilVendedorComponent,
+
   ],
   imports: [
     BrowserModule,

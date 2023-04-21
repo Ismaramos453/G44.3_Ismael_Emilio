@@ -1,8 +1,14 @@
-
+<!doctype html>
+	<html lang="es">
+	<head>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	</head>
 
-        <app-header></app-header>
+	
+<app-header></app-header>
+	<body>
+
 		<section id="main-content">
 			<article>
 				<!-- / aqui pueden ir imagenes -->
@@ -36,6 +42,27 @@
 
 				</div>
 
+				<script>
+					// Cargar el archivo JSON
+					fetch('vehiculos.json')
+					  .then(response => response.json())
+					  .then(data => {
+						// Iterar sobre el array de vehículos
+						data.vehiculos.forEach((vehiculo, index) => {
+						  // Obtener el contenedor HTML correspondiente
+						  const contenedor = document.querySelectorAll('.cuadradoNegro')[index];
+				
+						  // Crear la imagen y establecer la fuente desde el archivo JSON
+						  const imagen = new Image();
+						  imagen.src = vehiculo.foto;
+				
+						  // Agregar la imagen al contenedor
+						  contenedor.appendChild(imagen);
+						});
+					  });
+				  </script>
+
+
 				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-inner">
 					  <div class="carousel-item active">
@@ -58,12 +85,16 @@
 					</div>
 				  </div>
 				  
-				  
 
 
 			</article> <!-- /article -->
 		
 		</section> <!-- / #main-content -->
+
+
+	</body>
+	
+</html>
 
 
 <app-footer></app-footer>

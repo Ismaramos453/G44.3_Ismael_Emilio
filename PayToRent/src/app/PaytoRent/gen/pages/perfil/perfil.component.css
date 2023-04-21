@@ -1,0 +1,720 @@
+.usuarioFoto{
+	background-color: rgb(140, 138, 138);
+	height: 5em;
+	width: 5em;
+	background-size: cover;
+	display: flex;
+	flex-direction:row;
+}
+
+.usuarioFoto img {
+	display: block;
+	margin-top: 10%;
+	margin-left: 15%;
+	margin-right: 10%;
+	max-width: 100%;
+	height: 70%;
+	background-size: cover;
+
+}
+.usuario{
+	background-color: rgb(255, 255, 255);
+	height: 5em;
+	width: 10em;
+	background-size: cover;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center; /* centra horizontalmente */
+}
+
+.items{
+	height: auto;
+	flex-direction:row;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: end; /* centra horizontalmente */
+	margin-top: 0rem;
+
+  }
+.contenedorAnuncios{
+	position: relative;
+	display: flex;
+  	flex-direction:row;
+  	margin-left: 0rem;	
+	right: 1rem;
+
+}
+
+
+
+  
+.anuncios{
+	position: relative;
+	display: flex;
+  	flex-direction:column;
+	flex-wrap: wrap;	
+ 	margin-left: 4rem;
+	
+}
+
+.fotoVehiculo{
+	width: 15rem; 
+	height: 15rem; 
+	background:transparent;
+	margin-top: 4rem;
+	margin-right: 2rem;
+}
+
+.fotoVehiculo img {
+
+	width: 100%;
+	height: auto;
+	max-width: 15rem;
+	max-height: 15rem;
+	margin-top: 1.20rem;
+
+}
+
+.contenedorInformacion{
+  position: relative;
+	display: flex;
+  	flex-direction:column;
+	flex-wrap: wrap;
+ 	margin-left: 5rem;
+	
+}
+
+.informacionAnuncio{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    margin-left: -5rem;
+  
+}
+
+.informacion{
+    width: 50rem; 
+    height: 15rem; 
+    background: #ffffff;
+    margin-top: 5rem;
+
+    }
+
+
+
+.registration-form {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 8rem;
+  }
+  
+  .registration-form h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  
+  }
+  
+  .form-container {
+    margin-bottom: 10px;
+    margin-left: 3rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-grow: inherit;
+    flex-wrap: wrap;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    flex-direction: row;
+    padding-right: 2rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="date"] {
+    display: block;
+    width: 15rem;
+    height: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 20rem;
+    margin-left: 25%;
+    margin-top: 2rem;
+    padding: 10px;
+    background-color: #075e54;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+/*Foto de usuario*/
+.usuarioFotoEdicion{
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 12em;
+    width: 12em;
+    margin-left: 28em;
+    margin-top: 4rem;
+    background-size: cover;
+    display: flex;
+      flex-direction:row;
+    }
+    .usuarioFotoEdicion img {
+    display: block;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 10%;
+    max-width: 100%;
+    height: 70%;
+    background-size: cover;
+    
+    }
+/*Enlace a Anuncios*/
+
+    .texto-bonito {
+        font-family: Arial, sans-serif; /* Fuente del texto */
+        font-size: 18px; /* Tamaño de fuente del texto */
+        color: #333; /* Color del texto */
+        text-align: center; /* Centra el texto */
+        margin: 50px auto; /* Margen superior e inferior de 50px, centrado horizontalmente */
+        max-width: 600px; /* Ancho máximo del elemento */
+        line-height: 1.5; /* Altura de línea del texto */
+      }
+      
+      .texto-bonito a {
+        color: #007bff; /* Color del enlace */
+        text-decoration: none; /* Elimina la subrayado del enlace */
+        border-bottom: 2px solid #007bff; /* Agrega una línea debajo del enlace */
+        transition: all 0.2s ease-in-out; /* Agrega una transición suave al enlace */
+      }
+      
+      .texto-bonito a:hover {
+        color: #0069d9; /* Cambia el color del enlace al pasar el cursor sobre él */
+        border-bottom: 2px solid #0069d9; /* Cambia el color de la línea debajo del enlace */
+      }
+
+      .edicionUsuario{
+
+        background-color: rgb(255, 255, 255);
+        height: 4em;
+        width: 4em;
+        margin-top: -15rem;
+        margin-left: 0;
+        background-size: cover;
+        justify-content: center;
+        position: relative;
+        
+        }
+        .edicionUsuario img {
+        display: block;
+        margin-top: 15%;
+        margin-left: 15%;
+        margin-right: 10%;
+        max-width: 100%;
+        height: 70%;
+        background-size: cover;
+        }
+        
+    .edicionUsuarioEliminar{
+    
+        background-color: rgb(255, 255, 255);
+        height: 4em;
+        width: 4em;
+        margin-top: 7rem;
+        margin-left: 0;
+        background-size: cover;
+        justify-content: center;
+        position: relative;
+        
+        }
+        .edicionUsuarioEliminar img {
+        display: block;
+        margin-top: 15%;
+        margin-left: 15%;
+        margin-right: 20%;
+        max-width: 100%;
+        height: 70%;
+        background-size: cover;
+        }
+    
+    
+    .items2{
+         height: auto;
+        flex-direction:row;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: end; /* centra horizontalmente */
+        margin-top: -2rem;
+        margin-right: 5rem;
+    }
+    
+    .editarFoto{
+    
+            height: 4em;
+            width: 4em;
+            margin-left: 42.5em;
+            margin-top: -4rem;
+            background-size: cover;
+            display: flex;
+            flex-direction:row;
+    }
+    .editarFoto img {
+        display: block;
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 10%;
+        max-width: 100%;
+        height: 70%;
+        background-size: cover;
+                
+    }
+    
+    .items{
+        display: flex;
+        flex-direction:row;
+    }
+    
+    .fotoVehiculo{
+        width: 15rem; 
+        height: 15rem; 
+        background:transparent;
+        margin-top: 4rem;
+        margin-right: 10rem;
+    }
+    
+    .fotoVehiculo img {
+    
+        width: 100%;
+        height: auto;
+        max-width: 15rem;
+        max-height: 15rem;
+        margin-top: 1.20rem;
+    
+    }
+
+
+  @media screen and (max-width: 768px)  {
+
+    .contenedorAnuncios{
+		position: relative;
+		display: flex;
+		flex-direction:row;
+		margin-left: 2rem;
+
+	}
+	.anuncios{
+		position: relative;
+		display: flex;
+		  flex-direction:column;
+		flex-wrap: wrap;	
+		 margin-left: 1.5rem;
+	}
+
+	.fotoVehiculo{
+		width: 10rem; 
+		height: 10rem; 
+		background:transparent;
+		margin-top: 4rem;
+		margin-right: 0rem;
+	}
+	
+	.fotoVehiculo img {
+	
+		width: 100%;
+		height: auto;
+		max-width: 15rem;
+		max-height: 15rem;
+		margin-top: 1.20rem;
+	
+	}
+	
+	
+	.contenedorInformacion{
+	  position: relative;
+		display: flex;
+		flex-direction:column;
+		flex-wrap: wrap;
+		 margin-left: -2rem;
+		
+	}
+	
+	.informacionAnuncio{
+		position: relative;
+		display: flex;
+		flex-direction:column;
+		flex-wrap: wrap;
+		margin-left: 3.5rem;
+	  
+	}
+	
+	.informacion{
+		width: 30rem; 
+		height: 15rem; 
+		background: #ffffff;
+		margin-top: 5rem;
+	
+		}
+
+		.usuarioFoto{
+			background-color: rgb(140, 138, 138);
+			height: 2.5em;
+			width: 2.5em;
+			background-size: cover;
+			display: flex;
+			flex-direction:row;
+		}
+		
+		.usuarioFoto img {
+			display: block;
+			margin-top: 10%;
+			margin-left: 15%;
+			margin-right: 10%;
+			max-width: 100%;
+			height: 70%;
+			background-size: cover;
+		
+		}
+		.usuario{
+			background-color: rgb(255, 255, 255);
+			height: 2.5em;
+			width: 5em;
+			background-size: cover;
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: center; /* centra horizontalmente */
+
+		}
+
+
+    .registration-form {
+        max-width:30rem;
+        max-height: 100rem;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        margin-bottom: 8rem;
+      }
+    
+      .form-container {
+        margin-bottom: 10px;
+        margin-left: 3rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-grow: inherit;
+        flex-wrap: wrap;
+      }
+      
+      .form-group {
+        margin-bottom: 10px;
+        margin-top: 2rem;
+        margin-left: 8rem;
+        flex-direction: row;
+        padding-right: 2rem;
+      }
+
+    /*Foto de usuario*/
+    .usuarioFotoEdicion{
+        border-radius: 100%;
+        background-color: rgb(255, 255, 255);
+        height: 6em;
+        width: 6em;
+        margin-left:12rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        background-size: cover;
+        display: flex;
+        flex-direction:row;
+    }
+    .usuarioFotoEdicion img {
+        display: block;
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 10%;
+        max-width: 100%;
+        height: 70%;
+        background-size: cover;
+                
+    }
+
+    .edicionUsuario{
+
+        background-color: rgb(255, 255, 255);
+        height: 4em;
+        width: 4em;
+        margin-top: -10rem;
+        margin-left: -1rem;
+        background-size: cover;
+        justify-content: center;
+        position: relative;
+        
+        }
+        .edicionUsuario img {
+        display: block;
+        margin-top: 15%;
+        margin-left: 15%;
+        margin-right: 10%;
+        max-width: 100%;
+        height: 70%;
+        background-size: cover;
+        }
+        
+    .edicionUsuarioEliminar{
+    
+        background-color: rgb(255, 255, 255);
+        height: 4em;
+        width: 4em;
+        margin-top: 7rem;
+        margin-left: -1rem;
+        background-size: cover;
+        justify-content: center;
+        position: relative;
+        
+        }
+        .edicionUsuarioEliminar img {
+        display: block;
+        margin-top: 15%;
+        margin-left: 15%;
+        margin-right: 20%;
+        max-width: 100%;
+        height: 70%;
+        background-size: cover;
+        }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .contenedorAnuncios{
+		position: relative;
+		display: flex;
+		flex-direction:row;
+		margin-left: 5rem;
+
+	}
+	.anuncios{
+		position: relative;
+		display: flex;
+		  flex-direction:column;
+		flex-wrap: wrap;	
+		 margin-left: 4.5rem;
+	}
+
+	.fotoVehiculo{
+		width: 6rem; 
+		height: 10rem; 
+		background:transparent;
+		margin-top: 4rem;
+		margin-right: 0rem;
+	}
+	
+	.fotoVehiculo img {
+	
+		width: 100%;
+		height: auto;
+		max-width: 15rem;
+		max-height: 15rem;
+		margin-top: 1.20rem;
+	
+	}
+	
+	
+	.contenedorInformacion{
+	  position: relative;
+		display: flex;
+		flex-direction:column;
+		flex-wrap: wrap;
+		 margin-left: -12rem;
+		 margin-top: 10rem;
+		
+	}
+	
+	.informacionAnuncio{
+		position: relative;
+		display: flex;
+		flex-direction:column;
+		flex-wrap: wrap;
+		margin-left: 3.5rem;
+	  
+	}
+	
+	.informacion{
+		width: 12rem; 
+		height: 15rem; 
+		background: #ffffff;
+		margin-top: 5rem;
+	
+		}
+
+		.usuarioFoto{
+			background-color: rgb(140, 138, 138);
+			height: 2.5em;
+			width: 2.5em;
+			background-size: cover;
+			display: flex;
+			flex-direction:row;
+		}
+		
+		.usuarioFoto img {
+			display: block;
+			margin-top: 10%;
+			margin-left: 15%;
+			margin-right: 10%;
+			max-width: 100%;
+			height: 70%;
+			background-size: cover;
+		
+		}
+		.usuario{
+			background-color: rgb(255, 255, 255);
+			height: 2.5em;
+			width: 5em;
+			background-size: cover;
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: center; /* centra horizontalmente */
+
+		}
+    .registration-form {
+        max-width: auto;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        margin-bottom: 8rem;
+      }
+    
+      .form-group {
+        margin-bottom: 10px;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        flex-direction: row;
+        padding-right: 1rem;
+      }
+    
+      .form-container {
+        margin-bottom: 10px;
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: row;
+        flex-grow: inherit;
+        flex-wrap: wrap;
+      }
+    
+      button[type="button"] {
+        display: block;
+        width: 20rem;
+        margin-left: 1rem;
+        margin-top: 2rem;
+        padding: 10px;
+        background-color: #075e54;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+   /*Foto de usuario*/
+   .usuarioFotoEdicion{
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 6em;
+    width: 6em;
+    margin-left: 7rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    background-size: cover;
+    display: flex;
+    flex-direction:row;
+}
+.usuarioFotoEdicion img {
+    display: block;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 10%;
+    max-width: 100%;
+    height: 70%;
+    background-size: cover;
+            
+}
+.edicionUsuario{
+
+    background-color: rgb(255, 255, 255);
+    height: 2em;
+    width: 2em;
+    margin-top: -9rem;
+    margin-left: -0.5rem;
+    background-size: cover;
+    justify-content: center;
+    position: relative;
+    
+    }
+    .edicionUsuario img {
+    display: block;
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 10%;
+    max-width: 100%;
+    height: 40%;
+    background-size: cover;
+    }
+    
+.edicionUsuarioEliminar{
+
+    background-color: rgb(255, 255, 255);
+    height: 2em;
+    width: 2em;
+    margin-top: 5.5rem;
+    margin-left: -0.5rem;
+    background-size: cover;
+    justify-content: center;
+    position: relative;
+    
+    }
+    .edicionUsuarioEliminar img {
+    display: block;
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 20%;
+    max-width: 100%;
+    height: 70%;
+    background-size: cover;
+    }
+}
+
+
+
+
+
+

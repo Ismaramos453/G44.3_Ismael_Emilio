@@ -26,7 +26,6 @@ import { VerAnuncioComponent } from './PaytoRent/gen/pages/ver-anuncio/ver-anunc
 import { PerfilVendedorComponent } from './PaytoRent/gen/pages/perfil-vendedor/perfil-vendedor.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,3 +57,4 @@ import { PerfilVendedorComponent } from './PaytoRent/gen/pages/perfil-vendedor/p
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

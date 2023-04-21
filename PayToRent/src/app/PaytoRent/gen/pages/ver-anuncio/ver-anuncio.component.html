@@ -1,1 +1,143 @@
-<p>ver-anuncio works!</p>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Jockey+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        
+    </head>
+
+    <app-header></app-header>
+    <body>
+        
+
+
+
+       <script>
+        // Cargar el archivo JSON
+        fetch('../../vehiculos.json')
+          .then(response => response.json())
+          .then(data => {
+            // Iterar sobre el array de vehículos
+            data.vehiculos.forEach((vehiculo, index) => {
+              // Obtener el contenedor HTML correspondiente
+              const contenedor = document.querySelectorAll('.fotoVehiculo')[index];
+    
+              // Crear la imagen y establecer la fuente desde el archivo JSON
+              const imagen = new Image();
+              imagen.src = vehiculo.foto;
+    
+              // Agregar la imagen al contenedor
+              contenedor.appendChild(imagen);
+            });
+          });
+      </script>
+       
+       
+       
+       <div class="contenedorAnuncios">
+        <div class="anuncios">
+            <a id="vehiculo-1" class="fotoVehiculo" href="../Producto/producto.html ">
+            </a>
+        </div>
+        <div class= "contenedorInformacion">
+            <div class="informacionAnuncio">
+                <a class="informacion" >
+                    <span class="calificacion">7.5
+                        <div class= "estrella">
+                            <form>
+                                <p class="clasificacion">
+                                <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                --><label for="radio1">★</label><!--
+                                --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                --><label for="radio2">★</label><!--
+                                --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                --><label for="radio3">★</label><!--
+                                --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                --><label for="radio4">★</label><!--
+                                --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                --><label for="radio5">★</label>
+                                </p>
+                            </form>
+                        </div>
+                        
+                    </span>
+                    
+                    <p class="texto"> </p>
+                </a>
+            </div>
+        </div> 
+    </div>
+
+        <div class="contenedorAnuncios">
+        <div class="anuncios">
+            <a id="vehiculo-2" class="fotoVehiculo" href="../Producto/producto.html">
+            </a>
+        </div>
+        <div class= "contenedorInformacion">
+            <div class="informacionAnuncio">
+                <a class="informacion" >
+                    <span class="calificacion">7.5
+                        <div class= "estrella">
+                            <form>
+                                <p class="clasificacion">
+                                <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                --><label for="radio1">★</label><!--
+                                --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                --><label for="radio2">★</label><!--
+                                --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                --><label for="radio3">★</label><!--
+                                --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                --><label for="radio4">★</label><!--
+                                --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                --><label for="radio5">★</label>
+                                </p>
+                            </form>
+                        </div>
+                        
+                    </span>
+                    
+                    <p class="texto"> </p>
+                </a>
+            </div>
+        </div> 
+    </div>
+
+        <div class="contenedorAnuncios">
+        <div class="anuncios">
+            <a id="vehiculo-3" class="fotoVehiculo" href="../Producto/producto.html">
+            </a>
+        </div>
+        <div class= "contenedorInformacion">
+            <div class="informacionAnuncio">
+                <a class="informacion" >
+                    <span class="calificacion">7.5
+                        <div class= "estrella">
+                            <form>
+                                <p class="clasificacion">
+                                <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                --><label for="radio1">★</label><!--
+                                --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                --><label for="radio2">★</label><!--
+                                --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                --><label for="radio3">★</label><!--
+                                --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                --><label for="radio4">★</label><!--
+                                --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                --><label for="radio5">★</label>
+                                </p>
+                            </form>
+                        </div>
+                        
+                    </span>
+                    
+                    <p class="texto"> </p>
+                </a>
+            </div>
+        </div> 
+    </div>
+
+    
+    </body>
+</html>
+<app-footer></app-footer>

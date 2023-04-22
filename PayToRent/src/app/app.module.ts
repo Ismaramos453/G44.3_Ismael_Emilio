@@ -25,6 +25,9 @@ import { VerAnuncioComponent } from './PaytoRent/gen/pages/ver-anuncio/ver-anunc
 import { PerfilVendedorComponent } from './PaytoRent/gen/pages/perfil-vendedor/perfil-vendedor.component';
 import {RouterModule, Routes} from "@angular/router";
 import { RegisterComponent } from './PaytoRent/auth/pages/register/register.component';
+import { ColorWindowComponent } from './PaytoRent/ui/components/color-window/color-window.component';
+import { PriceWindowComponent } from './PaytoRent/ui/components/price-window/price-window.component';
+import { SeatsWindowComponent } from './PaytoRent/ui/components/seats-window/seats-window.component';
 
 
 const appRoute: Routes = [
@@ -68,7 +71,10 @@ const appRoute: Routes = [
     EditarPerfilComponent,
     VerAnuncioComponent,
     PerfilVendedorComponent,
-    RegisterComponent
+    RegisterComponent,
+    ColorWindowComponent,
+    PriceWindowComponent,
+    SeatsWindowComponent
 
 
   ],

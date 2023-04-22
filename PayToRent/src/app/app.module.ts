@@ -10,7 +10,6 @@ import { RegisterPageComponent } from './PaytoRent/auth/pages/register-page/regi
 import { PrincipalComponent } from './PaytoRent/gen/pages/principal/principal.component';
 import { CatalogoComponent } from './PaytoRent/gen/pages/catalogo/catalogo.component';
 
-import { TextLabelComponent } from './PaytoRent/auth/components/text-label/text-label.component';
 import { SubmitButtonComponent } from './PaytoRent/auth/components/submit-button/submit-button.component';
 import { HeaderComponent } from './PaytoRent/gen/components/header/header.component';
 import { FooterComponent } from './PaytoRent/gen/components/footer/footer.component';
@@ -55,7 +54,6 @@ const appRoute: Routes = [
     LoginPageComponent,
     RegisterPageComponent,
     PrincipalComponent,
-    TextLabelComponent,
     SubmitButtonComponent,
     HeaderComponent,
     FooterComponent,

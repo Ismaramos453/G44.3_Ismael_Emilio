@@ -13,12 +13,12 @@
     <form class="form" #loginForm="ngForm" (ngSubmit)="validateLogIn(loginForm)" novalidate>
         <input [(ngModel)]="email" name="email" placeholder="Correo electrónico" class="input" type="email"
             required>
-        <app-error-message *ngIf="loginForm.submitted && loginForm.controls['email'].invalid">Por favor, introduce una
-            dirección de correo electrónico válida.</app-error-message>
+        <p class="error-message" *ngIf="!validateMail()">Por favor, introduce una
+            dirección de correo electrónico válida.</p>
         <input [(ngModel)]="passwd" name="passwd" placeholder="Contraseña" class="input" type="password"
-            required><input>
-        <app-error-message *ngIf="loginForm.submitted && loginForm.controls['passwd'].invalid">Por favor, introduce una
-            contraseña válida.</app-error-message>
+            required>
+        <p class="error-message" *ngIf="!validatePass()">Por favor, introduce una
+            contraseña válida, mínimo 8 caracteres.</p>
         <button type="submit" class="loginBtn" [disabled]="loginForm.invalid ?? false">Iniciar Sesión</button>
         <a id="forgotPassword" href="#">Contraseña olvidada</a>
         <button class="create" id="createAccountBtn" formnovalidate>

@@ -76,4 +76,12 @@ export class RegisterComponent {
   validateNotEmpty(item:String){
     return item && item.trim().length > 0 && item.length >= 5
   }
+
+  validateRegister(){
+    if(this.validateAddress() && this.validateBirthDate(this.birthDate) && this.validateMail() && this.validatePass() && this.validatePasswordsMatch()){
+      return true
+    } else {
+      return false
+    }
+  }
 }

@@ -33,4 +33,11 @@ export class PagoComponent {
   checkExpireDate(){
     return true
   }
+
+  checkPayment(){
+    if(this.checkName() && this.checkData(this.cardNumber) && this.checkData(this.cvc) && this.checkExpireDate()){
+      return true
+    }
+    return false
+  }
 }

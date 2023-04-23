@@ -5,7 +5,7 @@
 
     <body>
         
-        <form class="payment-form" #payForm="ngForm" novalidate>
+        <form class="payment-form" #payForm="ngForm" (ngSubmit)="checkPayment()" novalidate>
             <div class="form-group">
               <label for="card-holder">Titular de la tarjeta</label>
               <input type="text" [(ngModel)]="cardHolder" placeholder="Nombre completo"  required>

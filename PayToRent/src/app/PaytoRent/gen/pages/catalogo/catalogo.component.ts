@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductExchangerService } from 'src/app/PaytoRent/services/product-exchanger.service';
+import { Product } from 'src/app/PaytoRent/services/product-exchanger.service';
 
 @Component({
   selector: 'app-catalogo',
@@ -6,6 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent {
+
+  productos!:Product[]
+
+  ngOnInit(): void {
+    this.productos= this.productService.products
+  }
+
+  constructor(private productService:ProductExchangerService){
+
+  }
+
   abrirMapa(){
     const popup: Window | null = window.open('', 'mapa', 'width=600,height=450');
     if (popup && popup.document) {

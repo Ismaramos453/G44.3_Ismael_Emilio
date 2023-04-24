@@ -1,23 +1,20 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <body>
 
-    <div class="registration-form">
+    <form class="registration-form" #reservForm="ngForm">
         <h2>Reserva</h2>
         <form novalidate>
             <div class="form-group3">
                 <label for="birthdate"> Desde:</label>
-                <input type="date" id="dateFrom" name="birthdate" required>
-                <p class="error-message"></p>
+                <input type="date" [(ngModel)]="dateFrom" name="birthdate" required>
+                <p class="error-message" *ngIf="reservForm.submitted && !checkReservationDates()">{{dateFromError}}</p>
             </div>
             <div class="form-group3">
                 <label for="birthdate"> Hasta:</label>
-                <input type="date" id="dateTo" name="birthdate" required>
-                <p class="error-message"></p>
+                <input type="date" [(ngModel)]="dateTo" name="birthdate" required>
+                <p class="error-message" *ngIf="reservForm.submitted && !checkReservationDates()">{{dateToError}}</p>
             </div>
         </form>
 
@@ -36,10 +33,10 @@
         <button type="submit">Añadir método pago</button>
 
         <a class="clase" [routerLink]="['/pagar']">
-            <button type="submit" onclick="checkReservation(event)">Confirmar</button>
+            <button type="submit" (click)="checkReservation()">Confirmar</button>
         </a>
 
-    </div>
+    </form>
 
 
 

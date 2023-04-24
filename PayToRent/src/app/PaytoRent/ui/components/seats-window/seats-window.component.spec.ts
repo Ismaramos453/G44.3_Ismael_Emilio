@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextLabelComponent } from './text-label.component';
+import { SeatsWindowComponent } from './seats-window.component';
 
-describe('TextLabelComponent', () => {
-  let component: TextLabelComponent;
-  let fixture: ComponentFixture<TextLabelComponent>;
+describe('SeatsWindowComponent', () => {
+  let component: SeatsWindowComponent;
+  let fixture: ComponentFixture<SeatsWindowComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TextLabelComponent ]
+      declarations: [ SeatsWindowComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TextLabelComponent);
+    fixture = TestBed.createComponent(SeatsWindowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

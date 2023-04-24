@@ -27,6 +27,18 @@
 
         <div class="botones_contendor">
             <button >Filtros: </button>
+            <div id="seleccionadorPrecio"></div>
+        <button (click)="abrirVentana()">Precio</button>
+        <div id="miVentanaEmergente" class="ventana" *ngIf="ventanaAbierta">
+            <div class="contenido">
+                <h2>Selecciona un precio</h2>
+                <p id="precioSeleccionado">{{ precio }}€</p>
+                <p>Selecciona un precio:</p><input type="range" min="0" max="1000" step="1" [value]="precio" (input)="onPriceChange($event)" id="rangoPrecio">
+                <button (click)="confirmarPrecio()">Confirmar</button>
+                <button (click)="cerrarVentana()">Cerrar</button>
+            </div>
+        </div>
+
             <button >Color</button>
             <button >Plazas</button>
             <button >Ubicación</button>

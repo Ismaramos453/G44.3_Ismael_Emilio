@@ -10,6 +10,7 @@ export interface Product {
   owner:string
   rating:number
   image:string
+  seats:string
   id:string
 }
 
@@ -70,6 +71,17 @@ export class ProductExchangerService {
     }
     return filteredList
   }
+
+  filterBySeats(filter:string){
+    let filteredList: Product[] = [];
+    for(let product of this.products){
+      if(Number(product.seats)>= Number(filter)){
+        filteredList.push(product)
+      }
+    }
+    return filteredList
+  }
+
 
   constructor(private dataBase: DatabaseService) {
     this.products = dataBase.getProducts()

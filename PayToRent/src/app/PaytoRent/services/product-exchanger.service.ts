@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DatabaseService } from './database.service';
+import { NotFoundError } from 'rxjs';
 
 export interface Product {
   name:string
@@ -9,6 +10,7 @@ export interface Product {
   owner:string
   rating:number
   image:string
+  id:string
 }
 
 @Injectable({
@@ -28,6 +30,15 @@ export class ProductExchangerService {
       }
     }    
     return filteredList
+  }
+
+  filterById(filter:string){
+    for(let product of this.products){
+      if(product.id === filter){
+        return product
+      }
+    }
+    return NotFoundError    
   }
 
   filterByPrice(filter:string){
@@ -59,8 +70,10 @@ export class ProductExchangerService {
     }
     return filteredList
   }
-  
-  constructor(private dataBase: DatabaseService) { }
+
+  constructor(private dataBase: DatabaseService) {
+    this.products = dataBase.getProducts()
+  }
 
 
 }

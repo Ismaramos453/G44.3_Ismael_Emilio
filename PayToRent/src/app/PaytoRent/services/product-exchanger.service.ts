@@ -12,6 +12,8 @@ export interface Product {
   image:string
   seats:string
   id:string
+  comments:string[]
+  gallery:string[]
 }
 
 @Injectable({

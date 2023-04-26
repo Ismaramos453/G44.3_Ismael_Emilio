@@ -37,10 +37,9 @@
 		</div>
 						
 		<div class = "items">
-			<a class="usuarioFoto" [routerLink]="['/propietario']">
-				<img class = "imagen" src="../../../../../assets/img/usuario1.png">
+			<a class="usuarioFoto" [routerLink]="['/propietario']" style="background-image: url({{userPhoto}});">
 			</a>			
-				<a class = "usuario" >Nombre Usuario</a>
+				<a class = "usuario" >{{userName}}</a>
 
 		</div>							
 	</div>
@@ -48,26 +47,9 @@
 	<div class= "rectangulosProducto">			
 	    <div class="contenedorInformacion">
 			<a class="informacion" ></a>
-            <div class="contenedorFotosProducto">
+            <div class="contenedorFotosProducto" *ngFor="let photo in productGallery">
                 <a [routerLink]="['/producto']">
-                  <div class="cuadradoProductos"></div>
-                </a>
-                <a [routerLink]="['/producto']">
-                  <div class="cuadradoProductos"></div>
-                </a>
-                <a [routerLink]="['/producto']">
-                  <div class="cuadradoProductos"></div>
-                </a>
-                <a [routerLink]="['/producto']">
-                    <div class="cuadradoProductos"></div>
-                  </a>
-
-                  <a [routerLink]="['/producto']">
-                    <div class="cuadradoProductos"></div>
-                  </a>
-
-                  <a [routerLink]="['/producto']">
-                  <div class="cuadradoProductos"></div>
+                  <div class="cuadradoProductos" style="background-image: url({{photo}});"></div>
                 </a>
               </div>
         </div>

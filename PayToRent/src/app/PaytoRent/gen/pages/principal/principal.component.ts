@@ -9,11 +9,12 @@ import { Product, ProductExchangerService } from 'src/app/PaytoRent/services/pro
 })
 export class PrincipalComponent {
 
-  products!:Product[]
-  productName!:string
+  productsCarrousel!:Product[][]
+  isActive!:number
 
   ngOnInit(){
-    this.products = this.productService.products
+    this.productsCarrousel = this.divideLista(this.productService.products)
+    this.isActive=0
   }
   
   constructor(private router: Router, private productService:ProductExchangerService) {
@@ -27,15 +28,11 @@ export class PrincipalComponent {
     this.router.navigate(['./producto']);
   }
 
-  onSearch(event:any){
-    if(event.key === "Enter"){
-      this.search()
+  divideLista(list:Product[]) :Product[][]{
+    const subListas: Product[][] = [];
+    for (let i = 0; i < list.length; i += 4) {
+      subListas.push(list.slice(i, i + 4));
     }
+    return subListas;
   }
-
-  search(){
-    this.productService.filterByName(this.productName)
-    this.llamadaCatalogo()
-  }
-  
 }

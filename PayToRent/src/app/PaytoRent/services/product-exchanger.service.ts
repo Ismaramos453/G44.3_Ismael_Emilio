@@ -84,7 +84,6 @@ export class ProductExchangerService {
     return filteredList
   }
 
-
   constructor(private dataBase: DatabaseService) {
     this.products = dataBase.getProducts()
   }

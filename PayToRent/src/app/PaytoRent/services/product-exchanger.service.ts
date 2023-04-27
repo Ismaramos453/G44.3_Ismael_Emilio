@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { DatabaseService } from './database.service';
 import { NotFoundError } from 'rxjs';
+import { User } from './user-exchanger.service';
 
 export interface Product {
   name:string
   price:string
   colour:string
   description:string
-  owner:string
+  owner:User
   rating:number
   image:string
   seats:string
-  id:string
+  id:number
   comments:string[]
   gallery:string[]
 }
@@ -35,13 +36,14 @@ export class ProductExchangerService {
     return filteredList
   }
 
-  filterById(filter:string){
+  filterById(filter:number){
     for(let product of this.products){
       if(product.id === filter){
         return product
       }
     }
-    return NotFoundError    
+
+    return null
   }
 
   filterByPrice(filter:string){

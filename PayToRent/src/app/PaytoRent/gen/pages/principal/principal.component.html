@@ -16,7 +16,7 @@
 		<article>
 			<!-- / aqui pueden ir imagenes -->
 			<div class="barrabusqueda">
-				<input class="busqueda" name="text" [(ngModel)]="productName" placeholder="Search..." type="search" (keydown)="onSearch($event)">
+				<input class="busqueda" name="text" [(ngModel)]="productName" placeholder="Search..." type="search" (keyup.enter)="search()">
 			</div>
 
 			<div class="circuloVehiculo">
@@ -54,7 +54,7 @@
 				  </div>
 				</div>
 			  </div>
-			  
+
 		</article> <!-- /article -->
 
 	</section> <!-- / #main-content -->

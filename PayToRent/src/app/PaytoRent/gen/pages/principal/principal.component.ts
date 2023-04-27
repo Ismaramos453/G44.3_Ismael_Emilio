@@ -12,6 +12,7 @@ export class PrincipalComponent {
   productsCarrousel!:Product[][]
   isFirst = true;
   productName !:string
+  selectedProduct !:Product
 
   ngOnInit(){
     this.productsCarrousel = this.divideLista(this.productService.products)
@@ -40,14 +41,16 @@ export class PrincipalComponent {
     return subListas;
   }
 
-  onSearch(event:any){
-    if(event.key === "Enter"){
-      this.search()
-    }
-  }
-
   search(){
-    this.productService.filterByName(this.productName)
+    if (this.productName && this.productName.trim() !== '') {
+      this.productService.filterByName(this.productName)
+    }
     this.llamadaCatalogo()
   }
+
+  onProductSelected(product: Product) {
+    this.selectedProduct = product;
+    this.router.navigate(['/producto'], { queryParams: { id: product.id } });
+  }
+
 }

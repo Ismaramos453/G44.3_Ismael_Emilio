@@ -27,7 +27,7 @@ export class UserExchangerService {
         return user
       }
     }
-    return NotFoundError
+    return null
   }
 
   constructor(private dataBase: DatabaseService) { 

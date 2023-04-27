@@ -8,7 +8,7 @@ export interface Product {
   price:string
   colour:string
   description:string
-  owner:User
+  owner:string
   rating:number
   image:string
   seats:string

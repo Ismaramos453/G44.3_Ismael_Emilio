@@ -26,8 +26,15 @@ export class ProductoComponent {
       this.productDescription = prod.description
       this.productGallery = prod.gallery
       this.productPhoto = prod.image
-    }
 
+      const usrName = prod.owner
+      const usr = this.userService.getThisUser(usrName)
+
+      if(usr != null){
+        this.userName = usr.userName
+        this.userPhoto = usr.photo
+      }
+    }
   }
 
   constructor(private productService:ProductExchangerService,private userService:UserExchangerService,private route: ActivatedRoute){

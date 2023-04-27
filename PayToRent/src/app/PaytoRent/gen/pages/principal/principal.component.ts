@@ -10,6 +10,7 @@ import { Product, ProductExchangerService } from 'src/app/PaytoRent/services/pro
 export class PrincipalComponent {
 
   products!:Product[]
+  productName!:string
 
   ngOnInit(){
     this.products = this.productService.products
@@ -25,4 +26,16 @@ export class PrincipalComponent {
   llamadaProducto(){
     this.router.navigate(['./producto']);
   }
+
+  onSearch(event:any){
+    if(event.key === "Enter"){
+      this.search()
+    }
+  }
+
+  search(){
+    this.productService.filterByName(this.productName)
+    this.llamadaCatalogo()
+  }
+  
 }

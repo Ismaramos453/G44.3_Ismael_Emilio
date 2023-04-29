@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product, ProductExchangerService } from 'src/app/PaytoRent/services/product-exchanger.service';
 
 @Component({
   selector: 'app-principal',
@@ -8,7 +9,13 @@ import { Router } from '@angular/router';
 })
 export class PrincipalComponent {
 
-  constructor(private router: Router) {
+  products!:Product[]
+
+  ngOnInit(){
+    this.products = this.productService.products
+  }
+  
+  constructor(private router: Router, private productService:ProductExchangerService) {
   }
 
   llamadaCatalogo(){

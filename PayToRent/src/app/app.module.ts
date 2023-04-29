@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './PaytoRent/auth/pages/login-page/login-page.component';
-import { RegisterPageComponent } from './PaytoRent/auth/pages/register-page/register-page.component';
 
 
 import { PrincipalComponent } from './PaytoRent/gen/pages/principal/principal.component';
@@ -55,7 +54,6 @@ const appRoute: Routes = [
   declarations: [
     AppComponent,
     LoginPageComponent,
-    RegisterPageComponent,
     PrincipalComponent,
     SubmitButtonComponent,
     HeaderComponent,
@@ -75,13 +73,13 @@ const appRoute: Routes = [
     ColorWindowComponent,
     PriceWindowComponent,
     SeatsWindowComponent
-
-
+  
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoute),
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

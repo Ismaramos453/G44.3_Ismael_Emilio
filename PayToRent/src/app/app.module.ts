@@ -28,12 +28,15 @@ import { ColorWindowComponent } from './PaytoRent/ui/components/color-window/col
 import { PriceWindowComponent } from './PaytoRent/ui/components/price-window/price-window.component';
 import { SeatsWindowComponent } from './PaytoRent/ui/components/seats-window/seats-window.component';
 
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from '../enviroments/enviroment';
+
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 
 const appRoute: Routes = [
@@ -86,13 +89,14 @@ const appRoute: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoute),
     FormsModule,
-    RouterModule, 
+    RouterModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    HttpClientModule,
-    AngularFireAuthModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
+        AngularFirestoreModule,
+        HttpClientModule,
+        AngularFireAuthModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideFirestore(() => getFirestore()),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

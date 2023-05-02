@@ -24,12 +24,56 @@
 </div>
 
 <div class="botones_contendor">
-    <button>Filtros: </button>
-    <button (click)="abrirVentanaColor()">Color</button>
+    <button (click)="abrirVentana()">Filtros: </button>
+        <div id="seleccionadorPrecio"></div>
+        <button (click)="abrirVentana()">Precio</button>
+        <div id="miVentanaEmergente" class="ventana" [style.display]="ventanaVisible ? 'block' : 'none'">
+        <div class="contenido">
+            <h2>Selecciona un precio</h2>
+            <p id="precioSeleccionado">{{ rangoPrecio }}€</p>
+            <p>Selecciona un precio:</p><input type="range" min="0" max="1000" step="1" [(ngModel)]="rangoPrecio">
+            <button (click)="confirmarPrecio()">Confirmar</button>
+            <button (click)="cerrarVentana()">Cerrar</button>
+        </div>
+        </div>
+        <button (click)="abrirVentanaColor()">Color</button>
+        <div id="miVentanaEmergenteColor" class="ventana" [style.display]="ventanaVisibleColor ? 'block' : 'none'">
+          <div class="contenido">
+            <h2>Selecciona un color</h2>
+            <select [(ngModel)]="colorSeleccionado">
+              <option value="rojo">Rojo</option>
+              <option value="azul">Azul</option>
+              <option value="verde">Verde</option>
+              <option value="amarillo">Amarillo</option>
+            </select>
+            <button (click)="seleccionarColor()">Seleccionar</button>
+            <button (click)="cerrarVentanaColor()">Cerrar</button>
+          </div>
+        </div>
+
+
+        <button (click)="abrirVentanaPlazas()">Plazas</button>
+        <div id="miVentanaEmergentePlazas" class="ventana" [style.display]="ventanaVisiblePlazas ? 'block' : 'none'">
+          <div class="contenido">
+            <h2>Selecciona el número de plazas</h2>
+            <select [(ngModel)]="plazasSeleccionadas">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <button (click)="seleccionarPlazas()">Seleccionar</button>
+            <button (click)="cerrarVentanaPlazas()">Cerrar</button>
+          </div>
+        </div>
+        
+
     
     <button (click)="abrirMapa()">Ubicación</button>
-    <button (click)="abrirVentanaPrecio()">Precio</button>
-</div>
+  </div>
+  
+
+
 <div class="contenedorAnuncios" *ngFor="let producto in productos">
     <div class="anuncios">
         <a id="vehiculo-1" class="fotoVehiculo" [routerLink]="['/producto']"

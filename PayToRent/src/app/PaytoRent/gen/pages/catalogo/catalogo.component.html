@@ -26,12 +26,10 @@
 <div class="botones_contendor">
     <button>Filtros: </button>
     <button (click)="abrirVentanaColor()">Color</button>
-    <button (click)="abrirVentanaPlazas()">Plazas</button>
+    
     <button (click)="abrirMapa()">Ubicación</button>
     <button (click)="abrirVentanaPrecio()">Precio</button>
 </div>
-
-
 <div class="contenedorAnuncios" *ngFor="let producto in productos">
     <div class="anuncios">
         <a id="vehiculo-1" class="fotoVehiculo" [routerLink]="['/producto']"

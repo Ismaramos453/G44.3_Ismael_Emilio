@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Fiat 500",
+    "price": "20",
+    "colour": "Rojo",
+    "description": "Pequeño y maniobrable, ideal para la ciudad.",
+    "owner": "Empresa A",
+    "rating": 4.5,
+    "image": "https://via.placeholder.com/350x200",
+    "seats": "4",
+    "id": "000008",
+    "comments": ["Muy cómodo y fácil de conducir.", "El motor es un poco ruidoso."],
+    "gallery": ["https://via.placeholder.com/350x200", "https://via.placeholder.com/350x200", "https://via.placeholder.com/350x200"]
+  },
+  {
+    "name": "Nissan Micra",
+    "price": "22",
+    "colour": "Blanco",
+    "description": "Un coche compacto con buen rendimiento de combustible.",
+    "owner": "Empresa A",
+    "rating": 4,
+    "image": "https://via.placeholder.com/350x200",
+    "seats": "5",
+    "id": "000009",
+    "comments": ["Excelente consumo de combustible.", "El espacio en el maletero es un poco limitado."],
+    "gallery": ["https://via.placeholder.com/350x200", "https://via.placeholder.com/350x200", "https://via.placeholder.com/350x200"]
+  },
+  {
+    "name": "Renault Clio",
+    "price": "23",
+    "colour": "Negro",
+    "description": "Un coche elegante y deportivo con buen rendimiento.",
+    "owner": "Empresa A",
+    "rating": 4.5,
+    "image": "https://via.placeholder.com/350x200",
+    "seats": "5",
+    "id": "000010",
+    "comments": ["Tiene un buen rendimiento en carretera.", "El espacio para las piernas en los asientos traseros es un poco reducido."],
+    "gallery": ["https://via.placeholder.com/350x200", "https://via.placeholder.com/350x200", "https://via.placeholder.com/350x200"]
+  },
+  {
+    "name": "Volkswagen Polo",
+    "price": "25",
+    "colour": "Azul",
+    "description": "Un coche compacto y práctico con un buen nivel de equipamiento.",
+    "owner": "Empresa B",
+    "rating": 4.2,
+    "image": "https://via.placeholder.com/350x200",
+    "seats": "5",
+    "id": "000011",
+    "comments": ["El sistema de sonido es muy bueno.", "El espacio en el maletero es un poco limitado."],
+    "gallery": ["https://via.placeholder.com/350x200", "https://via.placeholder.com/350x200", "https://via.placeholder.com/350x200"]
+  }
+]

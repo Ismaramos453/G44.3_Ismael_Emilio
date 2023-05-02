@@ -29,15 +29,6 @@ import { PriceWindowComponent } from './PaytoRent/ui/components/price-window/pri
 import { SeatsWindowComponent } from './PaytoRent/ui/components/seats-window/seats-window.component';
 
 
-import { AngularFireModule } from '@angular/fire/compat';
-import { environment } from '../environments/environment';
-import { HttpClientModule } from '@angular/common/http';
-
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
-
-import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 
 const appRoute: Routes = [
   {path: '', redirectTo:'Home', pathMatch:'full'},
@@ -90,12 +81,6 @@ const appRoute: Routes = [
     RouterModule.forRoot(appRoute),
     FormsModule,
     RouterModule,
-    AngularFireModule.initializeApp(environment.firebase),
-        AngularFirestoreModule,
-        HttpClientModule,
-        AngularFireAuthModule,
-        provideFirebaseApp(() => initializeApp(environment.firebase)),
-        provideFirestore(() => getFirestore()),
     
   ],
   providers: [],

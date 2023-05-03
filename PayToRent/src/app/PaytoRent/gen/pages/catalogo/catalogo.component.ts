@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
-import { ProductExchangerService } from 'src/app/PaytoRent/services/product-exchanger.service';
-import { Product } from 'src/app/PaytoRent/services/product-exchanger.service';
 
+import { ProductExchangerService } from 'src/app/PaytoRent/services/product-exchanger.service';
+
+import { Component, OnInit } from '@angular/core';
+import { ProductService, Product } from '../../../services/product.service';
 @Component({
   selector: 'app-catalogo',
   templateUrl: './catalogo.component.html',
   styleUrls: ['./catalogo.component.css']
 })
-export class CatalogoComponent {
+export class CatalogoComponent implements OnInit{
 
-  productos!:Product[]
+  productos!: Product[];
   ventanaVisible: boolean = false;
   rangoPrecio: number = 500;
   ventanaVisibleColor: boolean = false;
@@ -17,13 +18,14 @@ export class CatalogoComponent {
   ventanaVisiblePlazas: boolean = false;
   plazasSeleccionadas: string = '';
 
-  ngOnInit(): void {
-    this.productos= this.productService.products
-  }
+  constructor(private productService: ProductService) {}
 
-  constructor(private productService:ProductExchangerService){
-
+  ngOnInit() {
+    this.productService.products.subscribe(products => {
+      this.productos = products;
+    });
   }
+  
 
   abrirMapa(){
     const popup: Window | null = window.open('', 'mapa', 'width=600,height=450');

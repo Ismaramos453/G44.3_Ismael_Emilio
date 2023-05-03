@@ -37,6 +37,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { HttpClientModule } from '@angular/common/http';
 
+
+import { ProductService } from '../app/PaytoRent/services/product.service';
+
 const appRoute: Routes = [
   {path: '', redirectTo:'Home', pathMatch:'full'},
   {path: 'Home', component:PrincipalComponent},

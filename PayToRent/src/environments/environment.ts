@@ -7,6 +7,7 @@ export const environment = {
         storageBucket: "pwm-paytorent.appspot.com",
         messagingSenderId: "539284072619",
         appId: "1:539284072619:web:4d79baa5c07d3816ee6fee",
+        measurementId: "G-S0MMVYD5CR"
 
     }
   };

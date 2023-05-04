@@ -42,8 +42,10 @@ export class CatalogoComponent implements OnInit{
   }
 
   confirmarPrecio() {
-    alert("El precio seleccionado es: " + this.rangoPrecio);
-    this.cerrarVentana();
+     this.productService.getProductsByPrice(this.rangoPrecio).subscribe(products => {
+    this.productos = products;
+  });
+  this.cerrarVentana();
   }
 
 
@@ -76,7 +78,9 @@ cerrarVentanaPlazas() {
 }
 
 seleccionarPlazas() {
-  alert("El número de plazas seleccionado es: " + this.plazasSeleccionadas);
+  this.productService.getProductsBySeats(this.plazasSeleccionadas).subscribe(products => {
+    this.productos = products;
+  });
   this.cerrarVentanaPlazas();
 }
 

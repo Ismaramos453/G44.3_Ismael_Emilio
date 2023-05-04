@@ -54,8 +54,8 @@ const appRoute: Routes = [
   {path: 'pagar', component: PagoComponent},
   {path: 'verAnuncio', component: VerAnuncioComponent},
   {path: 'editar', component: EditarPerfilComponent},
-  {path: 'editarVehiculo', component: EditarVehiculoComponent}
-
+  {path: 'editarVehiculo', component: EditarVehiculoComponent},
+  { path: 'producto/:id', component: ProductoComponent }
   
   
 

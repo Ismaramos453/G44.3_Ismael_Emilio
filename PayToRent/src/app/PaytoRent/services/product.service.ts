@@ -34,6 +34,25 @@ export class ProductService {
     );
   }
 
+  getProductsBySeats(seats: string): Observable<Product[]> {
+    return this.products.pipe(
+      map(products => products.filter(product => product.seats === seats))
+    );
+  }
+  getProductsByPrice(price: number): Observable<Product[]> {
+    return this.products.pipe(
+      map(products => products.filter(product => parseInt(product.price) <= price))
+    );
+  }
+  getProductById(id: string): Observable<Product | undefined> {
+    return this.products.pipe(
+      map(products => products.find(product => product.id === id))
+    );
+  }
+  
+  
+  
+
 }
 
 

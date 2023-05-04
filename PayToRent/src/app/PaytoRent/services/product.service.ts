@@ -44,6 +44,22 @@ export class ProductService {
     );
   }
 
+
+
+  getMainImagesFromCollections(): Observable<string[]> {
+    const coches$ = this.firestore.collection<Product>('Coches').valueChanges();
+    const motos$ = this.firestore.collection<Product>('Motos').valueChanges();
+    const camiones$ = this.firestore.collection<Product>('Camiones').valueChanges();
+    const bicicletas$ = this.firestore.collection<Product>('Bicicletas').valueChanges();
+    const skates$ = this.firestore.collection<Product>('Skates').valueChanges();
+    const patinetes$ = this.firestore.collection<Product>('Patinete').valueChanges();
+    
+    return combineLatest([coches$, motos$, camiones$, bicicletas$, skates$, patinetes$]).pipe(
+      map(products => products.reduce((accumulator, currentValue) => accumulator.concat(currentValue))),
+      map(products => products.map(product => product.image))
+    );
+  }
+
   // En ProductService
 setCollection(collectionName: string) {
   this.products = this.firestore.collection<Product>(collectionName).valueChanges();

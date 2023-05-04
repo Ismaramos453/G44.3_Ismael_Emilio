@@ -48,7 +48,7 @@
 .cuadradoNegro {
     width: 15rem;
     height: 200px;
-    background-color:#000000;
+    background-color:transparent;
     margin: 0 1rem 13rem 1rem;
 }
 .cuadradoNegro img{

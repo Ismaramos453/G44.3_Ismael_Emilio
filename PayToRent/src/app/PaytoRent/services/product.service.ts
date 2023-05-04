@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-
+import { combineLatest } from 'rxjs';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -26,8 +26,18 @@ export class ProductService {
   products: Observable<Product[]>;
 
   constructor(private firestore: AngularFirestore) {
-    this.products = this.firestore.collection<Product>('Coches').valueChanges();
+    const coches$ = this.firestore.collection<Product>('Coches').valueChanges();
+    const motos$ = this.firestore.collection<Product>('Motos').valueChanges();
+    const camiones$ = this.firestore.collection<Product>('Camiones').valueChanges();
+    const bicicletas$ = this.firestore.collection<Product>('Bicicletas').valueChanges();
+    const skates$ = this.firestore.collection<Product>('Skates').valueChanges();
+    const patinetes$ = this.firestore.collection<Product>('Patinete').valueChanges();
+  
+    this.products = combineLatest([coches$, motos$, camiones$, bicicletas$, skates$, patinetes$]).pipe(
+      map(products => products.reduce((accumulator, currentValue) => accumulator.concat(currentValue)))
+    );
   }
+  
   getProductsByColor(color: string): Observable<Product[]> {
     return this.products.pipe(
       map(products => products.filter(product => product.colour.toLowerCase() === color.toLowerCase()))

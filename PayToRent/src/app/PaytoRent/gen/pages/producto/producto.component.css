@@ -178,15 +178,15 @@
   .FotoProducto {
     width: 15rem;
     height: 15rem;
-    background: #000000;
+    background: transparent;
     margin-top: 0rem;
   }
   
   .FotoProducto img{
     width: 200%;
       height: auto;
-      max-width: 20rem;
-      max-height: 20rem;
+      max-width: 15rem;
+      max-height: 15rem;
   }
   
   
@@ -207,7 +207,12 @@
     margin-left: 0rem;
     overflow: hidden;
   }
-  
+  .precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-top: 1rem;
+  }
   .contenedorOpinion{
     position: relative;
     display: flex;
@@ -243,17 +248,17 @@
   }
   
   .cuadradoProductos {
-    width: 12rem;
-    height: 10rem;
+    width: 15rem;
+    height:11rem;
     background: #000000;
     margin:2.25rem;
   }
   
   .cuadradoProductos img{
-    width: 200%;
+    width: 100%;
       height: auto;
-      max-width: 12rem;
-      max-height: 12rem;
+      max-width: 15rem;
+      max-height: 15rem;
   }
   
   

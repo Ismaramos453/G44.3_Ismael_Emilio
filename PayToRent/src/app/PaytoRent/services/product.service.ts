@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -26,6 +27,11 @@ export class ProductService {
 
   constructor(private firestore: AngularFirestore) {
     this.products = this.firestore.collection<Product>('Coches').valueChanges();
+  }
+  getProductsByColor(color: string): Observable<Product[]> {
+    return this.products.pipe(
+      map(products => products.filter(product => product.colour.toLowerCase() === color.toLowerCase()))
+    );
   }
 
 }

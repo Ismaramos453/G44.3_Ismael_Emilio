@@ -1,6 +1,6 @@
 
 import { ProductExchangerService } from 'src/app/PaytoRent/services/product-exchanger.service';
-
+import { filter } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { ProductService, Product } from '../../../services/product.service';
 @Component({
@@ -46,6 +46,8 @@ export class CatalogoComponent implements OnInit{
     this.cerrarVentana();
   }
 
+
+  
   
 
   // Agrega los siguientes métodos a la clase CatalogoComponent
@@ -58,7 +60,9 @@ cerrarVentanaColor() {
 }
 
 seleccionarColor() {
-  alert("El color seleccionado es: " + this.colorSeleccionado);
+  this.productService.getProductsByColor(this.colorSeleccionado).subscribe(products => {
+    this.productos = products;
+  });
   this.cerrarVentanaColor();
 }
 

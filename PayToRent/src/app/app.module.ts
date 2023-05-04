@@ -57,7 +57,8 @@ const appRoute: Routes = [
   {path: 'editarVehiculo', component: EditarVehiculoComponent},
   { path: 'producto/:id', component: ProductoComponent }
   
-  
+
+
 
 ];
 

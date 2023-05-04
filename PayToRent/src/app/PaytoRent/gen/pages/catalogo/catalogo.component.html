@@ -79,9 +79,7 @@
 
   <div class="contenedorAnuncios" *ngFor="let producto of productos">
     <div class="anuncios">
-      <a id="vehiculo-1" class="fotoVehiculo" [routerLink]="['/producto', producto.id]" [style.background-image]="'url(' + producto.image + ')'">
-
-      </a>
+      <a id="vehiculo-1" class="fotoVehiculo" [routerLink]="['/producto', producto.id]" [style.background-image]="'url(' + producto.image + ')'"></a>
     </div>
     <div class="contenedorInformacion">
       <div class="informacionAnuncio">
@@ -105,8 +103,10 @@
             </div>
           </span>
           <p class="texto">{{producto.description}}</p>
+          <span class="precio">{{producto.price}}€</span>
         </a>
       </div>
     </div>
   </div>
+  
   

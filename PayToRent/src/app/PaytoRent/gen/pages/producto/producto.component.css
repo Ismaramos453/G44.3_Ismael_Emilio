@@ -183,7 +183,7 @@
   }
   
   .FotoProducto img{
-    width: 100%;
+    width: 200%;
       height: auto;
       max-width: 20rem;
       max-height: 20rem;
@@ -207,11 +207,7 @@
     margin-left: 0rem;
     overflow: hidden;
   }
-  .fondoBlanco {
-    background-color: #fff;
-    max-width: 30rem;
-    margin-bottom: 22rem;
-  }
+  
   .contenedorOpinion{
     position: relative;
     display: flex;
@@ -248,13 +244,13 @@
   
   .cuadradoProductos {
     width: 12rem;
-    height: 12rem;
+    height: 10rem;
     background: #000000;
-    margin: 1.75rem;
+    margin:2.25rem;
   }
   
   .cuadradoProductos img{
-    width: 100%;
+    width: 200%;
       height: auto;
       max-width: 12rem;
       max-height: 12rem;

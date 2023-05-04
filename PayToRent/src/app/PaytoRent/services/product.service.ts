@@ -34,6 +34,12 @@ export class ProductService {
     );
   }
 
+  // En ProductService
+setCollection(collectionName: string) {
+  this.products = this.firestore.collection<Product>(collectionName).valueChanges();
+}
+  
+
   getProductsBySeats(seats: string): Observable<Product[]> {
     return this.products.pipe(
       map(products => products.filter(product => product.seats === seats))
@@ -49,8 +55,19 @@ export class ProductService {
       map(products => products.find(product => product.id === id))
     );
   }
+
+  getProductsByCollection(collection: string): Observable<Product[]> {
+    return this.firestore.collection<Product>(collection).valueChanges();
+  }
   
+
   
+
+getProductsFromCollection(collectionName: string): Observable<Product[]> {
+  return this.firestore.collection<Product>(collectionName).valueChanges();
+}
+
+
   
 
 }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pwm-paytorent": {
+      "hosting": {
+        "PayToRent": [
+          "pwm-paytorent"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pwm-paytorent"
+  }
+}

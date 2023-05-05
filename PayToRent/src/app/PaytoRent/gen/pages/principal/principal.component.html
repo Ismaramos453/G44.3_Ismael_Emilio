@@ -19,7 +19,29 @@
 				<input class="busqueda" name="text" [(ngModel)]="productName" placeholder="Search..." type="search" (keyup.enter)="search()">
 			</div>
 
-			<div class="circuloVehiculo">
+				<div class="circuloVehiculo">
+										
+					<a [routerLink]="['/catalogo']" class="circuloVehiculo1" >
+						<img src="../../../../../assets/img/barras.png">
+					</a>
+					<a (click)="handleCollectionClick('Coches')" class="circuloVehiculo2">
+						<img src="../../../../../assets/img/coche.png">
+					  </a>
+					  <a (click)="handleCollectionClick('Motos')" class="circuloVehiculo3">
+						<img src="../../../../../assets/img/moto.png">
+					  </a>
+					<a (click)="handleCollectionClick('Camiones')" class="circuloVehiculo4" >
+						<img src="../../../../../assets/img/camion.png">
+					</a>
+					<a (click)="handleCollectionClick('Bicicletas')" class="circuloVehiculo5" >
+						<img src="../../../../../assets/img/bicileta.png">
+					</a>
+					<a (click)="handleCollectionClick('Skates')" class="circuloVehiculo6" >
+						<img src=".../../../../../../../assets/img/skate.png">
+					</a>
+					<a (click)="handleCollectionClick('Patinete')" class="circuloVehiculo1" >
+						<img src="../../../../../assets/img/patinete.png">
+					</a>
 
 				<a [routerLink]="['/catalogo']" class="circuloVehiculo1">
 					<img src="../../../../../assets/img/barras.png">
@@ -45,20 +67,34 @@
 
 			</div>
 
-			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-inner">
-				  <div class="carousel-item" *ngFor="let sublist of productsCarrousel; let i=index;" [class.active]="i === 0 && isFirst">
-					<div class="fila" *ngFor="let product of sublist">
-					  <a [routerLink]="['/producto']" class="cuadradoNegro" style="background-image: url({{product.image}});"></a>
-					</div>
-				  </div>
-				</div>
-			  </div>
 
-		</article> <!-- /article -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+		<div *ngFor="let product of productos.slice(0, 3); let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+			<div class="fila d-flex">
+				<a [routerLink]="['/producto', product.id]" class="cuadradoNegro">
+					<img [src]="product.image" class="d-block w-100" alt="{{product.name}}">
+				</a>
+				<a [routerLink]="['/producto', productos[i + 1].id]" class="cuadradoNegro">
+					<img [src]="productos[i + 1].image" class="d-block w-100" alt="{{productos[i + 1].name}}">
+				</a>
+				<a [routerLink]="['/producto', productos[i + 2].id]" class="cuadradoNegro">
+					<img [src]="productos[i + 2].image" class="d-block w-100" alt="{{productos[i + 2].name}}">
+				</a>
+			</div>
+		 </div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Next</span>
+	</button>
+</div>
 
-	</section> <!-- / #main-content -->
-
+  
 
 </body>
 

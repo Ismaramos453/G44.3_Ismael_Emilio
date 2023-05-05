@@ -91,6 +91,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "PayToRent:build:production",
+            "firebaseProject": "pwm-paytorent",
+            "firebaseHostingSite": "pwm-paytorent"
+          }
         }
       }
     }

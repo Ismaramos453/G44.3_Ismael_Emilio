@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product, ProductExchangerService } from 'src/app/PaytoRent/services/product-exchanger.service';
+import { ProductService, Product } from '../../../services/product.service';
 
 @Component({
   selector: 'app-principal',
@@ -8,49 +8,26 @@ import { Product, ProductExchangerService } from 'src/app/PaytoRent/services/pro
   styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent {
+  productos: Product[] = [];
+  constructor(private router: Router, private productService: ProductService) {}
 
-  productsCarrousel!:Product[][]
-  isFirst = true;
-  productName !:string
-  selectedProduct !:Product
 
-  ngOnInit(){
-    this.productsCarrousel = this.divideLista(this.productService.products)
-  }
+  mainImages: string[] = [];
 
-  ngAfterViewInit() {
-    this.isFirst = false;
-  }
+  ngOnInit() {
+    this.productService.products.subscribe(products => {
+      this.productos = products;
+    });
   
-  constructor(private router: Router, private productService:ProductExchangerService) {
-  }
+  
+}
 
-  llamadaCatalogo(){
+showProductDetails(productId: string) {
+  this.router.navigate(['./producto', productId]);
+}
+
+  handleCollectionClick(collectionName: string) {
+    this.productService.setCollection(collectionName);
     this.router.navigate(['./catalogo']);
   }
-
-  llamadaProducto(){
-    this.router.navigate(['./producto']);
-  }
-
-  divideLista(list:Product[]) :Product[][]{
-    const subListas: Product[][] = [];
-    for (let i = 0; i < list.length; i += 4) {
-      subListas.push(list.slice(i, i + 4));
-    }
-    return subListas;
-  }
-
-  search(){
-    if (this.productName && this.productName.trim() !== '') {
-      this.productService.filterByName(this.productName)
-    }
-    this.llamadaCatalogo()
-  }
-
-  onProductSelected(product: Product) {
-    this.selectedProduct = product;
-    this.router.navigate(['/producto'], { queryParams: { id: product.id } });
-  }
-
 }

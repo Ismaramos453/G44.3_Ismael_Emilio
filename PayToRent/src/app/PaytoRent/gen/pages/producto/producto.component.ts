@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { Product,ProductExchangerService } from 'src/app/PaytoRent/services/product-exchanger.service';
-import { User, UserExchangerService } from 'src/app/PaytoRent/services/user-exchanger.service';
+import { Component, OnInit } from '@angular/core';
+import { ProductService, Product } from '../../../services/product.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,37 +7,18 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './producto.component.html',
   styleUrls: ['./producto.component.css']
 })
-export class ProductoComponent {
+export class ProductoComponent implements OnInit {
+  producto: Product | undefined;
 
-  userName!:string
-  userPhoto!:string
-  productPhoto!:string
-  productDescription!:string
-  productComments!:string[]
-  productGallery!:string[]
+  constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
-
-  ngOnInit(){
-    const productId = Number(this.route.snapshot.queryParamMap.get('id'));
-    const prod = this.productService.filterById(productId);
-    if(prod != null){
-      this.productComments = prod.comments
-      this.productDescription = prod.description
-      this.productGallery = prod.gallery
-      this.productPhoto = prod.image
-
-      const usrName = prod.owner
-      const usr = this.userService.getThisUser(usrName)
-
-      if(usr != null){
-        this.userName = usr.userName
-        this.userPhoto = usr.photo
-      }
+  ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.productService.getProductById(id).subscribe(producto => {
+        this.producto = producto;
+      });
     }
   }
-
-  constructor(private productService:ProductExchangerService,private userService:UserExchangerService,private route: ActivatedRoute){
-
-  }
-
 }
+

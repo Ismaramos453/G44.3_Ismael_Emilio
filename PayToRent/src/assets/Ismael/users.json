@@ -1,0 +1,21 @@
+[  {    
+    "name": "María",    
+    "surname": "García",    
+    "telephone": "123456789",    
+    "userName": "mariagarcia",    
+    "birthDate": "1990-05-12",    
+    "photo": "",    
+    "address": "Calle Mayor, 1",    
+    "products": []
+  },
+  {
+    "name": "Juan",
+    "surname": "Pérez",
+    "telephone": "987654321",
+    "userName": "juanperez",
+    "birthDate": "1985-10-21",
+    "photo": "",
+    "address": "Plaza España, 2",
+    "products": []
+  }
+]

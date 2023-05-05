@@ -1,0 +1,15 @@
+[
+  {
+  "name": "Patinete eléctrico plegable",
+  "price": "150",
+  "colour": "Negro",
+  "description": "Patinete eléctrico con batería de larga duración y sistema de plegado fácil.",
+  "owner": "Tienda de deportes A",
+  "rating": 4.6,
+  "image": "https://via.placeholder.com/350x200",
+  "id": "000018",
+  "comments": ["Muy cómodo y práctico para desplazarse.", "El peso es un poco elevado para subirlo a un transporte público."],
+  "gallery": ["https://via.placeholder.com/350x200", "https://via.placeholder.com/350x200", "https://via.placeholder.com/350x200"]
+  }
+]
+

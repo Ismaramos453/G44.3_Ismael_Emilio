@@ -12,6 +12,7 @@ export interface User {
   photo:string
   address:string
   products:Product[]
+  mail: string
 }
 
 @Injectable({
@@ -19,18 +20,11 @@ export interface User {
 })
 export class UserExchangerService {
 
-  users:User[]
-
   getThisUser(username:string){
-    for(let user of this.users){
-      if(user.userName === username){
-        return user
-      }
-    }
-    return NotFoundError
+    return this.dataBase.getUserById(username)
   }
 
   constructor(private dataBase: DatabaseService) { 
-    this.users = dataBase.getUsers()
+
   }
 }

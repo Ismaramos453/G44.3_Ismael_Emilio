@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { User,UserExchangerService } from 'src/app/PaytoRent/services/user-exchanger.service';
+import { User, UserExchangerService } from 'src/app/PaytoRent/services/user-exchanger.service';
 import { Product } from 'src/app/PaytoRent/services/product-exchanger.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -11,17 +12,21 @@ import { Product } from 'src/app/PaytoRent/services/product-exchanger.service';
 
 export class PerfilVendedorComponent {
 
-  email!:string
-  address!:string
-  phone!:string
-  photo!:string
-  name!:string
-  surname!:string
-  userName!:string
-  birthDate!:string
-  products!:Product[]
+  user: User |undefined
 
-  constructor(private userService:UserExchangerService){
+  ngOnInit() {
+    const user = this.route.snapshot.paramMap.get('owner');
+    if (user) {
+      this.userService.getThisUser(user).subscribe(usuario => {
+        if (usuario) {
+          this.user = usuario;
+        }
+      });
+    }
+
+  }
+
+  constructor(private userService: UserExchangerService, private route: ActivatedRoute) {
 
   }
 

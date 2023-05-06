@@ -49,17 +49,13 @@ const appRoute: Routes = [
   {path: 'producto', component: ProductoComponent},
   {path: 'perfil', component: PerfilComponent},
   {path: 'chat', component: ChatComponent},
-  {path: 'propietario', component: PerfilVendedorComponent},
+  {path: 'propietario/:owner', component: PerfilVendedorComponent},
   {path: 'alquilar', component: ReservaComponent},
   {path: 'pagar', component: PagoComponent},
   {path: 'verAnuncio', component: VerAnuncioComponent},
   {path: 'editar', component: EditarPerfilComponent},
   {path: 'editarVehiculo', component: EditarVehiculoComponent},
   { path: 'producto/:id', component: ProductoComponent }
-  
-
-
-
 ];
 
 @NgModule({

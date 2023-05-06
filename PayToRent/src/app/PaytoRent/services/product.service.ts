@@ -86,15 +86,9 @@ setCollection(collectionName: string) {
     return this.firestore.collection<Product>(collection).valueChanges();
   }
   
-
-  
-
 getProductsFromCollection(collectionName: string): Observable<Product[]> {
   return this.firestore.collection<Product>(collectionName).valueChanges();
 }
-
-
-  
 
 }
 

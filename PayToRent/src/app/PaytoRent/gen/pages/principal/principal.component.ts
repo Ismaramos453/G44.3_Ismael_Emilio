@@ -9,6 +9,7 @@ import { ProductService, Product } from '../../../services/product.service';
 })
 export class PrincipalComponent {
   productos: Product[] = [];
+  productName!:string
   constructor(private router: Router, private productService: ProductService) {}
 
 
@@ -29,5 +30,9 @@ showProductDetails(productId: string) {
   handleCollectionClick(collectionName: string) {
     this.productService.setCollection(collectionName);
     this.router.navigate(['./catalogo']);
+  }
+
+  search(){
+
   }
 }

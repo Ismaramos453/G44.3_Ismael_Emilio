@@ -13,6 +13,7 @@ export interface User {
   address:string
   products:Product[]
   mail: string
+  passwd: string
 }
 
 @Injectable({
@@ -22,6 +23,10 @@ export class UserExchangerService {
 
   getThisUser(username:string){
     return this.dataBase.getUserById(username)
+  }
+
+  createUser(usr:User){
+    this.dataBase.createUser(usr)
   }
 
   constructor(private dataBase: DatabaseService) { 

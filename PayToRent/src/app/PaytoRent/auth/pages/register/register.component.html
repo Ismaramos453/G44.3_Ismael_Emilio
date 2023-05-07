@@ -8,7 +8,7 @@
 
 <body>
     
-    <form class="registration-form" #registerForm="ngForm" (ngSubmit)="validateRegister()" novalidate>
+    <form class="registration-form" #registerForm="ngForm" novalidate>
         <h2>Registro</h2>
         <div class="form-container">
             <div class="form-group">
@@ -67,7 +67,7 @@
 
             </div>
 
-            <button type="submit" [disabled]="registerForm.invalid ?? false">Registrarse</button>
+            <button type="submit" (click)="validateRegister()">Registrarse</button>
         </div>
     </form>
     

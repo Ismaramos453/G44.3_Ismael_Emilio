@@ -1,0 +1,7 @@
+{
+  "name": "PayToRentMobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

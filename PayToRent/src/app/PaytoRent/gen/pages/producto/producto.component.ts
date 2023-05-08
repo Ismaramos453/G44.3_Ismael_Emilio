@@ -19,6 +19,8 @@ export class ProductoComponent implements OnInit {
         this.producto = producto;
       });
     }
+    
   }
+  
 }
 

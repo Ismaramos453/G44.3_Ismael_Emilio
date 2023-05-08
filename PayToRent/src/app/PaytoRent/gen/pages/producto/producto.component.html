@@ -35,7 +35,7 @@
 		</span>
 	  </div>
 	  <div class="items">
-		<a class="usuarioFoto" [routerLink]="['/propietario']">
+		<a class="usuarioFoto" [routerLink]="['/propietario', producto?.owner]">
 		  <img class="imagen" src="../../../../../assets/img/usuario1.png">
 		</a>
 		<a class="usuario">{{ producto?.owner }}</a>

@@ -1,102 +1,83 @@
 <!doctype html>
-	<html lang="es">
-	<head>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-	</head>
+<html lang="es">
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+</head>
 
 
-	<body>
+<body>
 
-		<section id="main-content">
-			<article>
-				<!-- / aqui pueden ir imagenes -->
-				<div class = "barrabusqueda">
-					<input class="busqueda" name="text" placeholder="Search..." type="search">
-				</div>
-
-				<div class="circuloVehiculo">
-										
-					<a [routerLink]="['/catalogo']" class="circuloVehiculo1" >
-						<img src="../../../../../assets/img/barras.png">
-					</a>
-					<a (click)="handleCollectionClick('Coches')" class="circuloVehiculo2">
-						<img src="../../../../../assets/img/coche.png">
-					  </a>
-					  <a (click)="handleCollectionClick('Motos')" class="circuloVehiculo3">
-						<img src="../../../../../assets/img/moto.png">
-					  </a>
-					<a (click)="handleCollectionClick('Camiones')" class="circuloVehiculo4" >
-						<img src="../../../../../assets/img/camion.png">
-					</a>
-					<a (click)="handleCollectionClick('Bicicletas')" class="circuloVehiculo5" >
-						<img src="../../../../../assets/img/bicileta.png">
-					</a>
-					<a (click)="handleCollectionClick('Skates')" class="circuloVehiculo6" >
-						<img src=".../../../../../../../assets/img/skate.png">
-					</a>
-					<a (click)="handleCollectionClick('Patinete')" class="circuloVehiculo1" >
-						<img src="../../../../../assets/img/patinete.png">
-					</a>
-
-				</div>
-
-				<script>
-					// Cargar el archivo JSON
-					fetch('vehiculos.json')
-					  .then(response => response.json())
-					  .then(data => {
-						// Iterar sobre el array de vehículos
-						data.vehiculos.forEach((vehiculo, index) => {
-						  // Obtener el contenedor HTML correspondiente
-						  const contenedor = document.querySelectorAll('.cuadradoNegro')[index];
-				
-						  // Crear la imagen y establecer la fuente desde el archivo JSON
-						  const imagen = new Image();
-						  imagen.src = vehiculo.foto;
-				
-						  // Agregar la imagen al contenedor
-						  contenedor.appendChild(imagen);
-						});
-					  });
-				  </script>
-
-
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-	<div class="carousel-inner">
-		<div *ngFor="let product of productos.slice(0, 3); let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
-			<div class="fila d-flex">
-				<a [routerLink]="['/producto', product.id]" class="cuadradoNegro">
-					<img [src]="product.image" class="d-block w-100" alt="{{product.name}}">
-				</a>
-				<a [routerLink]="['/producto', productos[i + 1].id]" class="cuadradoNegro">
-					<img [src]="productos[i + 1].image" class="d-block w-100" alt="{{productos[i + 1].name}}">
-				</a>
-				<a [routerLink]="['/producto', productos[i + 2].id]" class="cuadradoNegro">
-					<img [src]="productos[i + 2].image" class="d-block w-100" alt="{{productos[i + 2].name}}">
-				</a>
+	<section id="main-content">
+		<article>
+			<!-- / aqui pueden ir imagenes -->
+			<div class="barrabusqueda">
+				<input class="busqueda" name="text" [(ngModel)]="productName" placeholder="Search..." type="search"
+					(keyup.enter)="search()">
 			</div>
-		 </div>
-	</div>
-	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	  <span class="visually-hidden">Previous</span>
-	</button>
-	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	  <span class="visually-hidden">Next</span>
-	</button>
-</div>
 
-  
+			<div class="circuloVehiculo">
+				<a [routerLink]="['/catalogo']" class="circuloVehiculo1">
+					<img src="../../../../../assets/img/barras.png">
+				</a>
+				<a [routerLink]="['/catalogo']" class="circuloVehiculo2">
+					<img src="../../../../../assets/img/coche.png">
+				</a>
+				<a [routerLink]="['/catalogo']" class="circuloVehiculo3">
+					<img src="../../../../../assets/img/moto.png">
+				</a>
+				<a [routerLink]="['/catalogo']" class="circuloVehiculo4">
+					<img src="../../../../../assets/img/camion.png">
+				</a>
+				<a [routerLink]="['/catalogo']" class="circuloVehiculo5">
+					<img src="../../../../../assets/img/bicileta.png">
+				</a>
+				<a [routerLink]="['/catalogo']" class="circuloVehiculo6">
+					<img src=".../../../../../../../assets/img/skate.png">
+				</a>
+				<a [routerLink]="['/catalogo']" class="circuloVehiculo1">
+					<img src="../../../../../assets/img/patinete.png">
+				</a>
 
-			</article> <!-- /article -->
-		
-		</section> <!-- / #main-content -->
+			</div>
 
 
-	</body>
-	
+			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div *ngFor="let product of productos.slice(0, 3); let i = index" class="carousel-item"
+						[ngClass]="{'active': i === 0}">
+						<div class="fila d-flex">
+							<a [routerLink]="['/producto', product.id]" class="cuadradoNegro">
+								<img [src]="product.image" class="d-block w-100" alt="{{product.name}}">
+							</a>
+							<a [routerLink]="['/producto', productos[i + 1].id]" class="cuadradoNegro">
+								<img [src]="productos[i + 1].image" class="d-block w-100"
+									alt="{{productos[i + 1].name}}">
+							</a>
+							<a [routerLink]="['/producto', productos[i + 2].id]" class="cuadradoNegro">
+								<img [src]="productos[i + 2].image" class="d-block w-100"
+									alt="{{productos[i + 2].name}}">
+							</a>
+						</div>
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</article>
+	</section>
+</body>
+
 </html>
-
-

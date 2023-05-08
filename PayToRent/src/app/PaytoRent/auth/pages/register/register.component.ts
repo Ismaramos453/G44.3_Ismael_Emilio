@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { tick } from '@angular/core/testing';
+import { User, UserExchangerService } from 'src/app/PaytoRent/services/user-exchanger.service';
 
 @Component({
   selector: 'app-register',
@@ -15,9 +16,9 @@ export class RegisterComponent {
   address !: string
   phone !: string
   birthDate !: string
-  username !: String
+  username !: string
 
-  constructor() {
+  constructor(private userService: UserExchangerService) {
     this.address = ''
     this.passwd1 = ''
     this.passwd2 = ''
@@ -32,7 +33,7 @@ export class RegisterComponent {
   validatePass() {
     /*const securePass = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/"
     return this.passwd1.length >= 8 && this.passwd1.match(securePass)*/
-    return this.passwd1.length >=8
+    return this.passwd1.length >= 8
   }
 
   validatePasswordsMatch() {
@@ -49,12 +50,12 @@ export class RegisterComponent {
     const month = parseInt(birthdateArray[1], 10) - 1; // El mes en JS empieza en 0 (enero)
     const year = parseInt(birthdateArray[2], 10);
     const ageLimit = 18; // Límite de edad
-    
+
     const birthdate = new Date(year, month, day);
     const today = new Date();
     const ageInMs = today.getTime() - birthdate.getTime();
     const ageInYears = ageInMs / (1000 * 60 * 60 * 24 * 365.25); // Año bisiesto
-    
+
     return ageInYears < ageLimit;
   }
 
@@ -73,15 +74,34 @@ export class RegisterComponent {
     return this.address.match(addressPattern)
   }
 
-  validateNotEmpty(item:String){
+  validateNotEmpty(item: String) {
     return item && item.trim().length > 0 && item.length >= 5
   }
 
-  validateRegister(){
-    if(this.validateAddress() && this.validateBirthDate(this.birthDate) && this.validateMail() && this.validatePass() && this.validatePasswordsMatch()){
+  validateRegister() {
+    if (this.validateAddress() && this.validateBirthDate(this.birthDate) && this.validateMail() && this.validatePass() && this.validatePasswordsMatch()) {
+      this.registerUser(this.firstName, this.lastName, this.phone, this.username, this.birthDate, this.address, this.email, this.passwd1)
       return true
+
     } else {
       return false
     }
+  }
+
+  registerUser(firstName: string, lastName: string, phone: string, username: string, birthDay: string, address: string, email: string, passwd1: string) {
+    const usr: User = {
+      name: firstName,
+      surname: lastName,
+      telephone: phone,
+      userName: username,
+      birthDate: birthDay,
+      photo: "",
+      address: address,
+      products: [],
+      mail: email,
+      passwd: passwd1
+    };
+
+    this.userService.createUser(usr)
   }
 }

@@ -15,34 +15,34 @@
 
 
             <div class = "contenedorFotoUsuario">
-                <a class="usuarioFotoEdicion" [routerLink]="['/propietario']" style="background-image: url({{photo}})">
+                <a class="usuarioFotoEdicion" [routerLink]="['/propietario']" style="background-image: url({{user?.photo}})">
                 </a>
             </div>
 
             <div class="form-container">
                 <div class="form-group">
                     <label for="email">Correo electrónico:</label>
-                    <div class="panel">{{email}}</div>
+                    <div class="panel">{{user?.mail}}</div>
 
                     <label for="address">Dirección:</label>
-                    <div class="panel">{{address}}</div>
+                    <div class="panel">{{user?.address}}</div>
 
                     <label for="phone">Número de teléfono:</label>
-                    <div class="panel">{{email}}</div>
+                    <div class="panel">{{user?.telephone}}</div>
                 </div>
 
                 <div class="form-group">
                     <label for="first-name">Nombre:</label>
-                    <div class="panel">{{name}}</div>
+                    <div class="panel">{{user?.name}}</div>
                     
                     <label for="last-name">Apellido:</label>
-                    <div class="panel">{{surname}}</div>
+                    <div class="panel">{{user?.surname}}</div>
                 
                     <label for="username">Nombre de usuario:</label>
-                    <div class="panel">{{userName}}</div>
+                    <div class="panel">{{user?.userName}}</div>
 
                     <label for="birthdate"> Fecha de Nacimiento:</label>
-                    <div class="panel">{{birthDate}}</div>
+                    <div class="panel">{{user?.birthDate}}</div>
                 </div>
   
             </div>

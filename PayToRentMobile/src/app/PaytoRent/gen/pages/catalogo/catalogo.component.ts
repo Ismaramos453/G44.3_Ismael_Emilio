@@ -1,8 +1,9 @@
 
-import { ProductExchangerService } from 'src/app/PaytoRent/services/product-exchanger.service';
+import  { ProductExchangerService };
 import { filter } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { ProductService, Product } from '../../../services/product.service';
+
 @Component({
   selector: 'app-catalogo',
   templateUrl: './catalogo.component.html',

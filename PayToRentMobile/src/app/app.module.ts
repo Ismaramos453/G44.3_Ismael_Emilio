@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,12 +19,12 @@ import { FooterComponent } from './PaytoRent/gen/components/footer/footer.compon
 import { CatalogoComponent } from './PaytoRent/gen/pages/catalogo/catalogo.component';
 import { PerfilComponent } from './PaytoRent/gen/pages/perfil/perfil.component';
 import { PrincipalComponent } from './PaytoRent/gen/pages/principal/principal.component';
-import { ProductoComponent } from './PaytoRent/gen/pages/producto/producto.component';
+import { ProductoComponent } from './PayToRent/gen/pages/producto/producto.component';
 
 @NgModule({
   declarations: [AppComponent,LoginPageComponent,RegisterComponent,HeaderComponent,FooterComponent,CatalogoComponent,PerfilComponent,PrincipalComponent,ProductoComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), provideFirestore(() => getFirestore())],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent,ModalController],
 })
 export class AppModule {}

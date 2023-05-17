@@ -1,84 +1,122 @@
-<!-- app.component.html -->
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="abrirVentana()">
+        <ion-icon name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Catalogo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-searchbar placeholder="Search..." [(ngModel)]="searchQuery"></ion-searchbar>
+
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <div class="items">
-          <a class="usuarioFoto" routerLink="/perfil">
-            <img class="imagen" src="../../../../../assets/img/usuario1.png">
-          </a>
-          <a class="usuario">Mi perfil</a>
+      <ion-col size="3">
+        <ion-avatar (click)="irAPerfil()">
+          <img src="../../../../../assets/img/usuario1.png" alt="Usuario">
+        </ion-avatar>
+        <p>Mi perfil</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="abrirVentana()">Filtros: </ion-button>
+        <ion-range [(ngModel)]="rangoPrecio" color="primary" min="0" max="1000" step="1">
+          <ion-label slot="start">0€</ion-label>
+          <ion-label slot="end">1000€</ion-label>
+        </ion-range>
+        <ion-button (click)="confirmarPrecio()">Confirmar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="abrirVentanaColor()">Color</ion-button>
+        <ion-select [(ngModel)]="colorSeleccionado">
+          <ion-select-option value="rojo">Rojo</ion-select-option>
+          <ion-select-option value="azul">Azul</ion-select-option>
+          <ion-select-option value="verde">Verde</ion-select-option>
+          <ion-select-option value="amarillo">Amarillo</ion-select-option>
+          <ion-select-option value="blanco">Blanco</ion-select-option>
+          <ion-select-option value="negro">Negro</ion-select-option>
+        </ion-select>
+        <ion-button (click)="seleccionarColor()">Seleccionar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="abrirVentanaPlazas()">Plazas</ion-button>
+        <ion-select [(ngModel)]="plazasSeleccionadas">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+        </ion-select>
+        <ion-button (click)="seleccionarPlazas()">Seleccionar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="abrirMapa()">Ubicación</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let producto of productos">
+        <div class="contenedorAnuncios">
+          <div class="anuncios">
+            <a id="vehiculo-1" class="fotoVehiculo" [routerLink]="['/producto', producto.id]" [ngStyle]="{'background-image': 'url(' + producto.image + ')'}"></a>
+          </div>
+          <div class="contenedorInformacion">
+            <div class="informacionAnuncio">
+              <a class="informacion">
+                <span class="calificacion">{{producto.rating}}
+                  <div class="estrella">
+                    <form>
+                      <p class="clasificacion">
+                        <ion-radio-group [value]="producto.rating">
+                          <ion-item>
+                            <ion-label>★</ion-label>
+                            <ion-radio [value]="5"></ion-radio>
+                          </ion-item>
+                          <ion-item>
+                            <ion-label>★</ion-label>
+                            <ion-radio [value]="4"></ion-radio>
+                          </ion-item>
+                          <ion-item>
+                            <ion-label>★</ion-label>
+                            <ion-radio [value]="3"></ion-radio>
+                          </ion-item>
+                          <ion-item>
+                            <ion-label>★</ion-label>
+                            <ion-radio [value]="2"></ion-radio>
+                          </ion-item>
+                          <ion-item>
+                            <ion-label>★</ion-label>
+                            <ion-radio [value]="1"></ion-radio>
+                          </ion-item>
+                        </ion-radio-group>
+                      </p>
+                    </form>
+                  </div>
+                </span>
+                <p class="texto">{{producto.description}}</p>
+                <span class="precio">{{producto.price}}€</span>
+              </a>
+            </div>
+          </div>
         </div>
       </ion-col>
     </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <div class="barrabusqueda">
-          <ion-searchbar name="text" placeholder="Search..."></ion-searchbar>
-        </div>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <div class="botones_contendor">
-          <ion-button (click)="abrirVentana()">Filtros:</ion-button>
-          <div id="seleccionadorPrecio"></div>
-          <ion-button (click)="abrirVentana()">Precio</ion-button>
-
-          <ion-modal-controller>
-            <ng-template #priceFilter>
-              <ion-header translucent>
-                <ion-toolbar>
-                  <ion-title>Selecciona un precio</ion-title>
-                  <ion-buttons slot="end">
-                    <ion-button (click)="cerrarVentana()">Cerrar</ion-button>
-                  </ion-buttons>
-                </ion-toolbar>
-              </ion-header>
-
-              <ion-content fullscreen>
-                <ion-item>
-                  <ion-range min="0" max="1000" step="1" [(ngModel)]="rangoPrecio">
-                    <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
-                    <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
-                  </ion-range>
-                </ion-item>
-                <div class="ion-text-center">{{ rangoPrecio }}€</div>
-                <ion-button expand="block" (click)="confirmarPrecio()">Confirmar</ion-button>
-              </ion-content>
-            </ng-template>
-
-            <ng-template #colorFilter>
-              <ion-header translucent>
-                <ion-toolbar>
-                  <ion-title>Selecciona un color</ion-title>
-                  <ion-buttons slot="end">
-                    <ion-button (click)="cerrarVentanaColor()">Cerrar</ion-button>
-                  </ion-buttons>
-                </ion-toolbar>
-              </ion-header>
-
-              <ion-content fullscreen>
-                <ion-item>
-                  <ion-label>Color</ion-label>
-                  <ion-select [(ngModel)]="colorSeleccionado">
-                    <ion-select-option value="rojo">Rojo</ion-select-option>
-                    <ion-select-option value="azul">Azul</ion-select-option>
-                    <ion-select-option value="verde">Verde</ion-select-option>
-                    <ion-select-option value="amarillo">Amarillo</ion-select-option>
-                    <ion-select-option value="blanco">Blanco</ion-select-option>
-                    <ion-select-option value="negro">Negro</ion-select-option>
-                  </ion-select>
-                </ion-item>
-                <ion-button expand="block" (click)="seleccionarColor()">Seleccionar</ion-button>
-              </ion-content>
-            </ng-template>
-          </ion-modal-controller>
+  </ion-grid>
+</ion-content>

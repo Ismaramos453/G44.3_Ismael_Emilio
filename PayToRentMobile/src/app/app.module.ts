@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
@@ -20,6 +21,17 @@ import { CatalogoComponent } from './PaytoRent/gen/pages/catalogo/catalogo.compo
 import { PerfilComponent } from './PaytoRent/gen/pages/perfil/perfil.component';
 import { PrincipalComponent } from './PaytoRent/gen/pages/principal/principal.component';
 import { ProductoComponent } from './PayToRent/gen/pages/producto/producto.component';
+
+const appRoutes: Routes = [
+  { path: '', redirectTo: 'Home', pathMatch: 'full' },
+  { path: 'Home', component: PrincipalComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'catalogo', component: CatalogoComponent },
+  { path: 'producto', component: ProductoComponent },
+  { path: 'perfil', component: PerfilComponent },
+  { path: 'producto/:id', component: ProductoComponent }
+];
 
 @NgModule({
   declarations: [AppComponent,LoginPageComponent,RegisterComponent,HeaderComponent,FooterComponent,CatalogoComponent,PerfilComponent,PrincipalComponent,ProductoComponent],

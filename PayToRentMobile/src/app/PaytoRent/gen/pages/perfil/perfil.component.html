@@ -1,3 +1,71 @@
-<p>
-  perfil works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="registration-form">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h2>Perfil</h2>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="contenedorFotoUsuario">
+            <a class="usuarioFotoEdicion" [routerLink]="['/editar']" [ngStyle]="{'background-image': 'url(' + photo + ')'}"></a>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="items2">
+            <a class="usuarioFoto" [routerLink]="['/editar']" [ngStyle]="{'background-image': 'url(' + photo + ')'}"></a>
+            <a class="usuario">Editar Perfil</a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="form-container">
+            <div class="form-group">
+              <ion-label for="email">Correo electrónico:</ion-label>
+              <div class="panel">{{email}}</div>
+
+              <ion-label for="address">Dirección:</ion-label>
+              <div class="panel">{{address}}</div>
+
+              <ion-label for="phone">Número de teléfono:</ion-label>
+              <div class="panel">{{phone}}</div>
+            </div>
+
+            <div class="form-group">
+              <ion-label for="first-name">Nombre:</ion-label>
+              <div class="panel">{{name}}</div>
+
+              <ion-label for="last-name">Apellido:</ion-label>
+              <div class="panel">{{surname}}</div>
+
+              <ion-label for="username">Nombre de usuario:</ion-label>
+              <div class="panel">{{userName}}</div>
+
+              <ion-label for="birthdate">Fecha de Nacimiento:</ion-label>
+              <div class="panel">{{birthDate}}</div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <p class="texto-bonito"><a [routerLink]="['/verAnuncio']">Ver anuncios</a></p>
+  </form>
+</ion-content>
+

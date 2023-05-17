@@ -1,3 +1,66 @@
-<p>
-  producto works!
-</p>
+<ion-grid class="contenedorProducto">
+  <ion-row class="OpcionesProducto">
+    <ion-col size="6">
+      <ion-thumbnail class="FotoProducto" routerLink="/producto">
+        <img [src]="producto?.image" [alt]="producto?.name" />
+      </ion-thumbnail>
+      <ion-row class="chat">
+        <ion-col>
+          <ion-button expand="block" routerLink="/alquilar">
+            <span class="label">Alquilar</span>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-thumbnail class="chatUsuario" routerLink="/chat">
+            <img class="imagen" src="../../../../../assets/img/chat1.png">
+          </ion-thumbnail>
+        </ion-col>
+      </ion-row>
+      <ion-row class="calificacionProducto">
+        <ion-col>
+          <span>Valoración:</span>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col size="6">
+      <ion-row class="items">
+        <ion-col>
+          <ion-thumbnail class="usuarioFoto" routerLink="/propietario/{{producto?.owner}}">
+            <img class="imagen" src="../../../../../assets/img/usuario1.png">
+          </ion-thumbnail>
+          <span class="usuario">{{ producto?.owner }}</span>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row class="rectangulosProducto">
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          {{ producto?.description }}
+        </ion-card-content>
+      </ion-card>
+      <ion-grid>
+        <ion-row class="contenedorFotosProducto">
+          <ion-col *ngFor="let image of producto?.gallery" size="6">
+            <ion-thumbnail [style.background-image]="'url(' + image + ')'"></ion-thumbnail>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+  <ion-row class="contenedorOpinion">
+    <ion-col>
+      <span class="tituloOpinion">Opiniones:</span>
+      <ng-container *ngFor="let comment of producto?.comments; let i = index;">
+        <ng-container *ngIf="i < 2">
+          <ion-card>
+            <ion-card-content>
+              {{ comment }}
+            </ion-card-content>
+          </ion-card>
+        </ng-container>
+      </ng-container>
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,3 +1,54 @@
-<p>
-  principal works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-article>
+    <!-- Aquí pueden ir imágenes -->
+    <div class="barrabusqueda">
+      <ion-input [(ngModel)]="productName" placeholder="Search..." type="search" (keyup.enter)="search()"></ion-input>
+    </div>
+
+    <div class="circuloVehiculo">
+      <a [routerLink]="['/catalogo']" class="circuloVehiculo1">
+        <ion-img src="../../../../../assets/img/barras.png"></ion-img>
+      </a>
+      <a [routerLink]="['/catalogo']" class="circuloVehiculo2">
+        <ion-img src="../../../../../assets/img/coche.png"></ion-img>
+      </a>
+      <a [routerLink]="['/catalogo']" class="circuloVehiculo3">
+        <ion-img src="../../../../../assets/img/moto.png"></ion-img>
+      </a>
+      <a [routerLink]="['/catalogo']" class="circuloVehiculo4">
+        <ion-img src="../../../../../assets/img/camion.png"></ion-img>
+      </a>
+      <a [routerLink]="['/catalogo']" class="circuloVehiculo5">
+        <ion-img src="../../../../../assets/img/bicicleta.png"></ion-img>
+      </a>
+      <a [routerLink]="['/catalogo']" class="circuloVehiculo6">
+        <ion-img src="../../../../../assets/img/skate.png"></ion-img>
+      </a>
+      <a [routerLink]="['/catalogo']" class="circuloVehiculo1">
+        <ion-img src="../../../../../assets/img/patinete.png"></ion-img>
+      </a>
+    </div>
+
+    <ion-slides pager="true" [options]="slideOptions">
+      <ion-slide *ngFor="let product of productos.slice(0, 3); let i = index">
+        <div class="fila d-flex">
+          <a [routerLink]="['/producto', product.id]" class="cuadradoNegro">
+            <ion-img [src]="product.image" alt="{{product.name}}"></ion-img>
+          </a>
+          <a [routerLink]="['/producto', productos[i + 1].id]" class="cuadradoNegro">
+            <ion-img [src]="productos[i + 1].image" alt="{{productos[i + 1].name}}"></ion-img>
+          </a>
+          <a [routerLink]="['/producto', productos[i + 2].id]" class="cuadradoNegro">
+            <ion-img [src]="productos[i + 2].image" alt="{{productos[i + 2].name}}"></ion-img>
+          </a>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-article>
+</ion-content>

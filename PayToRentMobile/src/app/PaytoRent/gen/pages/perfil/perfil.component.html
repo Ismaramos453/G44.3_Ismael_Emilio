@@ -6,66 +6,58 @@
 
 <ion-content>
   <form class="registration-form">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <h2>Perfil</h2>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <h2>Perfil</h2>
 
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="contenedorFotoUsuario">
-            <a class="usuarioFotoEdicion" [routerLink]="['/editar']" [ngStyle]="{'background-image': 'url(' + photo + ')'}"></a>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <div class="items2">
-            <a class="usuarioFoto" [routerLink]="['/editar']" [ngStyle]="{'background-image': 'url(' + photo + ')'}"></a>
-            <a class="usuario">Editar Perfil</a>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <div class = "contenedorFotoUsuario">
+      <ion-avatar class="usuarioFotoEdicion" routerLink="/editar">
+        <img [src]="photo">
+      </ion-avatar>
+    </div>
 
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="form-container">
-            <div class="form-group">
-              <ion-label for="email">Correo electrónico:</ion-label>
-              <div class="panel">{{email}}</div>
+    <div class = "items2"> 
+      <ion-avatar class="usuarioFoto" routerLink="/editar">
+        <img [src]="photo">
+      </ion-avatar>
+      <ion-button routerLink="/editar" expand="full">Editar Perfil</ion-button>
+    </div>
 
-              <ion-label for="address">Dirección:</ion-label>
-              <div class="panel">{{address}}</div>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Correo electrónico:</ion-label>
+        <ion-text>{{email}}</ion-text>
+      </ion-item>
 
-              <ion-label for="phone">Número de teléfono:</ion-label>
-              <div class="panel">{{phone}}</div>
-            </div>
+      <ion-item>
+        <ion-label position="stacked">Dirección:</ion-label>
+        <ion-text>{{address}}</ion-text>
+      </ion-item>
 
-            <div class="form-group">
-              <ion-label for="first-name">Nombre:</ion-label>
-              <div class="panel">{{name}}</div>
+      <ion-item>
+        <ion-label position="stacked">Número de teléfono:</ion-label>
+        <ion-text>{{phone}}</ion-text>
+      </ion-item>
 
-              <ion-label for="last-name">Apellido:</ion-label>
-              <div class="panel">{{surname}}</div>
+      <ion-item>
+        <ion-label position="stacked">Nombre:</ion-label>
+        <ion-text>{{name}}</ion-text>
+      </ion-item>
 
-              <ion-label for="username">Nombre de usuario:</ion-label>
-              <div class="panel">{{userName}}</div>
+      <ion-item>
+        <ion-label position="stacked">Apellido:</ion-label>
+        <ion-text>{{surname}}</ion-text>
+      </ion-item>
 
-              <ion-label for="birthdate">Fecha de Nacimiento:</ion-label>
-              <div class="panel">{{birthDate}}</div>
-            </div>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+      <ion-item>
+        <ion-label position="stacked">Nombre de usuario:</ion-label>
+        <ion-text>{{userName}}</ion-text>
+      </ion-item>
 
-    <p class="texto-bonito"><a [routerLink]="['/verAnuncio']">Ver anuncios</a></p>
+      <ion-item>
+        <ion-label position="stacked">Fecha de Nacimiento:</ion-label>
+        <ion-text>{{birthDate}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <p class="texto-bonito"> <ion-button fill="clear" routerLink="/verAnuncio">Ver anuncios</ion-button></p>
   </form>
 </ion-content>
-
